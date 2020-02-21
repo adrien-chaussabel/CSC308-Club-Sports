@@ -3,13 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css'; 
 import * as serviceWorker from './serviceWorker';
 
-class Test extends React.Component {
+class DivTest extends React.Component{
     render() {
-      return <a href='page2.js'>Hello World!</a>;
+        return <div className="menu"> 
+            <a class="active" href="#home">Login</a>
+            <a href="#news">Forms</a>
+            <a href="#contact">Sports</a>
+            <a href="#about">Calendar</a>
+            <a href="#home">Home</a>
+            <h1> Club Sports Hub </h1>
+        </div>; 
     }
-  }
+}
+
   
-ReactDOM.render(<Test />, document.getElementById('root'));
+ReactDOM.render(<DivTest />, document.getElementById('root'));
+
 
 /*
 var element = React.createElement('h1', {className:'greeting'}, 'Hello word!');
