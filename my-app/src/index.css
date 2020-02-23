@@ -24,9 +24,10 @@ code {
   float: right;
   color: #C9CAC7;
   text-align: center;
-  padding: 1%;
+  font-weight: bold;
+  padding: 20px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .menu a:hover {
@@ -35,8 +36,24 @@ code {
 }
 
 .menu h1{
-  font-size: 26px;
+  font-size: 22px;
+  padding-top: 4px;
   color: #F7F8F4;
-  text-align:left;
-  padding-left: 3%;
+  float: left;
 }
+
+.menu img{
+  height: 45px;
+  padding: 10px;
+  padding-left: 20px;
+  float: left;
+}
+
+.teamOfTheWeek img{
+  height: 359px;
+  width: 537px;
+  padding-top: 600px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+

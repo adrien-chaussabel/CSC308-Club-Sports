@@ -3,21 +3,38 @@ import ReactDOM from 'react-dom';
 import './index.css'; 
 import * as serviceWorker from './serviceWorker';
 
-class DivTest extends React.Component{
+class Menu extends React.Component{
     render() {
         return <div className="menu"> 
-            <a class="active" href="#home">Login</a>
-            <a href="#news">Forms</a>
-            <a href="#contact">Sports</a>
-            <a href="#about">Calendar</a>
-            <a href="#home">Home</a>
-            <h1> Club Sports Hub </h1>
+            <img src='/CalPolyLogo.png' alt='Cal Poly Logo'/>
+            <h1>CLUB SPORTS HUB</h1>
+            <a class="active" href="#home">LOGIN</a>
+            <a href="#news">FORMS</a>
+            <a href="#contact">SPORTS</a>
+            <a href="#about">CALENDAR</a>
+            <a href="#home">HOME</a>
         </div>; 
     }
 }
 
+class PlaceHolderImage extends React.Component{
+    render(){
+        return <div className="teamOfTheWeek">
+            <img src='/PlaceHolderImage.jpg' alt= 'Placeholder'></img>
+        </div>;
+    }
+}
+
+class HomePage extends React.Component{
+    render(){
+        return <div>
+            <Menu/>
+            <PlaceHolderImage/>
+        </div>;
+    }
+}
   
-ReactDOM.render(<DivTest />, document.getElementById('root'));
+ReactDOM.render(<HomePage/>, document.getElementById('root'));
 
 
 /*
