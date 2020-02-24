@@ -37,12 +37,26 @@ code {
 .menu h1{
   font-size: 26px;
   color: #F7F8F4;
-  float: left;
+  text-align:left;
+  padding-left: 3%;
 }
 
-.menu img{
-  height: 45px;
-  padding: 10px;
-  padding-left: 20px;
-  float: left;
+.event {
+  font-style: arial;
+  color: black;
+  text-align: right;
+  padding: 4.5%;
+}
+
+.event h1{
+  font-size: 18px;
+}
+
+.event h2{
+  font-size: 12px;
+}
+.event h3{
+  font-size: 6px;
+  color: blue;
+  
 }
