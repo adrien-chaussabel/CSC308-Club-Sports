@@ -1,3 +1,14 @@
+# Info:
+
+## How to run:
+
+`git clone`
+
+`npm install`
+
+`npm start`
+
+# Default Stuff: 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
