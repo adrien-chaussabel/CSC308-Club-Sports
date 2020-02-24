@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css'; 
 import * as serviceWorker from './serviceWorker';
 
+
 class Menu extends React.Component{
     render() {
         return <div className="menu"> 
@@ -17,19 +18,45 @@ class Menu extends React.Component{
     }
 }
 
+class Title extends React.Component {
+    render() {
+      return <div className="title"> 
+
+      <h3>CAL POLY CLUB SPORTS</h3>
+    </div> 
+    }
+  }
+
 class PlaceHolderImage extends React.Component{
     render(){
-        return <div className="teamOfTheWeek">
+        return <div className="placeholderImage">
             <img src='/PlaceHolderImage.jpg' alt= 'Placeholder'></img>
         </div>;
+    }
+}
+
+class Info extends React.Component{
+    render(){
+        return <div className="info"> 
+            <div id="rectangle" ></div>
+            <h1>TEAM OF THE WEEK</h1>
+            <h2>WOMEN'S <br/>RUGBY</h2>
+            <h3>Follow them and <br/>
+                come to their home <br/>
+                game on Saturday <br/>
+                February 8th!</h3>
+            <img src='/PlaceHolderImage.jpg' alt='Team of the week'></img>
+        </div>
     }
 }
 
 class HomePage extends React.Component{
     render(){
         return <div>
+             <Title/>
             <Menu/>
             <PlaceHolderImage/>
+            <Info/>
         </div>;
     }
 }
