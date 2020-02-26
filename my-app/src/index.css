@@ -8,24 +8,21 @@ body {
   background-color: #F9F5EF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .menu{
   background-color: #154734;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  margin-bottom: 10px;
 }
 
 .menu a {
   float: right;
   color: #C9CAC7;
   text-align: center;
-  padding: 1%;
+  font-weight: bold;
+  padding: 20px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .menu a:hover {
@@ -34,56 +31,109 @@ code {
 }
 
 .menu h1{
-  font-size: 26px;
+  font-size: 22px;
   color: #F7F8F4;
   float: left;
 }
 
 .menu img{
-  height: 45px;
+  height: 35px;
   padding: 10px;
   padding-left: 20px;
   float: left;
 }
 
+.placeholderImage{
+  margin:10px;
+  padding:10px;
+  width: 45%;
+  padding-top: 0px;
+  margin-top:0px;
+}
+
+.placeholderImage img{
+  height: 413px;
+  width: 625px;
+  padding-top: 150px;
+  padding-left: 4.5%;
+  padding-bottom: 40px;
+}
+
+.title h3{
+  font-size: 34px;
+  font-family: NCAA Cal Poly Mustangs;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  height: 35px;
+  color: #413E3E;
+
+}
+.title {
+  padding-left: 4.5%;
+  position: absolute;
+  top: 60px;
+}
+
 .info{
   position: relative;
-  top: 700px;
-  height: 30px;
-  padding-top: 50%;
+  top: 280px;
+  height: 455px;
+  width:100%;
   background: #154734;
+  
+}
+
+.info img{
+  height: 300px;
+  width: 437px;
+  padding-left: 40px;
+  padding-top: 120px;  
 }
 
 .info h1{
   float: left;
   position: absolute;
-  top: 50px;
-  padding-left: 110px;
+  top: 29px;
+  font-size: 28px;
+  padding-left: 84px;
+  letter-spacing: 0.1em;
+  line-height: 32px;
   font-family: NCAA Cal Poly Mustangs;
 }
 
 .info h2{
   position: absolute;
-  font-family: Arial white;
+  font-family: Arial Black;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 31px;
+  letter-spacing: 0.1em;
   color: #F7F8F4;
-  top: 150px;
-  padding-left: 110px;
+  top: 100px;
+  padding-left: 540px;
 }
 
 .info h3{
   position: absolute;
-  font-family: Arial white;
+  font-family: Arial Unicode MS;
   color: #F7F8F4;
-  top: 200px;
-  padding-left: 110px;
-  font-style: normal;
+  top: 170px;
+  font-size: 17px;
+  padding-left: 540px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
 }
 
 #rectangle {
-  width:430px;
+  width:413px;
   height:60px;
   background: #F3BF39;
   position: absolute;
-  top: 57px;
-  left:60px;
+  top: 35px;
+  left:35px;
+}
+
+.info .instagramIcon {
+  width: 60px;
+  height: 40px;
 }
