@@ -1,3 +1,13 @@
+
+@font-face {
+  font-family: 'NCAA';
+  src: url('ncaa_cal_poly_mustangs-webfont.woff2') format('woff2'),
+       url('ncaa_cal_poly_mustangs-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -44,6 +54,10 @@ body {
   float: left;
 }
 
+.placeholderImage{
+  width: 650px;
+}
+
 .placeholderImage img{
   height: 413px;
   width: 625px;
@@ -54,7 +68,7 @@ body {
 
 .title h3{
   font-size: 34px;
-  font-family: NCAA Cal Poly Mustangs;
+  font-family: NCAA;
   font-weight: bold;
   letter-spacing: 0.1em;
   height: 35px;
@@ -90,7 +104,7 @@ body {
   padding-left: 84px;
   letter-spacing: 0.1em;
   line-height: 32px;
-  font-family: NCAA Cal Poly Mustangs;
+  font-family: NCAA;
 }
 
 .info h2{
@@ -128,4 +142,24 @@ body {
 .info .instagramIcon {
   width: 60px;
   height: 40px;
+}
+
+.event {
+  font-style: arial;
+  color: black;
+  text-align: right;
+  padding-top: -600px;
+}
+
+.event h1{
+  font-size: 18px;
+}
+
+.event h2{
+  font-size: 12px;
+}
+.event h3{
+  font-size: 16px;
+  color: #3381DC;
+  
 }
