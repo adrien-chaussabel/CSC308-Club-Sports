@@ -34,6 +34,7 @@ class PlaceHolderImage extends React.Component{
     }
 }
 
+
 class Info extends React.Component{
     // TODO: Make text wrap instead of having breaks
     render(){
@@ -49,6 +50,46 @@ class Info extends React.Component{
             <a href="https://instagram.com">
             <img src='/instagram.png' class='instagramIcon' alt='Instagram'></img>
             </a>
+        </div>
+    }
+}
+
+class EventBox extends React.Component{
+    //Class that is going to render each event.
+    render() {
+        return <div className="event">
+            <h2>{this.props.date}</h2>
+            <h1>{this.props.club}</h1>
+            <h2>{this.props.location}</h2>
+            <h2>{this.props.time}</h2>
+            <h3>see details</h3>
+        </div>
+    }
+}
+
+class EventsList extends React.Component{
+    render() {
+        return <div>
+        <EventBox 
+            date="Feb 1st" 
+            club="MENS SOCCER"
+            location="UCLA"
+            time="2:00p.m"></EventBox>
+        <EventBox
+            date="Feb 6th"
+            club="DISTANCE CLUB"
+            location="BBQ Fundraiser on Dexter Lawn"
+            time="11:00a.m"></EventBox>
+        <EventBox
+            date="Feb 8th"
+            club="WOMENS RUGBY"
+            location="CalPoly"
+            time="12:00p.m"></EventBox>
+        <EventBox
+            date="Feb 12th"
+            club="SWIM CLUB"
+            location="Stanford University"
+            time="1:00p.m"></EventBox>
         </div>
     }
 }
