@@ -34,7 +34,9 @@ class PlaceHolderImage extends React.Component{
     }
 }
 
-class TeamOfTheWeek extends React.Component{
+
+class Info extends React.Component{
+    // TODO: Make text wrap instead of having breaks
     render(){
         return <div className="info"> 
             <div id="rectangle" ></div>
@@ -95,10 +97,10 @@ class EventsList extends React.Component{
 class HomePage extends React.Component{
     render(){
         return <div>
-            <Title/>
             <Menu/>
+            <Title/>
             <PlaceHolderImage/>
-            <TeamOfTheWeek/>
+            <Info/>
         </div>;
     }
 }

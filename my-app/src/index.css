@@ -22,6 +22,7 @@ body {
   background-color: #154734;
   width: 100%;
   position: fixed;
+  margin-bottom: 10px;
 }
 
 
@@ -42,20 +43,23 @@ body {
 
 .menu h1{
   font-size: 22px;
-  padding-top: 4px;
   color: #F7F8F4;
   float: left;
 }
 
 .menu img{
-  height: 45px;
+  height: 35px;
   padding: 10px;
   padding-left: 20px;
   float: left;
 }
 
 .placeholderImage{
-  width: 650px;
+  margin:10px;
+  padding:10px;
+  width: 45%;
+  padding-top: 0px;
+  margin-top:0px;
 }
 
 .placeholderImage img{
@@ -85,6 +89,7 @@ body {
   position: relative;
   top: 280px;
   height: 455px;
+  width:100%;
   background: #154734;
   
 }
