@@ -3,20 +3,39 @@ import ReactDOM from 'react-dom';
 import './index.css'; 
 import * as serviceWorker from './serviceWorker';
 import Events from './components/events/events';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+
 
 class Menu extends React.Component{
     render() {
-        return <div className="menu"> 
-            <img src='/CalPolyLogo.png' alt='Cal Poly Logo'/>
-            <h1>CLUB SPORTS HUB</h1>
-            <a className="active" href="#home">LOGIN</a>
-            <a href="#news">FORMS</a>
-            <a href="#contact">SPORTS</a>
-            <a href="#about">CALENDAR</a>
-            <a href="#home">HOME</a>
-        </div>; 
+        return <Router>
+            <div className="menu"> 
+                <img src='/CalPolyLogo.png' alt='Cal Poly Logo'/>
+                <h1>CLUB SPORTS HUB</h1>
+                <Link to="/login">LOGIN</Link>
+                <Link to="/forms">FORMS</Link>
+                <a href="/.">SPORTS</a>
+                <Link to="calendar">CALENDAR</Link>
+                <Link to="/">HOME</Link>
+            </div>; 
+            
+            <Switch>
+                <Route exact path="/">
+                    <HomePage/>
+                </Route>
+                <Route path="/login">
+                    <LoginPage/>;
+                </Route>
+            </Switch>
+        </Router>
     }
 }
+
 
 class Title extends React.Component {
     render() {
@@ -25,7 +44,16 @@ class Title extends React.Component {
       <h3>CAL POLY CLUB SPORTS</h3>
     </div> 
     }
-  }
+}
+
+class AltTitle extends React.Component {
+    render() {
+      return <div className="title"> 
+
+      <h3>LOGIN PAGE</h3>
+    </div> 
+    }
+}
 
 class PlaceHolderImage extends React.Component{
     render(){
@@ -58,7 +86,6 @@ class Info extends React.Component{
 class HomePage extends React.Component{
     render(){
         return <div>
-            <Menu/>
             <Events/>
             <Title/>
             <PlaceHolderImage/>
@@ -66,8 +93,20 @@ class HomePage extends React.Component{
         </div>;
     }
 }
+
+class LoginPage extends React.Component{
+    render(){
+        return <div>
+            <Events/>
+            <AltTitle/>
+            <PlaceHolderImage/>
+            <Info/>
+        </div>;
+    }
+}
+
   
-ReactDOM.render(<HomePage/>, document.getElementById('root'));
+ReactDOM.render(<Menu/>, document.getElementById('root'));
 
 
 serviceWorker.unregister();
