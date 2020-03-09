@@ -1,13 +1,3 @@
-
-@font-face {
-  font-family: 'NCAA';
-  src: url('ncaa_cal_poly_mustangs-webfont.woff2') format('woff2'),
-       url('ncaa_cal_poly_mustangs-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -23,8 +13,8 @@ body {
   width: 100%;
   position: fixed;
   margin-bottom: 10px;
-  z-index: 1;
 }
+
 
 .menu a {
   float: right;
@@ -149,27 +139,11 @@ body {
   height: 40px;
 }
 
-.login
-{
-  background-image: url(/login.png);
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height:100%;
-  display:flex;
-  justify-content:center;
-  align-items: center;
-  font-size: 30px;
-  font-style: bolder;
-  font-weight: 100%;
-  color: white;
-}
 .event {
   font-style: arial;
-  color: black;
   text-align: right;
-  padding-top: -600px;
+  padding-top: 90px;
+  padding-right: 90px;
 }
 
 .event h1{
