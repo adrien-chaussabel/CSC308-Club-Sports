@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css'; 
 import * as serviceWorker from './serviceWorker';
 import Events from './components/events/events';
+import Login from './components/events/login';
 import {
     BrowserRouter as Router,
     Switch,
@@ -42,15 +43,6 @@ class Title extends React.Component {
       return <div className="title"> 
 
       <h3>CAL POLY CLUB SPORTS</h3>
-    </div> 
-    }
-}
-
-class AltTitle extends React.Component {
-    render() {
-      return <div className="title"> 
-
-      <h3>LOGIN PAGE</h3>
     </div> 
     }
 }
@@ -97,10 +89,8 @@ class HomePage extends React.Component{
 class LoginPage extends React.Component{
     render(){
         return <div>
-            <Events/>
-            <AltTitle/>
-            <PlaceHolderImage/>
-            <Info/>
+            
+            <Login/>
         </div>;
     }
 }
