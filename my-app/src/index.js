@@ -31,11 +31,13 @@ class Menu extends React.Component{
                 <Route path="/login">
                     <Login/>;
                 </Route>
+                <Route path="/forms">
+                    <FormsPage/>;
+                </Route>
             </Switch>
         </Router>
     }
 }
-
 
 class Title extends React.Component {
     render() {
@@ -48,9 +50,9 @@ class Title extends React.Component {
 
 class AltTitle extends React.Component {
     render() {
-      return <div className="title"> 
+      return <div className="title2"> 
 
-      <h3>LOGIN PAGE</h3>
+      <h3>RESOURCES AND FORMS</h3>
     </div> 
     }
 }
@@ -63,37 +65,6 @@ class PlaceHolderImage extends React.Component{
     }
 }
 
-// class Info extends React.Component{
-//     // TODO: Make text wrap instead of having breaks
-//     render(){
-//         return <div className="info"> 
-//             <div id="rectangle" ></div>
-//             <h1>TEAM OF THE WEEK</h1>
-//             <h2>WOMEN'S <br/>RUGBY</h2>
-//             <h3>Follow them and <br/>
-//                 come to their home <br/>
-//                 game on Saturday <br/>
-//                 February 8th!</h3>
-//             <img src='/PlaceHolderImage.jpg' alt='Team of the week'></img>
-//             <a href="https://instagram.com">
-//             <img src='/instagram.png' class='instagramIcon' alt='Instagram'></img>
-//             </a>
-//         </div>
-//     }
-// }
-
-// class HomePage extends React.Component{
-//     render(){
-//         return <div>
-//             <Menu/>
-//             <Title/>
-//             <PlaceHolderImage/>
-//             <Info/>
-//         </div>;
-//     }
-// }
-
-//---------------------------------------------
 class Login extends React.Component{
     constructor() {
         super();
@@ -140,7 +111,6 @@ class Login extends React.Component{
       }
     
       render() {
-        //<img src='/login.jpg' alt= 'LoginImage'></img>
         return (
           <div className="login">
             <form onSubmit={this.handleSubmit}>
@@ -151,15 +121,15 @@ class Login extends React.Component{
                 </h3>
               }
               <label classname= 'label'>User Name</label><br/>
-              <input type="text" style={{borderColor:'black', borderWidth:1, backgroundColor: 'rgba(196, 196, 196, 0.9)'}} data-test="username" value={this.state.username} onChange={this.handleUserChange}/>
+              <input type="text" style={{fontSize:'30px', borderColor:'black', borderWidth:1, backgroundColor: 'rgba(196, 196, 196, 0.9)'}} data-test="username" value={this.state.username} onChange={this.handleUserChange}/>
               <br/>
               <label>Password</label><br/>
-              <input type="password" style={{borderColor:'black', borderWidth:1, backgroundColor: 'rgba(196, 196, 196, 0.9)'}} data-test="password" value={this.state.password} onChange={this.handlePassChange}/>
+              <input type="password" style={{fontSize:'30px', borderColor:'black', borderWidth:1, backgroundColor: 'rgba(196, 196, 196, 0.9)'}} data-test="password" value={this.state.password} onChange={this.handlePassChange}/>
               <br/><br/>
               <input type="submit" value="LOGIN" data-test="submit" />
               <br/><br/>
-              <label>New User </label><br/><br/>
-              <label>Forgot Password</label>
+              <h6>New User</h6>
+              <h6>Forgot Password</h6>
 
             </form>
           </div>
@@ -197,20 +167,30 @@ class HomePage extends React.Component{
     }
 }
 
-class LoginPage extends React.Component{
+class FormsPage extends React.Component{
     render(){
-        return <div>
-            <Events/>
+        return <div className="forms">
             <AltTitle/>
-            <PlaceHolderImage/>
-            <Info/>
+            <h3>Club Sports strives to make running your club as streamlined as possible. This page is an <br/>
+                exellent resource for all the information and forms you need. If you have any additional <br/>
+                questions, please contact the Club Sports Advisor.</h3>
+            <div id="greenform1" ></div>
+            <h2>PARTICIPANT FORMS</h2>
+            <label>Participant Release Form (PDF)</label><br/>
+            <label>Risk and Release Form (PDF)</label><br/>
+            <label>Medical Insurance Form (PDF)</label>
+            <div id="greenform2" ></div>
+            <h2>HOME EVENT FORMS</h2>
+            <label>Facility Request Form (DOC)</label><br/>
+            <label>Equipment Agreement (DOC)</label>
+            <div id="greenform3" ></div>
+            <h2>AWAY EVENT FORMS</h2>
+            <label>Club Sport Travel Roster (PDF)</label><br/>
+            <label>Reimbursement Request (DOC)</label>
         </div>;
     }
 }
-
   
 ReactDOM.render(<Menu/>, document.getElementById('root'));
-
-/*ReactDOM.render(<Login/>, document.getElementById('root'));*/
 
 serviceWorker.unregister();
