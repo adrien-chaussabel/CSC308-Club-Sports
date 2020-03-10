@@ -88,11 +88,11 @@ class Login extends React.Component{
         evt.preventDefault();
     
         if (!this.state.username) {
-          return this.setState({ error: 'Username is required'});
+          return this.setState({ error: '*Username is required*'});
         }
     
         if (!this.state.password) {
-          return this.setState({ error: 'Password is required' });
+          return this.setState({ error: '*Password is required*' });
         }
     
         return this.setState({ error: '' });
@@ -116,11 +116,11 @@ class Login extends React.Component{
             <form onSubmit={this.handleSubmit}>
               {
                 this.state.error &&
-                <h3 data-test="error" style={{color:'red', fontFamily: 'Roboto', fontStyle:'bold'}} onClick={this.dismissError} >
+                <h3 data-test="error" style={{fontSize: '25px', color:'red', fontFamily: 'Arial, Helvetica, sans-serif'}} onClick={this.dismissError} >
                   {this.state.error}
                 </h3>
               }
-              <label classname= 'label'>User Name</label><br/>
+              <label classname= 'label'>Username</label><br/>
               <input type="text" style={{fontSize:'30px', borderColor:'black', borderWidth:1, backgroundColor: 'rgba(196, 196, 196, 0.9)'}} data-test="username" value={this.state.username} onChange={this.handleUserChange}/>
               <br/>
               <label>Password</label><br/>

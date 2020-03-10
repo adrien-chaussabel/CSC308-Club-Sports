@@ -163,7 +163,7 @@ body {
 .login
 {
   background-image: url(/login.png);
-  opacity: 0.8;
+  opacity: 0.7;
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
@@ -173,8 +173,8 @@ body {
   justify-content:center;
   align-items: center;
   font-size: 30px;
-  font-style: bolder;
-  font-weight: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   color:white;
 }
 .event {
