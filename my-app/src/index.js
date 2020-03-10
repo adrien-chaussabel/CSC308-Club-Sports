@@ -13,23 +13,52 @@ import {
 
 class App extends React.Component {
     state = {
-        users: []
+        users: [],
+        user: {
+            fullname: 'sample',
+            username: 'sample',
+            password: 'test'
+        }
     }
 
     componentDidMount(){
-        fetch('https://localhost:5000/users')
-        .then(res => res.json())
-        .then(res => this.setState({users: res.data}))
+        this.getUsers();
+    }
+
+    getUsers = _ => {
+        fetch('/user')
+        .then(response => response.json())
+        .then(response => this.setState({users: response.data}))
         .catch(err => console.error(err));
+    }
+
+    addUser = _ => {
+        const {user} = this.state;
+        fetch('/users/add?fullname=${user.fullname}&username=${user.username}&password={user.password}')
+        .then(response => response.json())
+        .then(this.getUsers)
+        .catch(err => console.error(err));
+
     }
 
     renderUser = ({ user_id, fullname}) => <div key={user_id}>{fullname}</div>
 
     render(){
-        const {users} = this.state;
+        const {users, user} = this.state;
         return (
             <div className = "title">
                 {users.map(this.renderUser)}
+                <div>
+                    <input 
+                    value={user.fullname} 
+                    onChange={e => this.setState({user: {...user, fullname: e.target.value }})} 
+                    />
+                    <input 
+                    value={user.username}
+                    onChange={e => this.setState({user: {...user, username: e.target.value }})} 
+                    />
+                    <button onClick={this.addUser}>Add User</button>
+                </div>
             </div>
         );
     }
