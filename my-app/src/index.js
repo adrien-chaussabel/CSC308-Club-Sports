@@ -11,6 +11,30 @@ import {
     Link
   } from "react-router-dom";
 
+class App extends React.Component {
+    state = {
+        users: []
+    }
+
+    componentDidMount(){
+        fetch('https://localhost:5000/users')
+        .then(res => res.json())
+        .then(res => this.setState({users: res.data}))
+        .catch(err => console.error(err));
+    }
+
+    renderUser = ({ user_id, fullname}) => <div key={user_id}>{fullname}</div>
+
+    render(){
+        const {users} = this.state;
+        return (
+            <div className = "title">
+                {users.map(this.renderUser)}
+            </div>
+        );
+    }
+}
+
 
 class Menu extends React.Component{
     render() {
@@ -30,7 +54,7 @@ class Menu extends React.Component{
                     <HomePage/>
                 </Route>
                 <Route path="/login">
-                    <LoginPage/>;
+                    <App/>;
                 </Route>
             </Switch>
         </Router>
@@ -42,7 +66,7 @@ class Title extends React.Component {
     render() {
       return <div className="title"> 
 
-      <h3>CAL POLY CLUB SPORTS</h3>
+      <h3>CAL POLY CLUB SPORTS</h3> 
     </div> 
     }
 }
@@ -54,7 +78,6 @@ class PlaceHolderImage extends React.Component{
         </div>;
     }
 }
-
 
 class Info extends React.Component{
     // TODO: Make text wrap instead of having breaks
@@ -89,12 +112,31 @@ class HomePage extends React.Component{
 class LoginPage extends React.Component{
     render(){
         return <div>
-            
             <Login/>
         </div>;
     }
 }
 
+/*class Users extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { users: [] };
+    
+      fetch('http://localhost:3000/users')
+      .then(response =>response.json())
+      .then(users => this.setState({users}))
+    }
+    render(){
+        return <div>
+            <ul>
+                {this.state.users.map(post=> <li>
+                    <h2>{post.title}</h2>
+                    <p>{post.body}</p>
+                </li>)}
+            </ul>
+        </div>;
+    }
+}*/
   
 ReactDOM.render(<Menu/>, document.getElementById('root'));
 

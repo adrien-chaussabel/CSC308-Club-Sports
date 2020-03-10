@@ -14,11 +14,13 @@ var con = mysql.createConnection({
 
 });
 
-var server = app.listen(1348, function(){
+/*
+var server = app.listen(1738, function(){
     var host = server.address().address
     var port = server.address().port
     console.log("start");
 });
+*/
 
 con.connect(function(error){
     if(error) console.log(error);
@@ -33,4 +35,26 @@ app.get('/users', function(req, res){
             res.send(rows);
         }
     });
+});
+
+app.get('/adduser', (req, res) => {
+    let body = {username:'achaussa', fullname:'adrien chaus', password:'1234'};
+    let sql = 'INSERT INTO users SET ?'
+    let query = con.query(sql, body, (err, result)=> {
+        if(err) throw err;
+        console.log(result);
+        res.send('user.inserted')
+    });
+})
+
+app.post('/users', function(req, res){
+    var name=req.body.fullname;
+    var username = req.body.username;
+    var pass = req.body.password;
+    con.query("INSERT INTO `users` (fullname, username, password) VALUES (?, ?, ?)",
+    fullname.toString(), username.toString(), password.toString(), function(err, result){
+        if(err) throw err;
+        console.log("1 record inserted");
+    });
+    res.send(username);
 });
