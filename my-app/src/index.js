@@ -3,66 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css'; 
 import * as serviceWorker from './serviceWorker';
 import Events from './components/events/events';
-import Login from './components/events/login';
+import Register from './components/register/register';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
-
-class App extends React.Component {
-    state = {
-        users: [],
-        user: {
-            fullname: 'sample',
-            username: 'sample',
-            password: 'test'
-        }
-    }
-
-    componentDidMount(){
-        this.getUsers();
-    }
-
-    getUsers = _ => {
-        fetch('/user')
-        .then(response => response.json())
-        .then(response => this.setState({users: response.data}))
-        .catch(err => console.error(err));
-    }
-
-    addUser = _ => {
-        const {user} = this.state;
-        fetch('/users/add?fullname=${user.fullname}&username=${user.username}&password={user.password}')
-        .then(response => response.json())
-        .then(this.getUsers)
-        .catch(err => console.error(err));
-
-    }
-
-    renderUser = ({ user_id, fullname}) => <div key={user_id}>{fullname}</div>
-
-    render(){
-        const {users, user} = this.state;
-        return (
-            <div className = "title">
-                {users.map(this.renderUser)}
-                <div>
-                    <input 
-                    value={user.fullname} 
-                    onChange={e => this.setState({user: {...user, fullname: e.target.value }})} 
-                    />
-                    <input 
-                    value={user.username}
-                    onChange={e => this.setState({user: {...user, username: e.target.value }})} 
-                    />
-                    <button onClick={this.addUser}>Add User</button>
-                </div>
-            </div>
-        );
-    }
-}
 
 
 class Menu extends React.Component{
@@ -83,7 +30,7 @@ class Menu extends React.Component{
                     <HomePage/>
                 </Route>
                 <Route path="/login">
-                    <App/>;
+                    <RegisterPage/>;
                 </Route>
             </Switch>
         </Router>
@@ -138,34 +85,13 @@ class HomePage extends React.Component{
     }
 }
 
-class LoginPage extends React.Component{
+class RegisterPage extends React.Component{
     render(){
         return <div>
-            <Login/>
+            <Register/>
         </div>;
     }
 }
-
-/*class Users extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { users: [] };
-    
-      fetch('http://localhost:3000/users')
-      .then(response =>response.json())
-      .then(users => this.setState({users}))
-    }
-    render(){
-        return <div>
-            <ul>
-                {this.state.users.map(post=> <li>
-                    <h2>{post.title}</h2>
-                    <p>{post.body}</p>
-                </li>)}
-            </ul>
-        </div>;
-    }
-}*/
   
 ReactDOM.render(<Menu/>, document.getElementById('root'));
 

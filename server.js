@@ -42,14 +42,15 @@ app.get("/users", (req, res) => {
 });
 
 app.get('/users/add', (req, res) =>{
-    const {fullname, username, password} = req.query;
-    const insertUser = "INSERT INTO users (fullname, username, password') VALUES ('', '', '')";
-    con.query(insertUser, (err, results) => {
+    const {firstname, lastname, email, username, password} = req.query;
+    let body = {firstname, lastname, email, username, password}
+    const insertUser = "INSERT INTO users SET ?";
+    con.query(insertUser, body, (err, results) => {
         if (err){
             return res.send(err);
         }
         else {
-            res.send("successfully added product")
+            res.send("successfully added user")
         }
     });
 });
@@ -63,36 +64,6 @@ app.get('/api/events', (req, res) => {
 
     res.json(events);
 });
-
-/*app.post('/',(req,res) =>{
-    let data = {username: req.body.username, fullname:req.body.fulname,
-    password:req.body.password};
-    let sql = "INSERT users SET ?"
-    let query = connection.query(sql, data,(err, results) => {
-        if(err) throw err;
-        req.redirect('/');
-    });
-});
-
-
-app.get('/users', function (req, res) {
-    con.query('SELECT * FROM users', function (error, results, fields) {
-      if (error) throw error;
-      res.send(results)
-    });
-});
-
-app.post('/adduser', (req, res) => {
-    let body = {name: req.body.fullname,
-        username: req.body.username,
-        pass: req.body.password};
-    let sql = 'INSERT INTO users SET ?'
-    let query = con.query(sql, body, (err, result)=> {
-        if(err) throw err;
-        console.log(result);
-        res.send('user.inserted')
-    });
-}); */
 
 const port = 5000;
 
