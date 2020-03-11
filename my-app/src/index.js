@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css'; 
 import * as serviceWorker from './serviceWorker';
 import Events from './components/events/events';
+import Register from './components/register/register';
 import {
     BrowserRouter as Router,
     Switch,
@@ -29,7 +30,7 @@ class Menu extends React.Component{
                     <HomePage/>
                 </Route>
                 <Route path="/login">
-                    <LoginPage/>;
+                    <RegisterPage/>;
                 </Route>
             </Switch>
         </Router>
@@ -41,16 +42,7 @@ class Title extends React.Component {
     render() {
       return <div className="title"> 
 
-      <h3>CAL POLY CLUB SPORTS</h3>
-    </div> 
-    }
-}
-
-class AltTitle extends React.Component {
-    render() {
-      return <div className="title"> 
-
-      <h3>LOGIN PAGE</h3>
+      <h3>CAL POLY CLUB SPORTS</h3> 
     </div> 
     }
 }
@@ -62,7 +54,6 @@ class PlaceHolderImage extends React.Component{
         </div>;
     }
 }
-
 
 class Info extends React.Component{
     // TODO: Make text wrap instead of having breaks
@@ -94,17 +85,13 @@ class HomePage extends React.Component{
     }
 }
 
-class LoginPage extends React.Component{
+class RegisterPage extends React.Component{
     render(){
         return <div>
-            <Events/>
-            <AltTitle/>
-            <PlaceHolderImage/>
-            <Info/>
+            <Register/>
         </div>;
     }
 }
-
   
 ReactDOM.render(<Menu/>, document.getElementById('root'));
 
