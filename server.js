@@ -7,15 +7,25 @@ const app=express();
 
 const selectAll = "SELECT * FROM users"
 
-const con = mysql.createConnection({
-    host: "localhost",
+//Connect to the Google cloud database
+const con = mysql.createPool({
+    host: '35.239.17.119',
     user: "root",
     password: "csc308sports",
-    database: "www"
+    database: "clubsports",
 
 });
 
-con.connect(err => {
+/* Connect to local database
+const con = mysql.createPool({
+    host: '127.0.0.1',
+    user: "root",
+    password: "csc308sports",
+    database: "www",
+
+});*/
+
+con.getConnection(err => {
     if(err){
         return err;
     }
