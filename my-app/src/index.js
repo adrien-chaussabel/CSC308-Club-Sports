@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css'; 
 import * as serviceWorker from './serviceWorker';
 import Events from './components/events/events';
+import Register from './components/register/register';
 import {
     BrowserRouter as Router,
     Switch,
@@ -33,6 +34,7 @@ class Menu extends React.Component{
                 </Route>
                 <Route path="/forms">
                     <FormsPage/>;
+                    //<RegisterPage/>;
                 </Route>
             </Switch>
         </Router>
@@ -42,13 +44,12 @@ class Menu extends React.Component{
 class Title extends React.Component {
     render() {
       return <div className="title"> 
-
-      <h3>CAL POLY CLUB SPORTS</h3>
+      <h3>CAL POLY CLUB SPORTS</h3> 
     </div> 
     }
 }
 
-class AltTitle extends React.Component {
+class ResourceTitle extends React.Component {
     render() {
       return <div className="title2"> 
 
@@ -170,7 +171,7 @@ class HomePage extends React.Component{
 class FormsPage extends React.Component{
     render(){
         return <div className="forms">
-            <AltTitle/>
+            <ResourceTitle/>
             <h3>Club Sports strives to make running your club as streamlined as possible. This page is an <br/>
                 exellent resource for all the information and forms you need. If you have any additional <br/>
                 questions, please contact the Club Sports Advisor.</h3>
@@ -187,6 +188,14 @@ class FormsPage extends React.Component{
             <h2>AWAY EVENT FORMS</h2>
             <label>Club Sport Travel Roster (PDF)</label><br/>
             <label>Reimbursement Request (DOC)</label>
+        </div>
+    }
+}
+
+class RegisterPage extends React.Component{
+    render(){
+        return <div>
+            <Register/>
         </div>;
     }
 }
