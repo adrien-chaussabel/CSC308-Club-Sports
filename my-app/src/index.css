@@ -23,8 +23,8 @@ body {
   width: 100%;
   position: fixed;
   margin-bottom: 10px;
+  z-index: 1;
 }
-
 
 .menu a {
   float: right;
@@ -77,12 +77,23 @@ body {
   letter-spacing: 0.1em;
   height: 35px;
   color: #413E3E;
-
 }
+
 .title {
   padding-left: 4.5%;
   position: absolute;
   top: 60px;
+}
+
+.title2{
+  font-size: 34px;
+  font-family: NCAA;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  height: 35px;
+  color: #413E3E;
+  top: 60px;
+  text-align: center;
 }
 
 .info{
@@ -149,6 +160,23 @@ body {
   height: 40px;
 }
 
+.login
+{
+  background-image: url(/login.png);
+  opacity: 0.7;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color:white;
+}
 .event {
   font-style: arial;
   color: black;
@@ -166,5 +194,55 @@ body {
 .event h3{
   font-size: 16px;
   color: #3381DC;
-  
 }
+
+.forms{
+  text-align: center;
+  padding-top: 100px;
+}
+
+.forms h2{
+  font-family: Arial Black;
+  font-weight: 900;
+  font-size: 27px;
+  line-height: 60px;
+  letter-spacing: 0.1em;
+  color: #413E3E;
+  text-align:center;
+}
+
+.forms label{
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+#greenform1{
+  width:40%;
+  border:3px solid green;
+  padding:30px;
+  display:inline-block;
+  position: absolute;
+  left: 380px;
+}
+
+#greenform2{
+  width:40%;
+  border:3px solid green;
+  padding:30px;
+  display:inline-block;
+  position: absolute;
+  left: 380px;
+  top:465px;
+}
+
+#greenform3{
+  width:40%;
+  border:3px solid green;
+  padding:30px;
+  display:inline-block;
+  position: absolute;
+  left: 380px;
+  top:613px;
+}
+
+
