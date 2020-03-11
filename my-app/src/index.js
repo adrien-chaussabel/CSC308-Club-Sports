@@ -116,21 +116,28 @@ class Login extends React.Component{
             <form onSubmit={this.handleSubmit}>
               {
                 this.state.error &&
-                <h3 data-test="error" style={{fontSize: '25px', color:'red', fontFamily: 'Arial, Helvetica, sans-serif'}} onClick={this.dismissError} >
+                <h3 data-test="error" style={{fontSize: '25px', color:'red', 
+                  fontFamily: 'Arial, Helvetica, sans-serif'}} 
+                  onClick={this.dismissError} >
                   {this.state.error}
                 </h3>
               }
               <label classname= 'label'>Username</label><br/>
-              <input type="text" style={{fontSize:'30px', borderColor:'black', borderWidth:1, backgroundColor: 'rgba(196, 196, 196, 0.9)'}} data-test="username" value={this.state.username} onChange={this.handleUserChange}/>
+              <input type="text" style={{fontSize:'30px', borderColor:'black', 
+                borderWidth:1, backgroundColor: 'rgba(196, 196, 196, 0.9)'}} 
+                data-test="username" value={this.state.username} 
+                onChange={this.handleUserChange}/>
               <br/>
               <label>Password</label><br/>
-              <input type="password" style={{fontSize:'30px', borderColor:'black', borderWidth:1, backgroundColor: 'rgba(196, 196, 196, 0.9)'}} data-test="password" value={this.state.password} onChange={this.handlePassChange}/>
+              <input type="password" style={{fontSize:'30px', borderColor:'black', 
+                borderWidth:1, backgroundColor: 'rgba(196, 196, 196, 0.9)'}} 
+                data-test="password" value={this.state.password} 
+                onChange={this.handlePassChange}/>
               <br/><br/>
               <input type="submit" value="LOGIN" data-test="submit" />
               <br/><br/>
               <h6>New User</h6>
               <h6>Forgot Password</h6>
-
             </form>
           </div>
         );
