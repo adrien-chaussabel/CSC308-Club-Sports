@@ -1,75 +1,201 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'; 
+import './index.css';
 import * as serviceWorker from './serviceWorker';
+import Events from './components/events/events';
+import Register from './components/register/register';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+} from "react-router-dom";
 
-class DivTest extends React.Component{
+
+class Menu extends React.Component {
     render() {
-        return <div className="menu"> 
-            <a class="active" href="#home">Login</a>
-            <a href="#news">Forms</a>
-            <a href="#contact">Sports</a>
-            <a href="#about">Calendar</a>
-            <a href="#home">Home</a>
-            <h1> Club Sports Hub </h1>
-        </div>; 
+        return <Router>
+            <div className="menu">
+                <img src='/CalPolyLogo.png' alt='Cal Poly Logo' />
+                <h1>CLUB SPORTS HUB</h1>
+                <Link to="/login">LOGIN</Link>
+                <Link to="/forms">FORMS</Link>
+                <a href="/.">SPORTS</a>
+                <Link to="calendar">CALENDAR</Link>
+                <Link to="/">HOME</Link>
+            </div>;
+
+            <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/forms" component={FormsPage} />
+                <Route exact path="/register" component={RegisterPage} />
+                <Route path="/login">
+                    <Login />;
+                </Route>
+            </Switch>
+        </Router>
     }
 }
 
-class EventBox extends React.Component{
-    //Class that is going to render each event.
+class Title extends React.Component {
     render() {
-        return <div className="event">
-            <h2>{this.props.date}</h2>
-            <h1>{this.props.club}</h1>
-            <h2>{this.props.location}</h2>
-            <h2>{this.props.time}</h2>
-            <h3>see details</h3>
+        return <div className="title">
+            <h3>CAL POLY CLUB SPORTS</h3>
         </div>
     }
 }
 
-class Together extends React.Component{
-    //Combines my Event class and the DivTest Class.
-    render(){
+class ResourceTitle extends React.Component {
+    render() {
+        return <div className="title2">
+
+            <h3>RESOURCES AND FORMS</h3>
+        </div>
+    }
+}
+
+class PlaceHolderImage extends React.Component {
+    render() {
+        return <div className="placeholderImage">
+            <img src='/PlaceHolderImage.jpg' alt='Placeholder'></img>
+        </div>;
+    }
+}
+
+class Login extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            username: '',
+            password: '',
+            error: '',
+        };
+
+        this.handlePassChange = this.handlePassChange.bind(this);
+        this.handleUserChange = this.handleUserChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.dismissError = this.dismissError.bind(this);
+    }
+
+    dismissError() {
+        this.setState({ error: '' });
+    }
+
+    handleSubmit(evt) {
+        evt.preventDefault();
+
+        if (!this.state.username) {
+            return this.setState({ error: '*Username is required*' });
+        }
+
+        if (!this.state.password) {
+            return this.setState({ error: '*Password is required*' });
+        }
+
+        return this.setState({ error: '' });
+    }
+
+    handleUserChange(evt) {
+        this.setState({
+            username: evt.target.value,
+        });
+    };
+
+    handlePassChange(evt) {
+        this.setState({
+            password: evt.target.value,
+        });
+    }
+
+    render() {
+        return (
+            <div className="login">
+                <form onSubmit={this.handleSubmit}>
+                    {
+                        this.state.error &&
+                        <h3 data-test="error" style={{ fontSize: '25px', color: 'red', fontFamily: 'Arial, Helvetica, sans-serif' }} onClick={this.dismissError} >
+                            {this.state.error}
+                        </h3>
+                    }
+                    <label classname='label'>Username</label><br />
+                    <input type="text" style={{ fontSize: '30px', borderColor: 'black', borderWidth: 1, backgroundColor: 'rgba(196, 196, 196, 0.9)' }} data-test="username" value={this.state.username} onChange={this.handleUserChange} />
+                    <br />
+                    <label>Password</label><br />
+                    <input type="password" style={{ fontSize: '30px', borderColor: 'black', borderWidth: 1, backgroundColor: 'rgba(196, 196, 196, 0.9)' }} data-test="password" value={this.state.password} onChange={this.handlePassChange} />
+                    <br /><br />
+                    <input type="submit" value="LOGIN" data-test="submit" />
+                    <br /><br />
+                        <Link to='/register'>New User</Link>
+                    <h6>Forgot Password</h6>
+
+                </form>
+            </div>
+        );
+    }
+}
+
+class Info extends React.Component {
+    // TODO: Make text wrap instead of having breaks
+    render() {
+        return <div className="info">
+            <div id="rectangle" ></div>
+            <h1>TEAM OF THE WEEK</h1>
+            <h2>WOMEN'S <br />RUGBY</h2>
+            <h3>Follow them and <br />
+                come to their home <br />
+                game on Saturday <br />
+                February 8th!</h3>
+            <img src='/PlaceHolderImage.jpg' alt='Team of the week'></img>
+            <a href="https://instagram.com">
+                <img src='/instagram.png' className='instagramIcon' alt='Instagram'></img>
+            </a>
+        </div>
+    }
+}
+
+class HomePage extends React.Component {
+    render() {
         return <div>
-            <DivTest></DivTest>
-            <EventBox 
-              date="Feb 1st" 
-              club="MENS SOCCER"
-              location="UCLA"
-              time="2:00p.m"></EventBox>
-            <EventBox
-               date="Feb 6th"
-               club="DISTANCE CLUB"
-               location="BBQ Fundraiser on Dexter Lawn"
-               time="11:00a.m"></EventBox>
-            <EventBox
-               date="Feb 8th"
-               club="WOMENS RUGBY"
-               location="CalPoly"
-               time="12:00p.m"></EventBox>
-            <EventBox
-              date="Feb 12th"
-              club="SWIM CLUB"
-              location="Stanford University"
-              time="1:00p.m"></EventBox>
-        </div>
-
+            <Events />
+            <Title />
+            <PlaceHolderImage />
+            <Info />
+        </div>;
     }
 }
-  
-ReactDOM.render(<Together />, document.getElementById('root'));
 
+class FormsPage extends React.Component {
+    render() {
+        return <div className="forms">
+            <ResourceTitle />
+            <h3>Club Sports strives to make running your club as streamlined as possible. This page is an <br />
+                exellent resource for all the information and forms you need. If you have any additional <br />
+                questions, please contact the Club Sports Advisor.</h3>
+            <div id="greenform1" ></div>
+            <h2>PARTICIPANT FORMS</h2>
+            <label>Participant Release Form (PDF)</label><br />
+            <label>Risk and Release Form (PDF)</label><br />
+            <label>Medical Insurance Form (PDF)</label>
+            <div id="greenform2" ></div>
+            <h2>HOME EVENT FORMS</h2>
+            <label>Facility Request Form (DOC)</label><br />
+            <label>Equipment Agreement (DOC)</label>
+            <div id="greenform3" ></div>
+            <h2>AWAY EVENT FORMS</h2>
+            <label>Club Sport Travel Roster (PDF)</label><br />
+            <label>Reimbursement Request (DOC)</label>
+        </div>
+    }
+}
 
-/*
-var element = React.createElement('h1', {className:'greeting'}, 'Hello word!');
+class RegisterPage extends React.Component {
+    render() {
+        return <div>
+            <Register />
+        </div>;
+    }
+}
 
+ReactDOM.render(<Menu />, document.getElementById('root'));
 
-ReactDOM.render(element, document.getElementById('root'));
-*/
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();

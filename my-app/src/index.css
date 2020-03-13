@@ -1,3 +1,13 @@
+
+@font-face {
+  font-family: 'NCAA';
+  src: url('fonts/ncaa_cal_poly_mustangs-webfont.woff2') format('woff2'),
+       url('fonts/ncaa_cal_poly_mustangs-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,25 +18,22 @@ body {
   background-color: #F9F5EF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .menu{
   background-color: #154734;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  margin-bottom: 10px;
+  z-index: 1;
 }
-
 
 .menu a {
   float: right;
   color: #C9CAC7;
   text-align: center;
-  padding: 1%;
+  font-weight: bold;
+  padding: 20px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .menu a:hover {
@@ -35,17 +42,146 @@ code {
 }
 
 .menu h1{
-  font-size: 26px;
+  font-size: 22px;
   color: #F7F8F4;
-  text-align:left;
-  padding-left: 3%;
+  float: left;
 }
 
+.menu img{
+  height: 35px;
+  padding: 10px;
+  padding-left: 20px;
+  float: left;
+}
+
+.placeholderImage{
+  margin:10px;
+  padding:10px;
+  width: 45%;
+  padding-top: 0px;
+  margin-top:0px;
+}
+
+.placeholderImage img{
+  height: 413px;
+  width: 625px;
+  padding-top: 150px;
+  padding-left: 4.5%;
+  padding-bottom: 40px;
+}
+
+.title h3{
+  font-size: 34px;
+  font-family: NCAA;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  height: 35px;
+  color: #413E3E;
+}
+
+.title {
+  padding-left: 4.5%;
+  position: absolute;
+  top: 60px;
+}
+
+.title2{
+  font-size: 34px;
+  font-family: NCAA;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  height: 35px;
+  color: #413E3E;
+  top: 60px;
+  text-align: center;
+}
+
+.info{
+  position: relative;
+  top: 280px;
+  height: 455px;
+  width:100%;
+  background: #154734;
+  
+}
+
+.info img{
+  height: 300px;
+  width: 437px;
+  padding-left: 40px;
+  padding-top: 120px;  
+}
+
+.info h1{
+  float: left;
+  position: absolute;
+  top: 29px;
+  font-size: 28px;
+  padding-left: 84px;
+  letter-spacing: 0.1em;
+  line-height: 32px;
+  font-family: NCAA;
+}
+
+.info h2{
+  position: absolute;
+  font-family: Arial Black;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 31px;
+  letter-spacing: 0.1em;
+  color: #F7F8F4;
+  top: 100px;
+  padding-left: 540px;
+}
+
+.info h3{
+  position: absolute;
+  font-family: Arial Unicode MS;
+  color: #F7F8F4;
+  top: 170px;
+  font-size: 17px;
+  padding-left: 540px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+}
+
+#rectangle {
+  width:413px;
+  height:60px;
+  background: #F3BF39;
+  position: absolute;
+  top: 35px;
+  left:35px;
+}
+
+.info .instagramIcon {
+  width: 60px;
+  height: 40px;
+}
+
+.login
+{
+  background-image: url(/login.png);
+  opacity: 0.7;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color:white;
+}
 .event {
   font-style: arial;
   color: black;
   text-align: right;
-  padding: 4.5%;
+  padding-top: -600px;
 }
 
 .event h1{
@@ -56,7 +192,55 @@ code {
   font-size: 12px;
 }
 .event h3{
-  font-size: 6px;
-  color: blue;
-  
+  font-size: 16px;
+  color: #3381DC;
+}
+
+.forms{
+  text-align: center;
+  padding-top: 100px;
+}
+
+.forms h2{
+  font-family: Arial Black;
+  font-weight: 900;
+  font-size: 27px;
+  line-height: 60px;
+  letter-spacing: 0.1em;
+  color: #413E3E;
+  text-align:center;
+}
+
+.forms label{
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+#greenform1{
+  width:40%;
+  border:3px solid green;
+  padding:30px;
+  display:inline-block;
+  position: absolute;
+  left: 380px;
+}
+
+#greenform2{
+  width:40%;
+  border:3px solid green;
+  padding:30px;
+  display:inline-block;
+  position: absolute;
+  left: 380px;
+  top:465px;
+}
+
+#greenform3{
+  width:40%;
+  border:3px solid green;
+  padding:30px;
+  display:inline-block;
+  position: absolute;
+  left: 380px;
+  top:613px;
 }
