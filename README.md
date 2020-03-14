@@ -4,7 +4,7 @@
 
 `git clone {github link}`
 
-`npm install-depend`
+`npm run install-depend`
 
 `npm run dev ` to run both frontend and backend
 
