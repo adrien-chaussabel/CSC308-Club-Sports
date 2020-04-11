@@ -7,15 +7,25 @@ const app=express();
 
 const selectAll = "SELECT * FROM users"
 
-const con = mysql.createConnection({
-    host: "localhost",
+//Connect to the Google cloud database
+const con = mysql.createPool({
+    host: '35.239.17.119',
     user: "root",
     password: "csc308sports",
-    database: "www"
+    database: "clubsports",
 
 });
 
-con.connect(err => {
+/* Connect to local database
+const con = mysql.createPool({
+    host: '127.0.0.1',
+    user: "root",
+    password: "csc308sports",
+    database: "www",
+
+});*/
+
+con.getConnection(err => {
     if(err){
         return err;
     }
@@ -57,9 +67,9 @@ app.get('/users/add', (req, res) =>{
 
 app.get('/api/events', (req, res) => {
     const events = [
-        {id: 1, firstName: 'John', lastName: 'Doe'},
-        {id: 2, firstName: 'Joe', lastName: 'Swanson'},
-        {id: 3, firstName: 'Kanye', lastName: 'West'}
+        {id: 1, sport: 'Men\s Soccer', eventName: 'Game at UCLA'},
+        {id: 2, sport: 'Distance Club', eventName: 'BBQ Fundraiser'},
+        {id: 3, sport: 'Women\'s Rugby', eventName: 'Game at Home'}
     ];
 
     res.json(events);

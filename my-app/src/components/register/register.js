@@ -27,7 +27,8 @@ getUsers = _ => {
 addUser = _ => {
   const {user} = this.state;
   //console.log(user)
-  fetch(`/users/add?firstname=${user.firstname}&lastname=${user.lastname}&email=${user.email}&username=${user.username}&password=${user.password}`)
+  fetch(`/users/add?firstname=${user.firstname}&lastname=${user.lastname}
+  &email=${user.email}&username=${user.username}&password=${user.password}`)
   .then(response => response.json())
   .then(this.getUsers)
   .catch(err => console.error(err));
@@ -64,7 +65,7 @@ render(){
               onChange={e => this.setState({user: {...user, password: e.target.value }})} 
               />
               <button onClick={this.addUser}>Register</button>
-              <p className="message">Already registered? <a href="/">Sign In</a></p>
+              <p className="message">Already registered? <a href="/login">Sign In</a></p>
           </div>
       </div>
   );

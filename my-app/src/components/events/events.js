@@ -22,7 +22,7 @@ class Events extends Component{
                 <h1>Events</h1>
                 <ul>
                     {this.state.events.map(events =>
-                        <li key={events.id}>{events.firstName} {events.lastName}</li>    
+                        <li key={events.id}>{events.sport} | {events.eventName}</li>    
                     )}
                 </ul>
             </div>
