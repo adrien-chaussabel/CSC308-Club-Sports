@@ -7,12 +7,20 @@ app.use(bodyParser.json({type: 'application/json'}));
 app.use(bodyParser.urlencoded({extended:true}));
 
 var con = mysql.createConnection({
+    host: "35.239.17.119",
+    user: "root",
+    password: "csc308sports",
+    database: "clubsports"
+
+});
+
+/*var con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "csc308sports",
     database: "www"
 
-});
+});*/
 
 con.connect(function(error){
     if(error) console.log(error);
