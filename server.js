@@ -7,13 +7,21 @@ const app=express();
 
 const selectAll = "SELECT * FROM users"
 
-const con = mysql.createConnection({
+var con = mysql.createConnection({
+    host: "35.239.17.119",
+    user: "root",
+    password: "csc308sports",
+    database: "clubsports"
+
+});
+
+/*var con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "csc308sports",
     database: "www"
 
-});
+});*/
 
 con.connect(err => {
     if(err){
