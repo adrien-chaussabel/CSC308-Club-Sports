@@ -28,7 +28,7 @@ class Events extends Component{
                 <h1>Events</h1>
                 <ul>
                 {events.map(events =>
-                        <li key={events.id}>{events.sport} {events.description} {events.time} {events.location}</li>   
+                        <li key={events.id}>{events.sport} {events.date} {events.time} {events.location}</li>   
                     )}
                 </ul>
             </div>

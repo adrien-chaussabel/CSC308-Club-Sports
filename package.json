@@ -14,8 +14,8 @@
     "node": "^13.9.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
-    "jest": "^25.3.0",
+    "nodemon": "^2.0.3",
+    "jest": "^25.3.0"
   },
   "scripts": {
     "install-depend": "npm install express concurrently nodemon mysql cors && cd my-app && npm install && npm install react-router-dom",
