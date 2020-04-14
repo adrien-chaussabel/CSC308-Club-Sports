@@ -6,7 +6,8 @@ const mysql = require("mysql");
 const app = express();
 
 const selectAllUsers = "SELECT * FROM users"
-const selectAllEvents = "SELECT * FROM events"
+const selectAllEvents = `SELECT id, sport, DATE_FORMAT(date, "%M %d %Y") as date, 
+TIME_FORMAT(time, "%h:%i %p")as time, location, description FROM events;`
 
 /*connection with Google server*/
 var con = mysql.createConnection({
