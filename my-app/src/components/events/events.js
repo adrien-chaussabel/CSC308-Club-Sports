@@ -24,13 +24,22 @@ class Events extends Component{
         const {events} = this.state;
         return (
             <div className='event'>
-            
-                <h1>Events</h1>
-                <ul>
+                <div className = "eventbox">
+                    <h1>UPCOMING EVENTS</h1>
+                </div>
+                <div className = "eventbox2">
+                    <img src='/calendar.png' alt='test'/>
+                </div>
+                <div className = "eventbox3">
+                
                 {events.map(events =>
-                        <li key={events.id}>{events.sport} {events.date} {events.time} {events.location}</li>   
+                         <h2 key={events.id}>{events.date} <h3>{events.sport}</h3> 
+                         {events.location} at {events.time} <a href="#details">see details</a> 
+                         <h5>______________________________________________</h5></h2>
                     )}
-                </ul>
+                
+                
+                </div>
             </div>
         );
     }

@@ -7,14 +7,98 @@
 }
 
 .event h1{
-  font-size: 18px;
+  font-size: 23px;
+  letter-spacing: 0.1em;
+  
 }
 
 .event h2{
   font-size: 12px;
 }
+
 .event h3{
   font-size: 16px;
   color: #3381DC;
   
+}
+
+/*box for events*/
+.eventbox {
+  margin-top: 60px;
+  right: 150px;
+  padding: 4px 3px;
+  background-color: #F3BF39;
+  width: 345px;
+  height: 40px;
+  text-align: center;
+  position: absolute;
+
+}
+
+.eventbox2 {
+  margin-top: 60px;
+  right: 95px;
+  padding: 4px 3px;
+  background-color: #789954;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  position: absolute;
+}
+
+.eventbox2 img {
+  position: absolute;
+  right: 6px;
+  max-width:50px;
+  max-height:44px;
+  width: auto;
+  height: auto;
+}
+
+.eventbox3 {
+  margin-top: 135px;
+  right: 84px;
+  padding: 4px 3px;
+  float: left;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  position: absolute;
+}
+
+.eventbox3 h2
+{
+  margin-top: -5px;
+  padding-top: 1px;
+  font-family: Arial Unicode MS;
+  text-align: left;
+  font-size: 18px; 
+  line-height: 100%;
+}
+
+.eventbox3 a
+{
+  float: right;
+  margin-top: -34px;
+  font-size: 18px; 
+  color:#3381DC;
+  text-decoration: none;
+}
+
+
+.eventbox3 h3
+{
+  padding-top: 10px;
+  font-family: Arial Black;
+  text-align: left;
+  font-size: 20px; 
+  line-height: 1%;
+}
+
+
+.eventbox3 h5{
+  color: rgba(41,64,15,0.81);
+  text-align: left;
+  margin-top: -20px;
+  font-size: 16px;
 }
