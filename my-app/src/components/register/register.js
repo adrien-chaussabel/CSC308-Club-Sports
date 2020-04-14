@@ -1,7 +1,7 @@
 import React from 'react';
 import './register.css'; 
 
-
+/*the users table holds first name, lastname, email, username, password, and type*/
 class Register extends React.Component {
   state = {
     user: {
@@ -18,7 +18,7 @@ componentDidMount(){
 }
 
 getUsers = _ => {
-  fetch('/user')
+  fetch('/users')
   .then(response => response.json())
   .then(response => this.setState({users: response.data}))
   .catch(err => console.error(err));

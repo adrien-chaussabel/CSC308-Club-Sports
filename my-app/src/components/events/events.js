@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './events.css';
 
+/* the events table holds sport, date, time, location, and description of event*/
 class Events extends Component{
     constructor(){
         super();
@@ -10,19 +11,24 @@ class Events extends Component{
     }
 
     componentDidMount(){
-        fetch('/api/events')
-            .then(res => res.json())
-            .then(events => this.setState({events}, () => console.log('Events fetched...',
-            events)));
-    }
-
+        this.getEvents();
+      }
+      
+      getEvents = _ => {
+        fetch('/events')
+        .then(response => response.json())
+        .then(response => this.setState({events: response.data}))
+        .catch(err => console.error(err));
+      }
     render(){
+        const {events} = this.state;
         return (
             <div className='event'>
+            
                 <h1>Events</h1>
                 <ul>
-                    {this.state.events.map(events =>
-                        <li key={events.id}>{events.firstName} {events.lastName}</li>    
+                {events.map(events =>
+                        <li key={events.id}>{events.sport} {events.description} {events.time} {events.location}</li>   
                     )}
                 </ul>
             </div>

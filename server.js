@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mysql = require("mysql");
 
-const app=express();
+const app = express();
 
 const selectAllUsers = "SELECT * FROM users"
 const selectAllEvents = "SELECT * FROM events"
@@ -38,6 +38,7 @@ app.get("/", (req, res) => {
     res.send("hello from the server")
 })
 
+/*shows all users in users table*/
 app.get("/users", (req, res) => {
     con.query(selectAllUsers, (err, results) => {
         if(err){
@@ -51,6 +52,7 @@ app.get("/users", (req, res) => {
     });
 });
 
+/*shows all events in events table*/
 app.get("/events", (req, res) => {
     con.query(selectAllEvents, (err, results) => {
         if(err){
@@ -64,6 +66,7 @@ app.get("/events", (req, res) => {
     });
 });
 
+/*adds user to users table*/
 app.get('/users/add', (req, res) =>{
     const {firstname, lastname, email, username, password} = req.query;
     let body = {firstname, lastname, email, username, password}
@@ -78,6 +81,7 @@ app.get('/users/add', (req, res) =>{
     });
 });
 
+/*fake data for backend work*/
 app.get('/api/events', (req, res) => {
     const events = [
         {id: 1, firstName: 'John', lastName: 'Doe'},
