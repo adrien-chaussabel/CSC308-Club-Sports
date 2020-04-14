@@ -13,14 +13,63 @@ import {
 
 
 class Menu extends React.Component {
-    render() {
+    render() {;
+        
         return <Router>
             <div className="menu">
                 <img src='/CalPolyLogo.png' alt='Cal Poly Logo' />
                 <h1>CLUB SPORTS HUB</h1>
                 <Link to="/login">LOGIN</Link>
                 <Link to="/forms">FORMS</Link>
-                <a href="/.">SPORTS</a>
+                <div class="dropdown">
+                <button class="dropbtn">Sports
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="header">
+                
+                    </div>
+                    <div class="row">
+                    <div class="column">
+                        <h3>MEN'S</h3>
+                        <h4>___________</h4>
+                        <b href="#">BASKETBALL</b>
+                        <b href="#">LACROSSE</b>
+                        <b href="#">HOCKEY</b>
+                        <b href="#">RUGBY</b>
+                        <b href="#">SOCCER</b>
+                        <b href="#">ULTIMATE</b>
+                        <b href="#">VOLLEYBALL</b>
+                        <b href="#">WATER POLO</b>
+                    </div>
+                    <div class="column">
+                        <h3>WOMEN'S </h3>
+                        <h4>___________</h4>
+                        <b href="#">BASKETBALL</b>
+                        <b href="#">RUGBY</b>
+                        <b href="#">SOCCER</b>
+                        <b href="#">ULTIMATE</b>
+                        <b href="#">VOLLEYBALL</b>
+                        <b href="#">WATER POLO</b>
+                    </div>
+                    <div class="column">
+                        <h3>COED</h3>
+                        <h4>___________</h4>
+                        <b href="#">CYCLING</b>
+                        <b href="#">BOWLING</b>
+                        <b href="#">DISTANCE</b>
+                        <b href="#">FENCING</b>
+                        <b href="#">SAILING</b>
+                        <b href="#">SURF</b>
+                        <b href="#">SWIM</b>
+                        <b href="#">TENNIS</b>
+                        <b href="#">TRIATHLON</b>
+                        <b href="#">WATER SKI</b>
+                    </div>
+                    <h5>___________________________________________________</h5>
+                    </div>
+                </div>
+                </div>
                 <Link to="calendar">CALENDAR</Link>
                 <Link to="/">HOME</Link>
             </div>;
@@ -36,6 +85,44 @@ class Menu extends React.Component {
         </Router>
     }
 }
+
+
+class EventBox extends React.Component{
+    //Class that is going to render each event.
+    render() {
+        return <div className="event">
+            <div class="eventbox">
+              <h1>UPCOMING EVENT</h1>
+            </div>
+            <div class="eventbox2">
+            <img src='/calendar.png' alt='test'/>
+            </div>
+            <div class="eventbox3">
+              <h2>Feb 1st</h2>
+              <h3>MEN'S SOCCER</h3>
+              <h2>at UCLA 2:00pm</h2>
+              <a href="#details">see details</a>
+              <h5>______________________________________________</h5>
+              <h2>Feb 6th</h2>
+              <h3>DISTANCE CLUB</h3>
+              <h2>BBQ Fundraiser on Dexter Lawn
+                11:00am - 1:30pm
+              </h2>
+              <a href="#details">see details</a>
+              <h5>______________________________________________</h5>
+              <h2>Feb 8th</h2>
+              <h3>WOMEN'S RUGBY</h3>
+              <h2>at Cal Poly 12:00pm</h2>
+              <h3>SWIM CLUB</h3>
+              <h2>at Stanford University 1:00pm</h2>
+              <a href="#details">see details</a>
+              <h5>______________________________________________</h5>
+            </div>
+        
+        </div>
+    }
+}
+
 
 class Title extends React.Component {
     render() {
@@ -156,7 +243,8 @@ class Info extends React.Component {
 class HomePage extends React.Component {
     render() {
         return <div>
-            <Events />
+            
+            <EventBox />
             <Title />
             <PlaceHolderImage />
             <Info />
@@ -195,6 +283,8 @@ class RegisterPage extends React.Component {
         </div>;
     }
 }
+
+
 
 ReactDOM.render(<Menu />, document.getElementById('root'));
 
