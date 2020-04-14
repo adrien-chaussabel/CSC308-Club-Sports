@@ -5,8 +5,10 @@ const mysql = require("mysql");
 
 const app=express();
 
-const selectAll = "SELECT * FROM users"
+const selectAllUsers = "SELECT * FROM users"
+const selectAllEvents = "SELECT * FROM events"
 
+/*connection with Google server*/
 var con = mysql.createConnection({
     host: "35.239.17.119",
     user: "root",
@@ -37,7 +39,20 @@ app.get("/", (req, res) => {
 })
 
 app.get("/users", (req, res) => {
-    con.query(selectAll, (err, results) => {
+    con.query(selectAllUsers, (err, results) => {
+        if(err){
+            return res.send(err)
+        }
+        else{
+            return res.json({
+                data: results
+            })
+        }
+    });
+});
+
+app.get("/events", (req, res) => {
+    con.query(selectAllEvents, (err, results) => {
         if(err){
             return res.send(err)
         }
