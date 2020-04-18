@@ -34,8 +34,8 @@ class Events extends Component{
                 
                 {events.map(events =>
                          <h2 key={events.id}>{events.date} <h3>{events.sport}</h3> 
-                         {events.location} at {events.time} <a href="#details">see details</a> 
-                         <h5>______________________________________________</h5></h2>
+                         {events.location} {events.time} <a href="#details">see details</a> 
+                         <h5>___________________________________________</h5></h2>
                     )}
                 
                 

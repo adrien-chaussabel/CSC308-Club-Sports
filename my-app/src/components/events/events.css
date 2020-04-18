@@ -1,24 +1,26 @@
 .event {
-  font-style: arial;
-  text-align: right;
-  float:right;
+  margin: 0 auto;
+  float: right;
   padding-top: 90px;
   padding-right: 90px;
 }
 
 .event h1{
+  font-family: NCAA;
   font-size: 23px;
+  margin-top: 13px;
   letter-spacing: 0.1em;
   
 }
 
 .event h2{
   font-size: 12px;
+  font-weight: 200;
 }
 
 .event h3{
   font-size: 16px;
-  color: #3381DC;
+  color: #000000;
   
 }
 
@@ -28,7 +30,7 @@
   right: 150px;
   padding: 4px 3px;
   background-color: #F3BF39;
-  width: 345px;
+  width: 320px;
   height: 40px;
   text-align: center;
   position: absolute;
@@ -42,63 +44,60 @@
   background-color: #789954;
   width: 50px;
   height: 40px;
-  text-align: center;
   position: absolute;
 }
 
 .eventbox2 img {
   position: absolute;
-  right: 6px;
-  max-width:50px;
-  max-height:44px;
+  right: 7px;
+  max-width: 45px;
+  max-height: 39px;
   width: auto;
   height: auto;
 }
 
 .eventbox3 {
-  margin-top: 135px;
-  right: 84px;
-  padding: 4px 3px;
+  margin-top: 130px;
+  right: 97px;
   float: left;
-  width: 400px;
-  height: 400px;
-  text-align: center;
+  width: 370px;
   position: absolute;
 }
 
 .eventbox3 h2
 {
-  margin-top: -5px;
-  padding-top: 1px;
-  font-family: Arial Unicode MS;
+  margin-top: 0px;
+  margin-left: -10px;
+  font-family: Arial;
   text-align: left;
-  font-size: 18px; 
-  line-height: 100%;
+  font-size: 16px; 
+  
 }
 
 .eventbox3 a
 {
   float: right;
-  margin-top: -34px;
-  font-size: 18px; 
+  padding-right: -300px;
+  font-size: 14px; 
+  font-weight: 200;
   color:#3381DC;
   text-decoration: none;
+  
 }
 
 
 .eventbox3 h3
 {
-  padding-top: 10px;
   font-family: Arial Black;
+  font-weight: 900;
   text-align: left;
-  font-size: 20px; 
+  font-size: 18px; 
   line-height: 1%;
 }
 
 
 .eventbox3 h5{
   color: rgba(41,64,15,0.81);
-  text-align: left;
-  margin-top: -20px;
+  margin-top: 6px;
   font-size: 16px;
 }

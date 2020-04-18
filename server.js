@@ -7,7 +7,10 @@ const app = express();
 
 const selectAllUsers = "SELECT * FROM users"
 const selectAllEvents = `SELECT id, sport, DATE_FORMAT(date, "%M %d") as date, 
-TIME_FORMAT(time, "%h:%i %p")as time, location, description FROM events;`
+TIME_FORMAT(time, "%h:%i %p")as time, location, description 
+FROM events
+ORDER BY YEAR(date) ASC, MONTH(date) ASC, DAY(date) ASC
+LIMIT 4;`
 
 /*connection with Google server*/
 var con = mysql.createConnection({
