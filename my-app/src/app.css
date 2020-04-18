@@ -246,21 +246,27 @@ body {
   padding: 1% ;
   float: right;
   overflow: hidden;
-  
+  color:#C9CAC7;
+}
+
+.dropdown:hover {
+  background-color: #032815;
+  color: #F3BF39;
 }
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: bold;
   text-align: center;
   border: none;
   outline: none;
-  color:#C9CAC7;
-  
+  color:inherit;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
+
 
 /* Add a grey background color to navbar links on hover */
 .menu b:hover{
@@ -270,28 +276,17 @@ body {
   mix-blend-mode: hard-light;
 }
 
-
-
- .dropdown:hover .dropbtn {
-  background-color: #154734;
-  fill: solid ;
-  color:  #F3BF39;
-  mix-blend-mode: hard-light;
-}
-
-
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   right: 1px;
-
+  margin-top: 1.4em;
   position: absolute;
   background-color: #F6EED9;
   width:438px ;
   height:330px ;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  
+  z-index: 1;  
 }
 
 /*box for events*/
@@ -304,11 +299,7 @@ body {
   height: 61px;
   text-align: center;
   position: absolute;
-
-
 }
-
-
 
 .eventbox2 {
   margin-top: 60px;
@@ -323,8 +314,6 @@ body {
 
 }
 
-
-
 .eventbox2 img {
   position: absolute;
   padding-top: 5px;
@@ -334,9 +323,6 @@ body {
   width: auto;
   height: auto;
 }
-
-
-
 
 .event h2{
   margin-top: 0px;
@@ -384,7 +370,6 @@ body {
 
 /* Links inside the dropdown */
 .dropdown-content b {
-
   float: none;
   font-family: NCAA;
   font-style: Regular;
@@ -396,8 +381,8 @@ body {
   text-decoration: none;
   height: 2px;
   display: block;
-
 }
+
 .menu h3{
   margin-top:-25px;
   top: 0;
@@ -410,10 +395,9 @@ body {
   letter-spacing: 10%;
   font-family: Arial;
   vertical-align: top;
-
 }
-.menu h4
-{
+
+.menu h4{
   margin-top:-18px;
   line-height: 0pc;
   font-size: 23px;
@@ -423,15 +407,12 @@ body {
 
 }
 
-.menu h5
-{
+.menu h5{
   padding-left: 5px;
   line-height: 13pt;
   font-size: 23px;
   font-style: Bold;
   color: #154734;
-  
-
 }
 
 
