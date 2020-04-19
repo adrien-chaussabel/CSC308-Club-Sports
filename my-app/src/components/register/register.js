@@ -1,6 +1,6 @@
 import React from 'react';
 import './register.css'; 
-
+import {Link} from "react-router-dom";
 
 class Register extends React.Component {
   state = {
@@ -64,7 +64,7 @@ render(){
               onChange={e => this.setState({user: {...user, password: e.target.value }})} 
               />
               <button onClick={this.addUser}>Register</button>
-              <p className="message">Already registered? <a href="/">Sign In</a></p>
+              <p className="message">Already registered? <Link to='/login'>Sign In</Link></p>
           </div>
       </div>
   );
