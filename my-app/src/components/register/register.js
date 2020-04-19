@@ -1,6 +1,7 @@
 import React from 'react';
 import './register.css'; 
 
+
 /*the users table holds first name, lastname, email, username, password, and type*/
 class Register extends React.Component {
   state = {
@@ -39,6 +40,7 @@ addUser = _ => {
   .catch(err => console.error(err));
 
 }
+
 render(){
   const {user} = this.state;
   return (
