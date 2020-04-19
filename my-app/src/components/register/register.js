@@ -9,7 +9,8 @@ class Register extends React.Component {
       lastname: '',
       email: '',
       username: '',
-      password: ''
+      password: '',
+      type: ''
     }
 }
 
@@ -27,7 +28,12 @@ getUsers = _ => {
 addUser = _ => {
   const {user} = this.state;
   //console.log(user)
-  fetch(`/users/add?firstname=${user.firstname}&lastname=${user.lastname}&email=${user.email}&username=${user.username}&password=${user.password}`)
+  fetch(`/users/add?firstname=${user.firstname}
+  &lastname=${user.lastname}
+  &email=${user.email}
+  &username=${user.username}
+  &password=${user.password}
+  &type=${user.type}`)
   .then(response => response.json())
   .then(this.getUsers)
   .catch(err => console.error(err));
@@ -40,29 +46,58 @@ render(){
           <div className="form">
               <input 
               type="text"
-              placeholder="firstname" 
+              placeholder="First Name" 
               onChange={e => this.setState({user: {...user, firstname: e.target.value }})} 
               />
               <input 
               type="text"
-              placeholder="lastname" 
+              placeholder="Last Name" 
               onChange={e => this.setState({user: {...user, lastname: e.target.value }})} 
               />
               <input 
               type="text"
-              placeholder="email" 
+              placeholder="Email" 
               onChange={e => this.setState({user: {...user, email: e.target.value }})} 
               />
               <input 
               type="text"
-              placeholder="username"
+              placeholder="Username"
               onChange={e => this.setState({user: {...user, username: e.target.value }})} 
               />
               <input 
               type="password"
-              placeholder="password"
+              placeholder="Password"
               onChange={e => this.setState({user: {...user, password: e.target.value }})} 
               />
+              <label class="container">Student
+                <input type="radio" 
+                value="student" 
+                name="type"
+                onChange={e => this.setState({user: {...user, type: e.target.value }})}/>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">Supporter
+                <input type="radio" 
+                value="supporter" 
+                name="type"
+                onChange={e => this.setState({user: {...user, type: e.target.value }})}></input>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">Coach
+                <input type="radio" 
+                value="coach" 
+                name="type"
+                onChange={e => this.setState({user: {...user, type: e.target.value }})}></input>
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">ASI Employee
+                <input type="radio" 
+                value="asi employee" 
+                name="type"
+                onChange={e => this.setState({user: {...user, type: e.target.value }})}></input>
+                <span class="checkmark"></span>
+              </label>
+
               <button onClick={this.addUser}>Register</button>
               <p className="message">Already registered? <a href="/">Sign In</a></p>
           </div>

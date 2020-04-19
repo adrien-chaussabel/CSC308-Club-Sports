@@ -72,8 +72,8 @@ app.get("/events", (req, res) => {
 
 /*adds user to users table*/
 app.get('/users/add', (req, res) =>{
-    const {firstname, lastname, email, username, password} = req.query;
-    let body = {firstname, lastname, email, username, password}
+    const {firstname, lastname, email, username, password, type} = req.query;
+    let body = {firstname, lastname, email, username, password, type}
     const insertUser = "INSERT INTO users SET ?";
     con.query(insertUser, body, (err, results) => {
         if (err){
