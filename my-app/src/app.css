@@ -274,9 +274,7 @@ body {
   z-index: 1;  
 }
 
-<<<<<<< HEAD:my-app/src/index.css
-=======
-/*box for events*/
+/*box for events
 .eventbox {
   margin-top: 60px;
   right: 154px;
@@ -314,7 +312,6 @@ body {
 .event h2{
   margin-top: 0px;
 }
->>>>>>> 8fbc8f577e18bd5632ab8332c265ce2f20da342d:my-app/src/app.css
 
 .event h1 {
   margin-top: 17px;
@@ -324,7 +321,7 @@ body {
   color:rgba(21,21,20,0.89);
   
   
-}
+}*/
 
 
 /* Create three equal columns that floats next to each other */

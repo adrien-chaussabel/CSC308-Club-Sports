@@ -2,7 +2,7 @@ import React from 'react';
 import '../../app.css';
 import Register from '../register/register';
 import Login from '../login/login'
-import EventBox from './events_box'
+import Events from '../events/events'
 import FormsPage from '../forms/forms'
 import {
     BrowserRouter as Router,
@@ -125,7 +125,7 @@ class Info extends React.Component {
 class HomePage extends React.Component {
     render() {
         return <div>
-            <EventBox />
+            <Events/>
             <Title />
             <PlaceHolderImage />
             <Info />
