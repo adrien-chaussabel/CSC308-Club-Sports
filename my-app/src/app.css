@@ -259,6 +259,7 @@ body {
   font-size: 15px;
   font-weight: bold;
   text-align: center;
+  padding: 8px;
   border: none;
   outline: none;
   color:inherit;
@@ -280,7 +281,7 @@ body {
 .dropdown-content {
   display: none;
   right: 1px;
-  margin-top: 1.4em;
+  margin-top: 1px;
   position: absolute;
   background-color: #F6EED9;
   width:438px ;
@@ -478,3 +479,21 @@ body {
   margin-top: -20px;
   font-size: 16px;
 }
+
+.dropdown-content a
+{
+  float: none;
+  text-align: left;
+  font-family: NCAA;
+  font-style: Regular;
+  fill: solid;
+  color:#413E3E;
+  font-size: 16px;
+  padding: 12px ;
+  letter-spacing: 15%;
+  text-decoration: none;
+  height: 2px;
+  display: block;
+
+}
+
