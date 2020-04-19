@@ -2,7 +2,7 @@ import React from 'react';
 import '../../app.css';
 import Register from '../register/register';
 import Login from '../login/login'
-import Events from '../events/events'
+import Events from './events'
 import FormsPage from '../forms/forms'
 import {
     BrowserRouter as Router,
