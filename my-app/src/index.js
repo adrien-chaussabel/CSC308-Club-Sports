@@ -1,16 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import App from './app.js';
 import * as serviceWorker from './serviceWorker';
-import Events from './components/events/events';
-import Register from './components/register/register';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-} from "react-router-dom";
 
+<<<<<<< HEAD
 
 class Menu extends React.Component {
     render() {;
@@ -249,5 +242,8 @@ class RegisterPage extends React.Component {
 
 
 ReactDOM.render(<Menu />, document.getElementById('root'));
+=======
+ReactDOM.render(<App />, document.getElementById('root'));
+>>>>>>> 8fbc8f577e18bd5632ab8332c265ce2f20da342d
 
 serviceWorker.unregister();
