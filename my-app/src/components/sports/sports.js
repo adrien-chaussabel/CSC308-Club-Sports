@@ -12,15 +12,12 @@ import {
 class SportsPage extends React.Component {
     render() {
         return <div>
-            
             <Menu2/>
-            <SportsTitle />
-            <Follow/>
-            <SportImage/>
-            <SportsInfo/>
-            <SportsInfoBottom/>
+            <SportsTitle/>
+            
+            
        
-        </div>;
+        </div>
     }
 }
 
@@ -35,7 +32,7 @@ class Menu2 extends React.Component {
                 <Link to="/login">CONTACT</Link>
                 <Link to="/login">SCHEDULE</Link>
                 <Link to="/login">RESULTS</Link>
-            </div>;
+            </div>
 
             <Switch>
                 
@@ -48,10 +45,10 @@ class Menu2 extends React.Component {
 
 }
 
-class SportImage extends React.Component {
+class SportsImage extends React.Component {
     render() {
-        return <div className="placeholderImage">
-            <img src='../public/Sport.jpg' alt='Sport'></img>
+        return <div classname="sportsimage">
+            <img src='/Sport.jpg' alt='Sport'></img>
         </div>;
     }
 }
@@ -98,6 +95,7 @@ class SportsTitle extends React.Component {
     render() {
         return <div className="sportstitle">
             <h3>CAL POLY SWIM CLUB</h3>
+            <img src='/Sport.jpg' alt='Sport'></img>
         </div>
     }
 }

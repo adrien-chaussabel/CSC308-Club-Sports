@@ -12,9 +12,9 @@ body {
 .menu2{
     background-color: #CFD5C8;
     width: 100%;
-    height: 51px;
+    height: 48px;
     position: absolute;
-    margin-top: 30px;
+    margin-top: 58px;
     z-index: 0;
   }
 
@@ -26,7 +26,7 @@ body {
     text-decoration: none;
     padding: 20px;
     font-size: 15px;
-    margin-top: -3px;
+    margin-top: -4px;
   
   }
   
@@ -38,12 +38,6 @@ body {
     font-family: NCAA;
     font-weight: bold;
     margin-left:20px;
-  }
-
-
-  .menu2 a:hover {
-    background-color: #032815;
-    color: #F3BF39;
   }
 
   .sportstitle {
@@ -58,7 +52,7 @@ body {
 
   .sportsinfo{
     position: relative;
-    top: 30px;
+    top: 300px;
     height: 455px;
     width:100%;
     background: #154734;
@@ -111,7 +105,6 @@ body {
   font-family: NCAA;
   color: #FFFFFF;
  
-
 }
 
 .sportsinfo h2
@@ -161,18 +154,21 @@ padding-left: 20px;
   margin: 0; /* Important for vertical align on mobile phones */
 }
   
-.placeholderImage{
-  margin:10px;
-  padding:10px;
-  width: 45%;
-  padding-top: 0px;
-  margin-top:0px;
-}
-
-.placeholderImage img{
+.sportstitle img{
   height: 413px;
   width: 625px;
-  padding-top: 150px;
-  padding-left: 4.5%;
-  padding-bottom: 40px;
+  margin-top: -15px;
 }  
+
+.sportstitle h3 {
+  font-family: NCAA;
+  letter-spacing: 0.1em;
+  font-size: 35px;
+  color: #154734;
+  padding-left: 10px;
+  
+}
+
+.sportstitle {
+  padding-top: 50px;
+}
