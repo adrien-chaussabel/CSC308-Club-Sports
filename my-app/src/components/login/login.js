@@ -44,12 +44,12 @@ class Login extends React.Component {
                 <form onSubmit ={this.handleSubmit}>
                 <input 
                 type="text"
-                placeholder="username"
+                placeholder="Username"
                 onChange={e => this.setState({user: {...user, username: e.target.value }})} 
                 />
                 <input 
                 type="password"
-                placeholder="password"
+                placeholder="Password"
                 onChange={e => this.setState({user: {...user, password: e.target.value }})} 
                 />
                 <button onClick={this.addUser}>Sign In</button>
