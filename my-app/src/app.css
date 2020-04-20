@@ -269,7 +269,7 @@ body {
   margin-top: 1.2em;
   position: absolute;
   background-color: #F6EED9;
-  width:530px ;
+  width:500px ;
   height:400px ;
   z-index: 1;  
 }
@@ -369,13 +369,12 @@ body {
 }
 
 .menu h3{
-  margin-top:-25px;
-  top: 0;
+  top: 10px;
   line-height: 0pc;
-  height: 0;
+  margin-top: 15px;
+  margin-left: 10px;
   font-size: 22px;
   color:#413E3E;
-  text-align: top;
   font-style: Bold;
   letter-spacing: 10%;
   font-family: Arial;
@@ -383,20 +382,21 @@ body {
 }
 
 .menu h4{
-  margin-top:-18px;
+  margin-top: -12px;
+  margin-left: 10px;
   line-height: 0pc;
   font-size: 23px;
-  font-style: Bold;
+  font-weight: 900;
   color: #F3BF39;
   height: 0;
 
 }
 
 .menu h5{
-  padding-left: 5px;
+  padding-left: 15px;
   line-height: 13pt;
   font-size: 23px;
-  font-style: Bold;
+  font-weight: 900;
   color: #154734;
 }
 
