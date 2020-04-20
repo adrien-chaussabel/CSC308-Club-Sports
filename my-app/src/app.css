@@ -232,6 +232,7 @@ body {
   float: right;
   overflow: hidden;
   color:#C9CAC7;
+  cursor: default;
 }
 
 .dropdown:hover {
@@ -244,6 +245,7 @@ body {
   font-size: 15px;
   font-weight: bold;
   text-align: center;
+  padding-top: 8px;
   border: none;
   outline: none;
   color:inherit;
@@ -255,22 +257,20 @@ body {
 
 /* Add a grey background color to navbar links on hover */
 .menu b:hover{
-  background-color: #154734;
-  fill: solid ;
   color: #413E3E;
   mix-blend-mode: hard-light;
+
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   right: 1px;
-  margin-top: 1.4em;
+  margin-top: 1.2em;
   position: absolute;
   background-color: #F6EED9;
-  width:438px ;
-  height:330px ;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width:530px ;
+  height:400px ;
   z-index: 1;  
 }
 
@@ -330,7 +330,7 @@ body {
   width: 29.33%;
   padding: 8px;
   background-color:#F6EED9 ;
-  height: 250px;
+  height: 320px;
 }
 
 .column b {
@@ -361,10 +361,10 @@ body {
   fill: solid;
   color:#413E3E;
   font-size: 16px;
-  padding: 12px ;
+  padding: 10px;
   letter-spacing: 15%;
   text-decoration: none;
-  height: 2px;
+ 
   display: block;
 }
 
@@ -401,11 +401,11 @@ body {
 }
 
 
-/* Add a grey background color to dropdown links on hover */
+/* Add a grey background color to dropdown links on hover
 .dropdown-content b:hover {
   background-color: #F6EED9;
   
-}
+}*/
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
