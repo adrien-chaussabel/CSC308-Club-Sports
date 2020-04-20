@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 
 
-
+/*have to run localhost:3000/sports to get TODO: link on menubar*/
 class SportsPage extends React.Component {
     render() {
         return <div>

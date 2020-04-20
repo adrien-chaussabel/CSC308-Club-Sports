@@ -12,6 +12,7 @@ import {
     Link,
 } from "react-router-dom";
 
+/*TODO: add link to sports page on menu bar*/
 class Menu extends React.Component {
     render() {
         return <Router>
