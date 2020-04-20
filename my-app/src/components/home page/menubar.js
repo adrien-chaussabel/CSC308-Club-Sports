@@ -2,7 +2,7 @@ import React from 'react';
 import '../../app.css';
 import Register from '../register/register';
 import Login from '../login/login'
-import EventBox from './events_box'
+import Events from './events'
 import FormsPage from '../forms/forms'
 import {
     BrowserRouter as Router,
@@ -46,7 +46,7 @@ class SportsDropDown extends React.Component {
                 <div class="row">
                     <div class="column">
                         <h3>MEN'S</h3>
-                        <h4>___________</h4>
+                        <h4>__________</h4>
                         <b href="#">BASKETBALL</b>
                         <b href="#">LACROSSE</b>
                         <b href="#">HOCKEY</b>
@@ -58,7 +58,7 @@ class SportsDropDown extends React.Component {
                     </div>
                     <div class="column">
                         <h3>WOMEN'S </h3>
-                        <h4>___________</h4>
+                        <h4>__________</h4>
                         <b href="#">BASKETBALL</b>
                         <b href="#">RUGBY</b>
                         <b href="#">SOCCER</b>
@@ -68,7 +68,7 @@ class SportsDropDown extends React.Component {
                     </div>
                     <div class="column">
                         <h3>COED</h3>
-                        <h4>___________</h4>
+                        <h4>__________</h4>
                         <b href="#">CYCLING</b>
                         <b href="#">BOWLING</b>
                         <b href="#">DISTANCE</b>
@@ -80,7 +80,6 @@ class SportsDropDown extends React.Component {
                         <b href="#">TRIATHLON</b>
                         <b href="#">WATER SKI</b>
                     </div>
-                    <h5>___________________________________________________</h5>
                 </div>
             </div>
         </div>
@@ -125,7 +124,7 @@ class Info extends React.Component {
 class HomePage extends React.Component {
     render() {
         return <div>
-            <EventBox />
+            <Events/>
             <Title />
             <PlaceHolderImage />
             <Info />

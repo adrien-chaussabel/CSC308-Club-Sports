@@ -92,3 +92,72 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
+.form label {
+  font-family: "Roboto", sans-serif;
+  float: left;
+  margin-left: 20px;
+  font-size: 13px;
+
+}
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 4px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  text-align: left;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  float: left;
+  opacity: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: -18px;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #4CAF50;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 4px;
+	left: 4px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: white;
+}
