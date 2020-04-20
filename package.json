@@ -22,7 +22,7 @@
     "nodemon": "^2.0.3"
   },
   "scripts": {
-    "install-depend": "npm install express concurrently nodemon mysql cors && cd my-app && npm install && npm install react-router-dom",
+    "install-depend": "npm install express concurrently nodemon mysql cors dotenv && cd my-app && npm install && npm install react-router-dom",
     "test": "jest",
     "start": "node server.js",
     "server": "nodemon server.js",
