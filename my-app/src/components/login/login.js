@@ -8,8 +8,8 @@ class Login extends React.Component {
         username: '',
         password: ''
       }
-  }
-  
+    }
+
   componentDidMount(){
     this.getUsers();
   }
@@ -20,16 +20,7 @@ class Login extends React.Component {
     .then(response => this.setState({users: response.data}))
     .catch(err => console.error(err));
   }
-  
-  addUser = _ => {
-    const {user} = this.state;
-    //console.log(user)
-    fetch(`/users/add?&username=${user.username}&password=${user.password}`)
-    .then(response => response.json())
-    .then(this.getUsers)
-    .catch(err => console.error(err));
-  
-  }
+
   render(){
     const {user} = this.state;
     return (
