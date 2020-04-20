@@ -51,7 +51,7 @@ class Menu2 extends React.Component {
 class SportImage extends React.Component {
     render() {
         return <div className="placeholderImage">
-            <img src='/Sport.jpg' alt='Sport'></img>
+            <img src='../public/Sport.jpg' alt='Sport'></img>
         </div>;
     }
 }
