@@ -1,6 +1,6 @@
 import React from 'react';
 import './register.css'; 
-
+import {Link} from "react-router-dom";
 
 /*the users table holds first name, lastname, email, username, password, and type*/
 class Register extends React.Component {
@@ -101,7 +101,7 @@ render(){
               </label>
 
               <button onClick={this.addUser}>Register</button>
-              <p className="message">Already registered? <a href="/">Sign In</a></p>
+              <p className="message">Already registered? <Link to='/login'>Sign In</Link></p>
           </div>
       </div>
   );
