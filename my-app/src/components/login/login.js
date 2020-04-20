@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../app.css';
 import {Link} from "react-router-dom";
+import axios from 'axios';
 
 class Login extends React.Component {
     state = {
@@ -21,11 +22,26 @@ class Login extends React.Component {
     .catch(err => console.error(err));
   }
 
+  handleSubmit(event) {
+      const {username, password} =this.state;
+    
+      axios.post("http://localhost:5000/users", 
+        {user: {username : username, password : password}})
+        .then(res =>{
+            console.log(res);
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+    event.preventDefault();
+  }
+
   render(){
     const {user} = this.state;
     return (
         <div className="login-page">
             <div className="form">
+                <form onSubmit ={this.handleSubmit}>
                 <input 
                 type="text"
                 placeholder="username"
@@ -38,6 +54,7 @@ class Login extends React.Component {
                 />
                 <button onClick={this.addUser}>Sign In</button>
                 <p className="message">New User? <Link to='/register'>Register</Link></p>
+                </form>
             </div>
         </div>
     );
