@@ -4,6 +4,7 @@ import Register from '../register/register';
 import Login from '../login/login'
 import Events from './events'
 import FormsPage from '../forms/forms'
+import SportsPage from '../sports/sports'
 import {
     BrowserRouter as Router,
     Switch,
@@ -38,7 +39,8 @@ class Menu extends React.Component {
 
 class SportsDropDown extends React.Component {
     render() {
-        return <div class="dropdown">
+        return <Router>
+        <div class="dropdown">
             <button class="dropbtn">SPORTS
                 <i class="fa fa-caret-down"></i>
             </button>
@@ -83,6 +85,10 @@ class SportsDropDown extends React.Component {
                 </div>
             </div>
         </div>
+        <Switch>
+        <Route path="/sports" component={SportsPage} />
+        </Switch>
+    </Router>
     }
 }
 
@@ -131,5 +137,7 @@ class HomePage extends React.Component {
         </div>;
     }
 }
+
+
 
 export default Menu;
