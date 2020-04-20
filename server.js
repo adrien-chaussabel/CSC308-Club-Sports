@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express=require('express');
 const cors = require('cors');
 const mysql = require("mysql");
@@ -13,10 +14,10 @@ LIMIT 4;`
 
 /*connection with Google server*/
 var con = mysql.createConnection({
-    host: "35.239.17.119",
-    user: "root",
-    password: "csc308sports",
-    database: "clubsports"
+    host: process.env.host,
+    user: process.env.user,
+    password: process.env.password,
+    database: process.env.database
 
 });
 
