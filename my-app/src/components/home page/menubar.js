@@ -4,6 +4,7 @@ import Register from '../register/register';
 import Login from '../login/login'
 import Events from './events'
 import FormsPage from '../forms/forms'
+import SportsPage from '../sports/sports'
 import {
     BrowserRouter as Router,
     Switch,
@@ -38,7 +39,8 @@ class Menu extends React.Component {
 
 class SportsDropDown extends React.Component {
     render() {
-        return <div class="dropdown">
+        return <Router>
+        <div class="dropdown">
             <button class="dropbtn">SPORTS
                 <i class="fa fa-caret-down"></i>
             </button>
@@ -46,6 +48,7 @@ class SportsDropDown extends React.Component {
                 <div class="row">
                     <div class="column">
                         <h3>MEN'S</h3>
+<<<<<<< HEAD
                         <h4>__________</h4>
                         <b href="#">BASKETBALL</b>
                         <b href="#">LACROSSE</b>
@@ -79,10 +82,49 @@ class SportsDropDown extends React.Component {
                         <b href="#">TENNIS</b>
                         <b href="#">TRIATHLON</b>
                         <b href="#">WATER SKI</b>
+=======
+                        <h4>___________</h4>
+                        <Link to="/sports">BASKETBALL</Link>
+                        <Link to="/sports">LACROSSE</Link>
+                        <Link to="/sports">HOCKEY</Link>
+                        <Link to="/sports">RUGBY</Link>
+                        <Link to="/sports">SOCCER</Link>
+                        <Link to="/sports">ULTIMATE</Link>
+                        <Link to="/sports">VOLLEYBALL</Link>
+                        <Link to="/sports">WATER POLO</Link>
+                    </div>
+                    <div class="column">
+                        <h3>WOMEN'S </h3>
+                        <h4>___________</h4>
+                        <Link to="/sports">BASKETBALL</Link>
+                        <Link to="/sports">RUGBY</Link>
+                        <Link to="/sports">SOCCER</Link>
+                        <Link to="/sports">ULTIMATE</Link>
+                        <Link to="/sports">VOLLEYBALL</Link>
+                        <Link to="/sports">WATER POLO</Link>
+                    </div>
+                    <div class="column">
+                        <h3>COED</h3>
+                        <h4>___________</h4>
+                        <Link to="/sports">CYCLING</Link>
+                        <Link to="/sports">BOWLING</Link>
+                        <Link to="/sports">DISTANCE</Link>
+                        <Link to="/sports">FENCING</Link>
+                        <Link to="/sports">SAILING</Link>
+                        <Link to="/sports">SURF</Link>
+                        <Link to="/sports">SWIM</Link>
+                        <Link to="/sports">TENNIS</Link>
+                        <Link to="/sports">TRIATHLON</Link>
+                        <Link to="/sports">WATER SKI</Link>
+>>>>>>> 904876a003c011e193f5a422b95443825f5bba07
                     </div>
                 </div>
             </div>
         </div>
+        <Switch>
+        <Route path="/sports" component={SportsPage} />
+        </Switch>
+    </Router>
     }
 }
 
@@ -131,5 +173,7 @@ class HomePage extends React.Component {
         </div>;
     }
 }
+
+
 
 export default Menu;

@@ -245,7 +245,11 @@ body {
   font-size: 15px;
   font-weight: bold;
   text-align: center;
+<<<<<<< HEAD
   padding-top: 8px;
+=======
+  padding: 8px;
+>>>>>>> 904876a003c011e193f5a422b95443825f5bba07
   border: none;
   outline: none;
   color:inherit;
@@ -266,7 +270,11 @@ body {
 .dropdown-content {
   display: none;
   right: 1px;
+<<<<<<< HEAD
   margin-top: 1.2em;
+=======
+  margin-top: 1px;
+>>>>>>> 904876a003c011e193f5a422b95443825f5bba07
   position: absolute;
   background-color: #F6EED9;
   width:500px ;
@@ -411,3 +419,76 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+<<<<<<< HEAD
+=======
+
+
+.eventbox3 {
+  margin-top: 135px;
+  right: 84px;
+  padding: 4px 3px;
+  float: left;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  position: absolute;
+
+
+}
+.eventbox3 h2
+{
+  margin-top: -5px;
+  padding-top: 1px;
+  font-family: Arial Unicode MS;
+  text-align: left;
+  font-size: 18px; 
+  line-height: 100%;
+
+}
+
+.eventbox3 a
+{
+  float: right;
+  margin-top: -34px;
+  font-size: 18px; 
+  color:#3381DC;
+  text-decoration: none;
+}
+
+
+.eventbox3 h3
+{
+  padding-top: 10px;
+  font-family: Arial Black;
+  text-align: left;
+  font-size: 20px; 
+  line-height: 1%;
+
+}
+
+
+.eventbox3 h5{
+  color: rgba(41,64,15,0.81);
+  text-align: left;
+  margin-top: -20px;
+  font-size: 16px;
+}
+
+.dropdown-content a
+{
+  float: none;
+  text-align: left;
+  font-family: NCAA;
+  font-style: Regular;
+  fill: solid;
+  color:#413E3E;
+  font-size: 16px;
+  padding: 12px ;
+  letter-spacing: 15%;
+  text-decoration: none;
+  height: 2px;
+  display: block;
+
+}
+
+>>>>>>> 904876a003c011e193f5a422b95443825f5bba07
