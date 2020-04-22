@@ -1,4 +1,4 @@
-//Code for the events Database, currently hosted on Shah's/Sam's local machine.
+// Code for the events Database, currently hosted on Shah's/Sam's local machine.
 const mysql = require('mysql');
 const express = require('express');
 const bodyParser = require('body-parser');
