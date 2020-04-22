@@ -13,7 +13,7 @@
 `npm run client ` to run just frontend
 
 ## Style Guide:
-https://github.com/google/eslint-config-google
+https://github.com/airbnb/javascript
 
 ## Prototype:
 
