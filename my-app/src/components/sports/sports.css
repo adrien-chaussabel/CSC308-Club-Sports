@@ -52,9 +52,10 @@ body {
 
   .sportsinfo{
     position: relative;
-    top: 300px;
+    margin-left: -100px;
+    top: 450px;
     height: 455px;
-    width:100%;
+    width:1400px;
     background: #154734;
   
   }
@@ -64,9 +65,7 @@ body {
     top: 10px;
     height: 153px;
     width:100%;
-    background: #CFD4C8;
-    padding-bottom: 10px;
-  
+    background: #CFD4C8;  
   }
   
   .sportsinfobottom h1{
@@ -92,34 +91,34 @@ body {
     color: #3381DC;
   }
 
-
-  .sportsinfo h1
-{
+  .sportsinfo h1{
   float: left;
   position: absolute;
   top: 29px;
-  font-size: 39px;
-  padding-left: 84px;
+  font-size: 35px;
+  padding-left: 120px;
   letter-spacing: 0.1em;
-  line-height: 32px;
   font-family: NCAA;
   color: #FFFFFF;
  
 }
 
-.sportsinfo h2
-{
+.sportsinfo h2{
   position: absolute;
   font-family: Arial Unicode MS;
   color: #F7F8F4;
-  top: 120px;
+  top: 100px;
   width: 636px;
   word-wrap: break-word;
   font-size: 17px;
-  padding-left: 84px;
+  padding-left: 120px;
   font-weight: normal;
   letter-spacing: 0.1em;
 
+}
+.sportsinfo img{
+  width: 60px;
+  height: 40px;
 }
 
 .follow
@@ -129,7 +128,6 @@ position: absolute;
 top: 610px;
 left: 525px;
 padding-left: 20px;
-
 
 }
 

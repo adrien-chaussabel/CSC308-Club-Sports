@@ -8,15 +8,13 @@ import {
 } from "react-router-dom";
 
 
-
+/*have to run localhost:3000/sports to get TODO: link on menubar*/
 class SportsPage extends React.Component {
     render() {
         return <div>
             <Menu2/>
             <SportsTitle/>
             
-            
-       
         </div>
     }
 }
@@ -45,24 +43,20 @@ class Menu2 extends React.Component {
 
 }
 
-class SportsImage extends React.Component {
-    render() {
-        return <div classname="sportsimage">
-            <img src='/Sport.jpg' alt='Sport'></img>
-        </div>;
-    }
-}
-
 class SportsInfo extends React.Component {
     render() {
         return <div className="sportsinfo">
             <h1>ABOUT SWIM CLUB</h1>
-            <h2>Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club has over 100 members and is constantly growing. We offer high quality professional coaching that can reach swimmers of all ability. The goal of our team is to provide every member an opportunity to improve their swimming skills and achieve success at his or her level of ability, from beginner to international competitor. Come by and check us out! We are a non profit club, that is run by its elected Board of Directors which meets each month. All members are welcome at each meeting and encouraged to be involved in team activities and fundraisers.
-              
+            <h2>Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club 
+                has over 100 members and is constantly growing. We offer high quality professional 
+                coaching that can reach swimmers of all ability. The goal of our team is to provide 
+                every member an opportunity to improve their swimming skills and achieve success 
+                at his or her level of ability, from beginner to international competitor. 
+                Come by and check us out! We are a non profit club, that is run by its elected 
+                Board of Directors which meets each month. All members are welcome at each meeting 
+                and encouraged to be involved in team activities and fundraisers.
                 </h2>
-            <a href="https://instagram.com">
-                <img src='/instagram.png' className='instagramIcon' alt='Instagram'></img>
-            </a>
+            
         </div>
     }
 }
@@ -96,6 +90,7 @@ class SportsTitle extends React.Component {
         return <div className="sportstitle">
             <h3>CAL POLY SWIM CLUB</h3>
             <img src='/Sport.jpg' alt='Sport'></img>
+            <SportsInfo/>
         </div>
     }
 }
