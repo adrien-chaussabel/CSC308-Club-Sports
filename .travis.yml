@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+  - node
+
+befre_install:
+  - npm i -g npm@version-number
+
+install:
+  - npm ci
+
+script:
+  - npm test
