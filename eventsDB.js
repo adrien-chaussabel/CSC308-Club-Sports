@@ -24,7 +24,7 @@ const mySqlConnection = mysql.createConnection(
       user: "root",
       password: "csc308sports",
       database: "clubsports",
-      multipleStatements: true
+      multipleStatements: true,
     }
 );
 
@@ -45,6 +45,7 @@ read_router.get("/", (req, res) => {
     mySqlConnection.query(sqlQuery, (err, rows, fields) => {
         if(err){
             console.log("Error in GET request to events database.");
+            res.sendStatus(500);
             return;
         }
         res.send(rows);
@@ -59,6 +60,7 @@ read_router.get("/eventsColumn", (req, res) => {
     mySqlConnection.query(sqlQuery, (err, rows, fields) => {
         if(err){
             console.log("Error in GET request to events database.");
+            res.sendStatus(500);
             return;
         }
         if(rows.length < 4){
@@ -87,9 +89,11 @@ write_router.post("/postEvent", (req, res) => {
     mySqlConnection.query(sqlQuery, (err) => {
         if(err){
             console.log("Error in POST request to events database.");
+            res.sendStatus(500);
             return;
         }
         console.log("POST request successfull.");
+        res.sendStatus(201);
     });
 });
 
@@ -108,9 +112,12 @@ update_router.post("/updateEvent", (req, res) => {
     mySqlConnection.query(sqlQuery, (err) => {
         if(err){
             console.log("Error in POST request to events database.");
+            res.sendStatus(500);
             return;
         }
         console.log("POST request successfull.");
+        res.sendStatus(201);
+
     });
 });
 
@@ -123,9 +130,12 @@ delete_router.delete('/deleteEvent', (req, res) => {
     mySqlConnection.query(sqlQuery, (err) => {
         if(err){
             console.log("Error in processing DELETE request.");
+            res.sendStatus(500);
             return;
         }
+
         console.log("DELTE request Successfull.");
+        res.sendStatus(200);
     })
 });
 

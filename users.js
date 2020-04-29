@@ -35,6 +35,10 @@ router.get('getUser/:userName/:password', (req, res) => {
     AND password = ${encryptedPassword};`;
   connection.query(sqlQuery, (err, rows) => {
     if (err) {
+      res.sendStatus(500);
+      return;
+    }
+    if (rows.length <= 0) {
       res.sendStatus(404);
       return;
     }
