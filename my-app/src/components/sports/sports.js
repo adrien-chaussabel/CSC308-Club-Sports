@@ -6,18 +6,24 @@ import {
     Route,
     Link,
 } from "react-router-dom";
+import App from "./Carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-
-/*have to run localhost:3000/sports to get TODO: link on menubar*/
 class SportsPage extends React.Component {
     render() {
         return <div>
             <Menu2/>
             <SportsTitle/>
-            
+            <Follow/>
+            <SportsInfoBottom/>
+            <App />
+   
         </div>
     }
 }
+
+
+
 
 class Menu2 extends React.Component {
     render() {
@@ -89,10 +95,12 @@ class SportsTitle extends React.Component {
     render() {
         return <div className="sportstitle">
             <h3>CAL POLY SWIM CLUB</h3>
-            <img src='/Sport.jpg' alt='Sport'></img>
+            
             <SportsInfo/>
         </div>
     }
 }
+
+
 
 export default SportsPage;
