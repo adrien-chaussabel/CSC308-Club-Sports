@@ -40,10 +40,7 @@ addUser = _ => {
   .catch(err => console.error(err));
 
   this.props.history.push(`/login`);
-}
-
-login = () => {
-  this.props.history.push(`/login`);
+  alert("User " + user.firstname + " was registered");
 }
 
 render(){
