@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../app.css';
-import {Link} from "react-router-dom";
-//import axios from 'axios';
+import {Link, withRouter} from "react-router-dom";
+import axios from 'axios';
 
 
 function validate(username, password) {
@@ -17,13 +17,12 @@ function validate(username, password) {
   }
 
 class Login extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            user: {
               username: " ",
-              password: " "
-            }, 
+              password: " ", 
+
             errors: []
           };
           this.handleSubmit = this.handleSubmit.bind(this);
@@ -55,32 +54,31 @@ class Login extends React.Component {
 };
 
   handleSubmit(event) {
-    event.preventDefault();
-      const {username, password} =this.state;
+    event.preventDefault()
+    const {username, password}= this.state;
 
       const errors = validate(username, password);
       if (errors.length > 0) {
         this.setState({ errors });
         return;
       }
-      else{
+      else if (errors.length ===0) {
           this.setState({username: "", password: ""});
-          //this.setState({ errors: '' });
+          this.setState({errors: []});
+          this.props.history.push("/forms");
       }
+    }
 
-      
-    //   axios.post("http://localhost:5000/users", 
-    //     {user: {username : username, password : password}})
-        // .then(res =>{
-        //     console.log(res);
-        // })
-        // .catch(error=>{
-        //     console.log(error);
-        // })
-  }
+  //     axios.post("http://localhost:5000/users")
+  //       .then(res =>{
+  //           console.log(res);
+  //       })
+  //       .catch(error=>{
+  //           console.log(error);
+  //       })
+  // }
 
   render(){
-    //const {user} = this.state;
     const { errors } = this.state;
     return (
         <div className="login-page">
@@ -89,18 +87,18 @@ class Login extends React.Component {
                 {errors.map(error => (
                 <p key={error}>Error: {error}</p>))}
                 <input 
-                type="text"
                 placeholder="Username"
-                value={this.state.username}
-                //onChange={e => this.setState({user: {...user, username: e.target.value }})} 
-                onChange={evt => this.setState({ username: evt.target.value })}
+                //value={this.state.username}
+                //onChange={evt => this.setState({ username: evt.target.value })}
+                onChange = {this.handleUserChange}
+                type="text"
                 />
                 <input 
-                type="password"
+                type="text"
                 placeholder="Password"
-                value={this.state.password}
-                //onChange={e => this.setState({user: {...user, password: e.target.value }})} 
-                onChange={evt => this.setState({ password: evt.target.value })}
+                //value={this.state.password}
+                //onChange={evt => this.setState({ password: evt.target.value })}
+                onChange = {this.handlePassChange}
                 />
                 <button onClick={this.addUser}>Sign In</button>
                 <p className="message">New User? <Link to='/register'>Register</Link></p>
@@ -111,4 +109,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
