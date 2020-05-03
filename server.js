@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -8,7 +7,7 @@ const mysql = require('mysql');
 const app = express();
 
 const selectAllUsers = 'SELECT * FROM users';
-const selectAllEvents = `SELECT id, sport, DATE_FORMAT(date, "%M %d") as date, 
+const selectAllEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
 TIME_FORMAT(time, "%h:%i %p")as time, location, description 
 FROM events
 ORDER BY YEAR(date) ASC, MONTH(date) ASC, DAY(date) ASC
@@ -20,22 +19,15 @@ const con = mysql.createConnection({
   user: process.env.user,
   password: process.env.password,
   database: process.env.database,
+
 });
 
-/* var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "csc308sports",
-    database: "www"
-
-}); */
-
+// eslint-disable-next-line consistent-return
 con.connect((err) => {
   if (err) {
-    console.log('Error connecting to database.');
-  } else {
-    console.log('Connected!');
+    return err;
   }
+  console.log('connected!');
 });
 
 app.use(cors());
@@ -50,7 +42,6 @@ app.get('/users', (req, res) => {
     if (err) {
       return res.send(err);
     }
-
     return res.json({
       data: results,
     });
@@ -63,7 +54,6 @@ app.get('/events', (req, res) => {
     if (err) {
       return res.send(err);
     }
-
     return res.json({
       data: results,
     });

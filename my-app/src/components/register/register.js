@@ -39,6 +39,8 @@ addUser = _ => {
   .then(this.getUsers)
   .catch(err => console.error(err));
 
+  this.props.history.push(`/login`);
+  alert("User " + user.firstname + " was registered");
 }
 
 render(){
@@ -98,8 +100,8 @@ render(){
                 name="type"
                 onChange={e => this.setState({user: {...user, type: e.target.value }})}></input>
                 <span class="checkmark"></span>
-              </label>         
-              <button onClick={this.addUser}>Register </button>
+              </label>
+              <button onClick={this.addUser}>Register</button>
               <p className="message">Already registered? <Link to='/login'>Sign In</Link></p>
           </div>
       </div>
