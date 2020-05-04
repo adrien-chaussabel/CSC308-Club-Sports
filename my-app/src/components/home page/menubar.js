@@ -60,7 +60,7 @@ class SportsDropDown extends React.Component {
           <div className="dropdown-content">
             <div className="row">
               <div className="column">
-                <h3>MEN'S</h3>
+                <h3>MEN&apos;S</h3>
                 <h4>__________</h4>
                 <b href="#">BASKETBALL</b>
                 <b href="#">LACROSSE</b>
@@ -72,7 +72,7 @@ class SportsDropDown extends React.Component {
                 <b href="#">WATER POLO</b>
               </div>
               <div className="column">
-                <h3>WOMEN'S </h3>
+                <h3>WOMEN&apos;S </h3>
                 <h4>__________</h4>
                 <b href="#">BASKETBALL</b>
                 <b href="#">RUGBY</b>
