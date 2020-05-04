@@ -94,13 +94,7 @@ class Title extends React.Component {
     }
 }
 
-class PlaceHolderImage extends React.Component {
-    render() {
-        return <div className="placeholderImage">
-            <img src='/PlaceHolderImage.jpg' alt='Placeholder'></img>
-        </div>;
-    }
-}
+
 
 class Info extends React.Component {
     // TODO: Make text wrap instead of having breaks
@@ -114,12 +108,10 @@ class Info extends React.Component {
                 game on Saturday 
                 February 8th!</h3>
             <img src='/PlaceHolderImage.jpg' alt='Team of the week'></img>
-            <a href="https://instagram.com">
-                <img src='/instagram.png' className='instagramIcon' alt='Instagram'></img>
-            </a>
         </div>
     }
 }
+
 
 class HomePage extends React.Component {
     render() {

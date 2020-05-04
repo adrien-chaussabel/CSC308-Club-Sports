@@ -60,6 +60,13 @@ body {
 
 }
 
+.sportsinfo img{
+  height: 35px;
+  padding: 10px;
+  padding-left: 20px;
+  float: left;
+}
+
  
 .sportsinfobottom{
   position: relative;
@@ -171,19 +178,16 @@ margin: 0; /* Important for vertical align on mobile phones */
 }
 
 .sportstitle img{
-height: 413px;
-width: 625px;
-margin-top: -15px;
+height: 65px;
+width: 65px;
+margin-top: 275px;
+margin-left: 20px;
+float: left;
+position: relative;
+left: 950px;
+
 }  
 
-.sportstitle h3 {
-font-family: NCAA;
-letter-spacing: 0.1em;
-font-size: 35px;
-color: #154734;
-padding-left: 10px;
-
-}
 
 .sportstitle {
 padding-top: 50px;

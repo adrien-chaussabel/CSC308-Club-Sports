@@ -9,6 +9,9 @@ import {
 import App from "./Carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import logo from './button.png';
+import instagram from './instagram.png'
+import web from './web.png'
+import facebook from './facebook.png'
 
 class SportsPage extends React.Component {
     render() {
@@ -60,8 +63,11 @@ class SportsInfo extends React.Component {
                 Come by and check us out! We are a non profit club, that is run by its elected 
                 Board of Directors which meets each month. All members are welcome at each meeting 
                 and encouraged to be involved in team activities and fundraisers.
-                </h2>
-            
+            </h2>
+           
+            <img src={web} alt='web.jpg'></img>
+            <img src={instagram} alt='instagram.jpg'></img>
+            <img src={facebook} alt='facebook.jpg'></img>
         </div>
     }
 }
