@@ -6,18 +6,26 @@ import {
     Route,
     Link,
 } from "react-router-dom";
+import App from "./Carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import logo from './button.png';
+import instagram from './instagram.png'
+import web from './web.png'
+import facebook from './facebook.png'
 
-
-/*have to run localhost:3000/sports to get TODO: link on menubar*/
 class SportsPage extends React.Component {
     render() {
         return <div>
             <Menu2/>
             <SportsTitle/>
-            
+            <Follow/>
+            <SportsInfoBottom/>
+            <App />
+   
         </div>
     }
 }
+
 
 class Menu2 extends React.Component {
     render() {
@@ -55,8 +63,11 @@ class SportsInfo extends React.Component {
                 Come by and check us out! We are a non profit club, that is run by its elected 
                 Board of Directors which meets each month. All members are welcome at each meeting 
                 and encouraged to be involved in team activities and fundraisers.
-                </h2>
-            
+            </h2>
+           
+            <img src={web} alt='web.jpg'></img>
+            <img src={instagram} alt='instagram.jpg'></img>
+            <img src={facebook} alt='facebook.jpg'></img>
         </div>
     }
 }
@@ -77,10 +88,9 @@ class SportsInfoBottom extends React.Component {
 class Follow extends React.Component {
 
     render() {return <div className="follow">
-
+        <img src={logo} alt="button"></img>
         <button class="dropbtn"> FOLLOW
         </button>
-     
         </div>
     }
 }
@@ -89,10 +99,12 @@ class SportsTitle extends React.Component {
     render() {
         return <div className="sportstitle">
             <h3>CAL POLY SWIM CLUB</h3>
-            <img src='/Sport.jpg' alt='Sport'></img>
+            
             <SportsInfo/>
         </div>
     }
 }
+
+
 
 export default SportsPage;
