@@ -5,8 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 let styles = {
     
-    marginTop: '50px',
-    marginLeft: '65px',
+    marginTop: '-310px',
+    marginLeft: '55px',
     maxWidth: '600px'
     
   };

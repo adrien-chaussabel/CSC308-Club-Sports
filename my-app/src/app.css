@@ -97,7 +97,7 @@ body {
 
 .info{
   position: relative;
-  top: 280px;
+  top: 580px;
   height: 455px;
   width:100%;
   background: #154734;
@@ -139,6 +139,8 @@ body {
   font-family: Arial Unicode MS;
   color: #F7F8F4;
   top: 170px;
+  width: 300px;
+  word-wrap: break-word;
   font-size: 17px;
   padding-left: 540px;
   font-weight: normal;

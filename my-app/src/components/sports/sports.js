@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import App from "./Carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import logo from './button.png';
 
 class SportsPage extends React.Component {
     render() {
@@ -21,8 +22,6 @@ class SportsPage extends React.Component {
         </div>
     }
 }
-
-
 
 
 class Menu2 extends React.Component {
@@ -83,10 +82,9 @@ class SportsInfoBottom extends React.Component {
 class Follow extends React.Component {
 
     render() {return <div className="follow">
-
+        <img src={logo} alt="button"></img>
         <button class="dropbtn"> FOLLOW
         </button>
-     
         </div>
     }
 }

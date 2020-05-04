@@ -53,7 +53,7 @@ body {
 .sportsinfo{
   position: relative;
   margin-left: -100px;
-  top: 400px;
+  top: 450px;
   height: 455px;
   width:1475px;
   background: #154734;
@@ -63,7 +63,7 @@ body {
  
 .sportsinfobottom{
   position: relative;
-  bottom: -1000px;
+  bottom: -1050px;
   height: 153px;
   width:100%;
   background: #CFD4C8;
@@ -130,19 +130,32 @@ height: 40px;
 {
 z-index: 0;
 position: absolute;
-top: 620px;
+top: 630px;
 left: 530px;
 padding-left: 20px;
 
 }
+
+
 
 .follow .dropbtn:hover{
 color: #F3BF39;
 background-color:  #032815;
 }
 
-.follow .dropbtn {
+.follow img{
+  width: 20px;
+  height: auto;
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  z-index: 1;
 
+}
+
+
+.follow .dropbtn {
+background-image: "/button.png" ;
 border-radius: 25px;
 font-size: 15px;
 text-align: left;

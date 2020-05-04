@@ -11,6 +11,8 @@ import {
     Route,
     Link,
 } from "react-router-dom";
+import App from "./carouselHome";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 /*TODO: add link to sports page on menu bar*/
 class Menu extends React.Component {
@@ -107,9 +109,9 @@ class Info extends React.Component {
             <div id="rectangle" ></div>
             <h1>TEAM OF THE WEEK</h1>
             <h2>WOMEN'S <br />RUGBY</h2>
-            <h3>Follow them and <br />
-                come to their home <br />
-                game on Saturday <br />
+            <h3>Follow them and 
+                come to their home 
+                game on Saturday 
                 February 8th!</h3>
             <img src='/PlaceHolderImage.jpg' alt='Team of the week'></img>
             <a href="https://instagram.com">
@@ -124,8 +126,8 @@ class HomePage extends React.Component {
         return <div>
             <Events/>
             <Title />
-            <PlaceHolderImage />
             <Info />
+            <App/>
         </div>;
     }
 }
