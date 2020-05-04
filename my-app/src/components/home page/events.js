@@ -44,5 +44,5 @@ class Events extends Component{
         );
     }
 }
-
+/* comment */
 export default Events;
