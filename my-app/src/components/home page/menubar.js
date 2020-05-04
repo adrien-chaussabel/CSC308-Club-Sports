@@ -17,6 +17,7 @@ import Login from '../login/login';
 import Events from './events';
 import FormsPage from '../forms/forms';
 import SportsPage from '../sports/sports';
+import Gallery from './carouselHome';
 
 /* TODO: add link to sports page on menu bar */
 class Menu extends React.Component {
@@ -146,14 +147,15 @@ class Info extends React.Component {
   }
 }
 
+
 class HomePage extends React.Component {
   render() {
     return (
       <div>
         <Events />
         <Title />
-        <PlaceHolderImage />
         <Info />
+        <Gallery />
       </div>
     );
   }
