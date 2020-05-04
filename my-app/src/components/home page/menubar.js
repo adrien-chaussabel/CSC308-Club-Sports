@@ -19,6 +19,21 @@ import FormsPage from '../forms/forms';
 import SportsPage from '../sports/sports';
 import Gallery from './carouselHome';
 
+
+class HomePage extends React.Component {
+  render() {
+    return (
+      <div>
+        <Events />
+        <Title />
+        <Info />
+        <Gallery />
+      </div>
+    );
+  }
+}
+
+
 /* TODO: add link to sports page on menu bar */
 class Menu extends React.Component {
   render() {
@@ -152,20 +167,6 @@ class Info extends React.Component {
         <a href="https://instagram.com">
           <img src="/instagram.png" className="instagramIcon" alt="Instagram" />
         </a>
-      </div>
-    );
-  }
-}
-
-
-class HomePage extends React.Component {
-  render() {
-    return (
-      <div>
-        <Events />
-        <Title />
-        <Info />
-        <Gallery />
       </div>
     );
   }
