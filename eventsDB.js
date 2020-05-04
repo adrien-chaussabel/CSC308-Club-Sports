@@ -87,9 +87,11 @@ writeRouter.post('/postEvent', (req) => {
   mySqlConnection.query(sqlQuery, (err) => {
     if (err) {
       console.log('Error in POST request to events database.');
+      res.sendStatus(500);
       return;
     }
     console.log('POST request successfull.');
+    res.sendStatus(201);
   });
 });
 
@@ -108,9 +110,11 @@ updateRouter.post('/updateEvent', (req) => {
   mySqlConnection.query(sqlQuery, (err) => {
     if (err) {
       console.log('Error in POST request to events database.');
+      res.sendStatus(500);
       return;
     }
     console.log('POST request successfull.');
+    res.sendStatus(201);
   });
 });
 
@@ -123,9 +127,12 @@ deleteRouter.delete('/deleteEvent', (req) => {
   mySqlConnection.query(sqlQuery, (err) => {
     if (err) {
       console.log('Error in processing DELETE request.');
+      res.sendStatus(500);
       return;
     }
+
     console.log('DELTE request Successfull.');
+    res.sendStatus(200);
   });
 });
 
