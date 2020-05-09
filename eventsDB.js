@@ -10,7 +10,7 @@ const readRouter = express.Router();
 const writeRouter = express.Router();
 const updateRouter = express.Router();
 const deleteRouter = express.Router();
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '8080';
 
 app.use(bodyParser.json());
 app.use('/viewevents', readRouter);

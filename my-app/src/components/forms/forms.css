@@ -1,0 +1,93 @@
+.forms{
+    padding-top: -10px;
+}
+  
+.forms h2{
+    padding-top: 10px;
+    padding-left: 500px;
+    font-family: Arial Black;
+    font-weight: 900;
+    font-size: 27px;
+    letter-spacing: 0.1em;
+    color: #413E3E;
+    
+}
+
+.forms h1{
+    padding-top: -100px;
+    font-weight: 300;
+    color: #789954;
+    padding-left: 500px;
+}
+
+.forms h3{
+    word-wrap: break-word;
+    padding-left: 120px;
+    padding-right: 120px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.forms h4{
+    padding-left: 120px;
+}
+
+.forms .links a, h5 {
+    text-decoration: none;
+    text-align: left;
+    color: black;
+    display: block;
+    padding: 5px;
+}
+
+.forms .links {
+    float: right;
+    width: 300px;
+    padding-right: 325px;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+.forms a:hover {
+    text-decoration: none;
+    background-color: #154734;
+    color: aliceblue;
+}
+
+.formtitle{
+    font-size: 34px;
+    font-family: NCAA;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: #154734;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.vertical-menu {
+    float: left;
+    width: 240px;
+    padding-left: 130px;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 100px;
+  }
+  
+  .vertical-menu a {
+    background-color: #403E3E;
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #141816;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #195330;
+    color: white;
+  }
+  

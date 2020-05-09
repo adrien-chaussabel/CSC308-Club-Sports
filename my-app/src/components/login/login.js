@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../app.css';
 import {Link, withRouter} from "react-router-dom";
-import axios from 'axios';
+// import axios from 'axios';
 
 
 function validate(username, password) {
