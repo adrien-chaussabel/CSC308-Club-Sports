@@ -11,6 +11,7 @@ jestExample.js
 jestExample.test.js
 
 # production
+/my-app
 #/build
 
 # misc
