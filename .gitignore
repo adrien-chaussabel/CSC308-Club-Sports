@@ -11,7 +11,7 @@ jestExample.js
 jestExample.test.js
 
 # production
-/build
+#/build
 
 # misc
 .DS_Store
