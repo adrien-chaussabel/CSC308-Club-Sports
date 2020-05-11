@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
-const path = require('path');
 
 const app = express();
 
@@ -13,13 +12,6 @@ TIME_FORMAT(time, "%h:%i %p")as time, location, description
 FROM events
 ORDER BY YEAR(date) ASC, MONTH(date) ASC, DAY(date) ASC
 LIMIT 4;`;
-
-app.use(express.static(path.join(__dirname, 'build')));
-
-
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 /* connection with Google server */
 const con = mysql.createConnection({
