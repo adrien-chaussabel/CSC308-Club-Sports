@@ -37,7 +37,7 @@ con.connect((err) => {
   }
   console.log('connected!');
 });
-
+ 
 app.use(cors());
 /*
 app.get('/', (req, res) => {
