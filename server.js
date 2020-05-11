@@ -30,6 +30,7 @@ const con = mysql.createConnection({
 
 });
 
+
 // eslint-disable-next-line consistent-return
 con.connect((err) => {
   if (err) {
