@@ -7,7 +7,8 @@ const mysql = require('mysql');
 const app = express();
 
 const selectAllUsers = 'SELECT * FROM users';
-const selectAllEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
+const selectAllEvents = 'SELECT * FROM events';
+const selectTopEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
 TIME_FORMAT(time, "%h:%i %p")as time, location, description 
 FROM events
 ORDER BY YEAR(date) ASC, MONTH(date) ASC, DAY(date) ASC
@@ -49,6 +50,18 @@ app.get('/users', (req, res) => {
 });
 
 /* shows all events in events table */
+app.get('/eventsBox', (req, res) => {
+  con.query(selectTopEvents, (err, results) => {
+    if (err) {
+      return res.send(err);
+    }
+    return res.json({
+      data: results,
+    });
+  });
+});
+
+/* shows all events in events table */
 app.get('/events', (req, res) => {
   con.query(selectAllEvents, (err, results) => {
     if (err) {
@@ -75,6 +88,23 @@ app.get('/users/add', (req, res) => {
       return res.send(err);
     }
     res.send('successfully added user');
+  });
+});
+
+app.get('/events/add', (req, res) => {
+  const {
+    teamName, date, time, location, description,
+  } = req.query;
+  const body = {
+    teamName, date, time, location, description,
+  };
+  const insertEvent = 'INSERT INTO events SET ?';
+  // eslint-disable-next-line consistent-return
+  con.query(insertEvent, body, (err) => {
+    if (err) {
+      return res.send(err);
+    }
+    res.send('successfully added event');
   });
 });
 
