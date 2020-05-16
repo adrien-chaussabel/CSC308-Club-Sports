@@ -23,12 +23,12 @@ const con = mysql.createConnection({
 
 });
 
-// eslint-disable-next-line consistent-return
+
 con.connect((err) => {
   if (err) {
     return err;
   }
-  console.log('connected!');
+  return 'connected';
 });
 
 app.use(cors());
@@ -82,15 +82,15 @@ app.get('/users/add', (req, res) => {
     firstname, lastname, email, username, password, type,
   };
   const insertUser = 'INSERT INTO users SET ?';
-  // eslint-disable-next-line consistent-return
   con.query(insertUser, body, (err) => {
     if (err) {
       return res.send(err);
     }
-    res.send('successfully added user');
+    return res.send('successfully added user');
   });
 });
 
+/* adds event to events table */
 app.get('/events/add', (req, res) => {
   const {
     teamName, date, time, location, description,
@@ -99,12 +99,11 @@ app.get('/events/add', (req, res) => {
     teamName, date, time, location, description,
   };
   const insertEvent = 'INSERT INTO events SET ?';
-  // eslint-disable-next-line consistent-return
   con.query(insertEvent, body, (err) => {
     if (err) {
       return res.send(err);
     }
-    res.send('successfully added event');
+    return res.send('successfully added event');
   });
 });
 
