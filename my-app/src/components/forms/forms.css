@@ -13,12 +13,6 @@
     
 }
 
-.forms h1{
-    padding-top: -100px;
-    font-weight: 300;
-    color: #789954;
-    padding-left: 500px;
-}
 
 .forms h3{
     word-wrap: break-word;
@@ -45,7 +39,7 @@
 .forms .links {
     float: right;
     width: 300px;
-    padding-right: 325px;
+    padding-right: 440px;
     font-family: Arial, Helvetica, sans-serif;    
 }
 
