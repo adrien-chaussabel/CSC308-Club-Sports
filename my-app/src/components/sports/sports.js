@@ -41,7 +41,6 @@ class Menu2 extends React.Component {
             </div>
 
             <Switch>
-                
                 <Route path="/login">
                     
                 </Route>

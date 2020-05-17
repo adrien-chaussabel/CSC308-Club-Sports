@@ -14,9 +14,7 @@ class Events extends Component {
     };
   }
 
-  componentDidMount() {
-    this.getEvents();
-  }
+
 
   getEvents() {
     fetch('/events')
