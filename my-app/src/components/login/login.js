@@ -30,10 +30,6 @@ class Login extends React.Component {
     this.handleUserChange = this.handleUserChange.bind(this);
   }
 
-  componentDidMount() {
-    this.getUsers();
-  }
-
   handlePassChange(evt) {
     this.setState({
       password: evt.target.value,
@@ -56,6 +52,7 @@ class Login extends React.Component {
     } else if (errors.length === 0) {
       this.setState({ username: '', password: '' });
       this.setState({ errors: [] });
+      // eslint-disable-next-line react/prop-types
       this.props.history.push('/');
     }
   }
