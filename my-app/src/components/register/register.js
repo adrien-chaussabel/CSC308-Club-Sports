@@ -3,14 +3,20 @@ import './register.css';
 //import {Link} from "react-router-dom";
 import {Link, withRouter} from "react-router-dom";
 
-function validate(username, password) {
+function validate(username, password, first, last) {
   const errors = [];
 
-  if (username.length < 6) {
+  if (username.length <= 4) {
       errors.push("Username should be at least 5 characters long");
     }
-  if (password.length < 6) {
+  if (password.length <= 4) {
     errors.push("Password should be at least 5 characters long");
+  }
+  if (first.length <= 4) {
+    errors.push("First Name should be at least 5 characters long");
+  }
+  if (last.length <= 4) {
+    errors.push("Last Name should be at least 5 characters long");
   }
   return errors;
 }
@@ -31,22 +37,6 @@ class Register extends React.Component {
   };
   this.handleSubmit = this.handleSubmit.bind(this);
 }
-
-handleSubmit(event) {
-  event.preventDefault()
-  const {user}= this.state;
-
-    const errors = validate(user.username, user.password);
-    if (errors.length > 0) {
-      this.setState({ errors });
-      return;
-    }
-    else if (errors.length ===0) {
-        this.setState({username: "", password: ""});
-        this.setState({errors: []});
-        this.props.history.push("/");
-    }
-  }
 
 componentDidMount(){
   this.getUsers();
@@ -75,6 +65,22 @@ addUser = _ => {
   alert("User " + user.username + " was registered");
 }
 
+handleSubmit(event) {
+  event.preventDefault()
+  const {user}= this.state;
+
+    const errors = validate(user.username, user.password, user.firstname, user.lastname);
+    if (errors.length > 0) {
+      this.setState({ errors });
+      return;
+    }
+    else if (errors.length ===0) {
+        this.setState({username: "", password: "", firstname: "", lastname: ""});
+        this.setState({errors: []});
+        this.addUser();
+    }
+  }
+
 render() {
   const {user} = this.state;
   const {errors} = this.state;
@@ -98,7 +104,7 @@ render() {
               />
               <h5>Email</h5>
               <input 
-              type="text"
+              type="email"
               placeholder="Enter Email"
               onChange={e => this.setState({user: {...user, email: e.target.value }})} 
               />
@@ -143,9 +149,9 @@ render() {
                 onChange={e => this.setState({user: {...user, type: e.target.value }})}></input>
                 <span class="checkmark"></span>
               </label>
-              </form>
-              <button onClick={this.addUser}>Register</button>
+              <button type="submit">Register</button>
               <p className="message">Already registered? <Link to='/login'>Sign In</Link></p>
+              </form>
           </div>
       </div>
     );
