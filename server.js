@@ -92,7 +92,7 @@ app.post('/postEvent', (req, res) => {
     if (err) {
       return res.send(err);
     }
-    res.send('successfully added event');
+    return res.send('successfully added event');
   });
 });
 
