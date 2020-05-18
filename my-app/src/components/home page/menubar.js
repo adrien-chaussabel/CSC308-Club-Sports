@@ -48,14 +48,12 @@ class Menu extends React.Component {
           <Link to="calendar">CALENDAR</Link>
           <Link to="/">HOME</Link>
         </div>
-        ;
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/forms" component={FormsPage} />
           <Route exact path="/register" component={Register} />
           <Route path="/login">
             <Login />
-            ;
           </Route>
         </Switch>
       </Router>
