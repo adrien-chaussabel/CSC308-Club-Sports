@@ -7,6 +7,7 @@ const mysql = require('mysql');
 const app = express();
 
 const selectAllUsers = 'SELECT * FROM users';
+const selectTeamNames = 'SELECT name FROM team';
 const selectAllEvents = 'SELECT * FROM events';
 const selectTopEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
 TIME_FORMAT(time, "%h:%i %p")as time, location, description 
@@ -106,15 +107,16 @@ app.get('/events/add', (req, res) => {
   });
 });
 
-/* fake data for backend work */
-app.get('/api/events', (req, res) => {
-  const events = [
-    { id: 1, firstName: 'John', lastName: 'Doe' },
-    { id: 2, firstName: 'Joe', lastName: 'Swanson' },
-    { id: 3, firstName: 'Kanye', lastName: 'West' },
-  ];
-
-  res.json(events);
+/* selects team names */
+app.get('/teams', (req, res) => {
+  con.query(selectTeamNames, (err, results) => {
+    if (err) {
+      return res.send(err);
+    }
+    return res.json({
+      data: results,
+    });
+  });
 });
 
 const port = 5000;
