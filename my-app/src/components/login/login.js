@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function validate(username, password) {
     const errors = [];
-  
+
     if (username.length < 6) {
         errors.push("Username should be at least 5 characters long");
       }
@@ -21,7 +21,7 @@ class Login extends React.Component {
         super(props);
         this.state = {
               username: " ",
-              password: " ", 
+              password: " ",
 
             errors: []
           };
@@ -29,16 +29,31 @@ class Login extends React.Component {
           this.handlePassChange = this.handlePassChange.bind(this);
           this.handleUserChange = this.handleUserChange.bind(this);
     }
-    
+
   componentDidMount(){
     this.getUsers();
   }
-  
+
   getUsers = _ => {
     fetch('/user')
     .then(response => response.json())
     .then(response => this.setState({users: response.data}))
     .catch(err => console.error(err));
+  }
+
+  getUserServer = _ => {
+    const userName = this.state.username;
+    const password = this.state.password;
+    fetch(`http://localhost:3011/users/getUser/${userName}/${password}`)
+    .then((response) => {
+      if(response.status === 404) {
+        alert('Failed to authenticate user');
+      }
+      else{
+        alert('User authenticated');
+      }
+    })
+    .catch(err => console.log(err));
   }
 
   handlePassChange(evt) {
@@ -86,21 +101,21 @@ class Login extends React.Component {
                 <form onSubmit ={this.handleSubmit}>
                 {errors.map(error => (
                 <p key={error}>Error: {error}</p>))}
-                <input 
+                <input
                 placeholder="Username"
                 //value={this.state.username}
                 //onChange={evt => this.setState({ username: evt.target.value })}
                 onChange = {this.handleUserChange}
                 type="text"
                 />
-                <input 
+                <input
                 type="password"
                 placeholder="Password"
                 //value={this.state.password}
                 //onChange={evt => this.setState({ password: evt.target.value })}
                 onChange = {this.handlePassChange}
                 />
-                <button onClick={this.addUser}>Sign In</button>
+                <button onClick={this.getUserServer}>Sign In</button>
                 <p className="message">New User? <Link to='/register'>Register</Link></p>
                 </form>
             </div>
