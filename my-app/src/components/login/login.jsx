@@ -1,12 +1,10 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-unused-state */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 /* eslint-disable no-console */
 import React from 'react';
 import '../../app.css';
 import { Link, withRouter } from 'react-router-dom';
-// import axios from 'axios';
 
 function validate(username, password) {
   const errors = [];
@@ -59,7 +57,6 @@ class Login extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const { username, password } = this.state;
-
     const errors = validate(username, password);
     if (errors.length > 0) {
       this.setState({ errors });
@@ -69,15 +66,6 @@ class Login extends React.Component {
       this.props.history.push('/');
     }
   }
-
-  //     axios.post("http://localhost:5000/users")
-  //       .then(res =>{
-  //           console.log(res);
-  //       })
-  //       .catch(error=>{
-  //           console.log(error);
-  //       })
-  // }
 
   render() {
     const { errors } = this.state;
@@ -122,5 +110,4 @@ class Login extends React.Component {
     );
   }
 }
-
 export default withRouter(Login);
