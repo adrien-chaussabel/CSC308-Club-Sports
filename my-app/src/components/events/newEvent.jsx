@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable no-console */
 /* eslint-disable react/no-unused-state */
 import React from 'react';
@@ -43,10 +42,10 @@ class NewEvent extends React.Component {
   addEvent() {
     const { event } = this.state;
     fetch(`/events/add?team_name=${event.team_name}
-  &date=${event.date}
-  &time=${event.time}
-  &location=${event.location}
-  &description=${event.description}`)
+    &date= ${event.date}
+    &time=${event.time}
+    &location=${event.location}
+    &description=${event.description}`)
       .then((response) => response.json())
       .then(this.getUsers)
       .catch((err) => console.error(err));
@@ -58,8 +57,7 @@ class NewEvent extends React.Component {
       <div className="event-page">
         <div className="form">
           <select
-            // eslint-disable-next-line react/destructuring-assignment
-            value={this.state.selectedTeam}
+            value=""
             onChange={(e) => this.setState({ selectedTeam: e.target.value })}
           >
             <option value={event.team_name}>
@@ -68,7 +66,7 @@ class NewEvent extends React.Component {
             <option value="Swim">Swim</option>
             <option value="Triathlon">Triathlon</option>
             <option value="Tennis">Tennis</option>
-            <option value="Women's Rugby">Women$aposs Rugby</option>
+            <option value="Women's Rugby">Women&apos;s Rugby</option>
           </select>
           <input
             type="date"

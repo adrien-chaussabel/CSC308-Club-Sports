@@ -21,7 +21,6 @@ const con = mysql.createConnection({
   user: process.env.user,
   password: process.env.password,
   database: process.env.database,
-
 });
 
 con.connect((err) => {
@@ -86,7 +85,7 @@ app.get('/users/add', (req, res) => {
     if (err) {
       return res.send(err);
     }
-    return res.send('successfully added user');
+    return res.sendStatus(200);
   });
 });
 
@@ -103,7 +102,7 @@ app.get('/events/add', (req, res) => {
     if (err) {
       return res.send(err);
     }
-    return res.send('successfully added event');
+    return res.sendStatus(200);
   });
 });
 
