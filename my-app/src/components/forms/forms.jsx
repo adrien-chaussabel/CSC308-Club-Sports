@@ -8,7 +8,7 @@ const FormsPage = () => (
     <h3>
       Club Sports strives to make running your club as streamlined as possible. This page is an
       <br />
-      exellent resource for all the information and forms you need. If you have any additional 
+      exellent resource for all the information and forms you need. If you have any additional
       <br />
       questions, please contact the Club Sports Advisor.
     </h3>

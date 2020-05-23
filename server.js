@@ -78,15 +78,22 @@ app.get('/users/add', (req, res) => {
   });
 });
 
-/* fake data for backend work */
-app.get('/api/events', (req, res) => {
-  const events = [
-    { id: 1, firstName: 'John', lastName: 'Doe' },
-    { id: 2, firstName: 'Joe', lastName: 'Swanson' },
-    { id: 3, firstName: 'Kanye', lastName: 'West' },
-  ];
-
-  res.json(events);
+app.post('/postEvent', (req, res) => {
+  // POST request for new Event.
+  const {
+    // should be camelcase for style guide but needs to match table columns
+    team_name, team_id, date, time, location, description,
+  } = req.query;
+  const body = {
+    team_name, team_id, date, time, location, description,
+  };
+  const sqlQuery = 'INSERT INTO events SET ?';
+  con.query(sqlQuery, body, (err) => {
+    if (err) {
+      return res.sendStatus(400);
+    }
+    return res.sendStatus(201);
+  });
 });
 
 const port = 5000;
