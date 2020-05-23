@@ -90,9 +90,9 @@ app.post('/postEvent', (req, res) => {
   const sqlQuery = 'INSERT INTO events SET ?';
   con.query(sqlQuery, body, (err) => {
     if (err) {
-      return res.send(err);
+      return res.sendStatus(400);
     }
-    return res.send('successfully added event');
+    return res.sendStatus(201);
   });
 });
 
