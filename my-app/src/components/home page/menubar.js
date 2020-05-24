@@ -20,6 +20,21 @@ import SportsPage from '../sports/sports';
 import Gallery from './carouselHome';
 import NewEvent from '../events/newEvent';
 
+
+class HomePage extends React.Component {
+  render() {
+    return (
+      <div>
+        <Events />
+        <Title />
+        <Info />
+        <Gallery />
+      </div>
+    );
+  }
+}
+
+
 /* TODO: add link to sports page on menu bar */
 class Menu extends React.Component {
   render() {
@@ -34,7 +49,6 @@ class Menu extends React.Component {
           <Link to="calendar">CALENDAR</Link>
           <Link to="/">HOME</Link>
         </div>
-        ;
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/forms" component={FormsPage} />
@@ -42,7 +56,6 @@ class Menu extends React.Component {
           <Route exact path="/newEvent" component={NewEvent} />
           <Route path="/login">
             <Login />
-            ;
           </Route>
         </Switch>
       </Router>
@@ -154,20 +167,6 @@ class Info extends React.Component {
         <a href="https://instagram.com">
           <img src="/instagram.png" className="instagramIcon" alt="Instagram" />
         </a>
-      </div>
-    );
-  }
-}
-
-
-class HomePage extends React.Component {
-  render() {
-    return (
-      <div>
-        <Events />
-        <Title />
-        <Info />
-        <Gallery />
       </div>
     );
   }

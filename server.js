@@ -89,32 +89,21 @@ app.get('/users/add', (req, res) => {
   });
 });
 
-/* adds event to events table */
-app.get('/events/add', (req, res) => {
+app.post('/postEvent', (req, res) => {
+  // POST request for new Event.
   const {
-    teamName, date, time, location, description,
+    // should be camelcase for style guide but needs to match table columns
+    team_name, team_id, date, time, location, description,
   } = req.query;
   const body = {
-    teamName, date, time, location, description,
+    team_name, team_id, date, time, location, description,
   };
-  const insertEvent = 'INSERT INTO events SET ?';
-  con.query(insertEvent, body, (err) => {
+  const sqlQuery = 'INSERT INTO events SET ?';
+  con.query(sqlQuery, body, (err) => {
     if (err) {
-      return res.send(err);
+      return res.sendStatus(400);
     }
-    return res.sendStatus(200);
-  });
-});
-
-/* selects team names */
-app.get('/teams', (req, res) => {
-  con.query(selectTeamNames, (err, results) => {
-    if (err) {
-      return res.send(err);
-    }
-    return res.json({
-      data: results,
-    });
+    return res.sendStatus(201);
   });
 });
 
