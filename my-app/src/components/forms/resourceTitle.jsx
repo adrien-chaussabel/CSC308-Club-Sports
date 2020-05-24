@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../app.css';
+import './forms.css';
 
 const ResourceTitle = () => (
-  <div className="title2">
+  <div className="formTitle">
     <h3>RESOURCES AND FORMS</h3>
   </div>
 );

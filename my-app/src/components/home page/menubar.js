@@ -18,6 +18,7 @@ import Events from './events';
 import FormsPage from '../forms/forms';
 import SportsPage from '../sports/sports';
 import Gallery from './carouselHome';
+import NewEvent from '../events/newEvent';
 
 
 class HomePage extends React.Component {
@@ -52,6 +53,7 @@ class Menu extends React.Component {
           <Route exact path="/" component={HomePage} />
           <Route path="/forms" component={FormsPage} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/newEvent" component={NewEvent} />
           <Route path="/login">
             <Login />
           </Route>

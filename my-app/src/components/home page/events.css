@@ -25,7 +25,7 @@
 
 /*box for events*/
 .eventbox {
-  margin-top: 3.75rem;
+  margin-top: 3.3125rem;
   right: 8.313rem;
   padding: 0.25rem 0.188rem;
   background-color: #F3BF39;
@@ -37,9 +37,9 @@
 }
 
 .eventbox2 {
-  margin-top: 3.75rem;
+  margin-top: 3.3125rem;
   right: 4.838rem;
-  padding: 4px 3px;
+  padding: 0.25rem 0.188rem;
   background-color: #789954;
   width: 3.125rem;
   height: 2.5rem;
@@ -56,7 +56,7 @@
 }
 
 .eventbox3 {
-  margin-top: 130px;
+  margin-top: 120px;
   right: 78px;
   float: left;
   width: 370px;

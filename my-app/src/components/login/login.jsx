@@ -1,11 +1,13 @@
+/* eslint-disable react/no-unused-state */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-console */
 import React from 'react';
 import '../../app.css';
 import { Link, withRouter } from 'react-router-dom';
 
-
 function validate(username, password) {
   const errors = [];
-
   if (username.length < 6) {
     errors.push('Username should be at least 5 characters long');
   }
@@ -54,7 +56,6 @@ class Login extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const { username, password } = this.state;
-
     const errors = validate(username, password);
     if (errors.length > 0) {
       this.setState({ errors });
@@ -74,29 +75,33 @@ class Login extends React.Component {
             {errors.map((error) => (
               <p key={error}>
                 Error:
+                {' '}
                 {error}
               </p>
             ))}
             <input
               placeholder="Username"
-              // value={this.state.username}
-              // onChange={evt => this.setState({ username: evt.target.value })}
+                // value={this.state.username}
+                // onChange={evt => this.setState({ username: evt.target.value })}
               onChange={this.handleUserChange}
               type="text"
             />
             <input
               type="password"
               placeholder="Password"
-              // value={this.state.password}
-              // onChange={evt => this.setState({ password: evt.target.value })}
+                // value={this.state.password}
+                // onChange={evt => this.setState({ password: evt.target.value })}
               onChange={this.handlePassChange}
             />
-            <button onClick={this.addUser} type="submit">Sign In</button>
+            <button
+              type="submit"
+              onClick={this.addUser}
+            >
+              Sign In
+            </button>
             <p className="message">
               New User?
-              <Link to="/register">
-                Register
-              </Link>
+              <Link to="/register">Register</Link>
             </p>
           </form>
         </div>
@@ -104,5 +109,4 @@ class Login extends React.Component {
     );
   }
 }
-
 export default withRouter(Login);
