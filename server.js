@@ -1,10 +1,16 @@
 /* eslint-disable no-console */
 require('dotenv').config();
 const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql');
+const userRoute = require('./routes/users');
 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors());
+app.use('/users', userRoute);
 
 const selectAllUsers = 'SELECT * FROM users';
 const selectAllEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
@@ -29,8 +35,6 @@ con.connect((err) => {
   }
   console.log('connected!');
 });
-
-app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('hello from the server');

@@ -42,10 +42,12 @@ function encryptPassword(password) {
 }
 
 
-router.get('/getUser/:userName/:password', (req, res) => {
+router.get('/', (req, res) => {
   // GET request for user.
-  const userName = req.params.userName;
-  const encryptedPassword = encryptPassword(req.params.password);
+  // console.log(`UserName = ${req.params.userName}`);
+  // console.log(`Password = ${req.params.password}`);
+  const userName = req.body.userName;
+  const encryptedPassword = encryptPassword(req.body.password);
   const sqlQuery = `SELECT * FROM users WHERE username = "${userName}" 
     AND password = "${encryptedPassword}";`;
 
@@ -87,19 +89,20 @@ router.post('/postUser', (req, res) => {
   });
 });
 
-router.post('/updateUser/:id', (req, res) => {
+router.post('/updateUser', (req, res) => {
   // POST request for updating am existing user.
-  const userID = req.params.id;
   const userName = req.body.userName;
   const password = encryptPassword(req.body.password);
   const email = req.body.email;
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const type = req.body.type;
+  const oldUserName = req.body.oldUserName;
+  const oldPassword = encryptPassword(req.body.oldPassword);
 
   const sqlQuery = `UPDATE users SET firstName = "${firstName}", lastName = "${lastName}", 
     email = "${email}", username = "${userName}", password = "${password}", type = "${type}"
-    WHERE id = ${userID};`;
+    WHERE username = "${oldUserName}" AND password = "${oldPassword}";`;
   connection.query(sqlQuery, (err) => {
     if (err) {
       console.log(err);
