@@ -14,7 +14,7 @@ class Events extends Component {
     };
   }
 
-
+  
 
   getEvents() {
     fetch('/events')

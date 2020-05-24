@@ -7,18 +7,15 @@
     position: absolute;
     
   }
-
 .fc h2 {
     font-size: 50px;
     color: #2D6041;
  }
-
  .fc-event {
     border-radius: 10px;
     border-width: 1px;
     font-size: 12px;
 }
-
 .fc-day-grid-event .fc-content {
     white-space: normal; 
  }

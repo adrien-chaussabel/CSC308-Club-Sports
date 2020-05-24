@@ -85,7 +85,6 @@ class Menu extends React.Component {
               <Route path="/sports" component={SportsPage} />
               <Route path="/calendar" component={CalendarPage} />
               <Route path="/login">
-
                   <Login />;
               </Route>
           </Switch>

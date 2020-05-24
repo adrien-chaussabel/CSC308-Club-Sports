@@ -12,19 +12,11 @@ import logo from './button.png';
 import instagram from './instagram.png'
 import web from './web.png'
 import facebook from './facebook.png'
-
-class SportsPage extends React.Component {
-    render() {
-        return <div>
-            <Menu2/>
-            <SportsTitle/>
-            <Follow/>
-            <SportsInfoBottom/>
-            <App />
-   
-        </div>
-    }
-}
+import ResultsPage from './results';
+import FAQpage from './faq';
+import FormsPage from './forms';
+import SchedulePage from './schedule';
+import ContactPage from './contact';
 
 
 class Menu2 extends React.Component {
@@ -33,21 +25,35 @@ class Menu2 extends React.Component {
             <div className="menu2">
             
                 <h1>SWIM CLUB</h1>
-                <Link to="/login">FAQ</Link>
+                <Link to="/faq">FAQ</Link>
                 <Link to="/forms">FORMS</Link>
-                <Link to="/login">CONTACT</Link>
-                <Link to="/login">SCHEDULE</Link>
-                <Link to="/login">RESULTS</Link>
+                <Link to="/contact">CONTACT</Link>
+                <Link to="/schedule">SCHEDULE</Link>
+                <Link to="/results">RESULTS</Link>
             </div>
-
             <Switch>
-                <Route path="/login">
-                    
-                </Route>
+                <Route exact path="/" component={SportsMain}/>
+                <Route path="/results" component={ResultsPage}/> 
+                <Route path="/schedule" component={SchedulePage}/> 
+                <Route path="/contact" component={ContactPage}/> 
+                <Route path="/forms" component={FormsPage}/> 
+                <Route path="/faq" component={FAQpage}/>               
             </Switch>
         </Router>
     }
 
+}
+
+class SportsPage extends React.Component {
+    render() {
+        return <div>
+            <SportsMain/>
+            <SportsTitle/>
+            <Follow/>
+            <SportsInfoBottom/>
+            <App />
+        </div>
+    }
 }
 
 class SportsInfo extends React.Component {
@@ -97,13 +103,17 @@ class Follow extends React.Component {
 class SportsTitle extends React.Component {
     render() {
         return <div className="sportstitle">
-            <h3>CAL POLY SWIM CLUB</h3>
-            
+            <h3>CAL POLY SWIM CLUB</h3> 
             <SportsInfo/>
         </div>
     }
 }
 
-
-
+class SportsMain extends React.Component {
+    render() {
+        return <div>
+            <Menu2/>
+        </div>
+    }
+}
 export default SportsPage;

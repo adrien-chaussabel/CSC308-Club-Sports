@@ -6,7 +6,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 
 let styles = {
     marginTop: '50px',
-    marginLeft: '65px',
+    marginLeft: '230px',
     maxWidth: '900px',
   };
   
@@ -20,24 +20,13 @@ class CalendarPage extends React.Component {
          displayEventTime = "true"
          header = { {right: 'dayGridMonth,timeGridWeek',left: 'today prev,next',center: 'title'} }
          events={[
-            { title: 'MENS SOCCER-fundraiser on lawn',  start:  '2020-05-09T14:30:00' , 
-            allDay: false , color  : '#2D6041'},
-            { title: 'WOMENS RUGBY',  start:  '2020-05-14T17:30:00' , allDay: false,color  : '#2D6041'},
-            { title: 'DISTANCE',  start:  '2020-05-14T18:50:00' , allDay: false, color  : '#2D6041'},
-          ]}
-         
-         
-         
-         />
-           
- 
+          { title: 'MENS SOCCER-fundraiser on lawn',  start:  '2020-05-09T14:30:00' , 
+          allDay: false , color  : '#2D6041'},
+          { title: 'WOMENS RUGBY',  start:  '2020-05-14T17:30:00' , allDay: false,color  : '#2D6041'},
+          { title: 'DISTANCE',  start:  '2020-05-14T18:50:00' , allDay: false, color  : '#2D6041'},]}/>
         </div>
     }
 
 }
-
-
-
-
 
 export default CalendarPage;
