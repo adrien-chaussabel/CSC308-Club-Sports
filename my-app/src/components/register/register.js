@@ -3,20 +3,23 @@ import './register.css';
 //import {Link} from "react-router-dom";
 import {Link, withRouter} from "react-router-dom";
 
-function validate(username, password, first, last) {
+function validate(username, password, first, last, email) {
   const errors = [];
 
-  if (username.length <= 4) {
-      errors.push("Username should be at least 5 characters long");
+  if (username.length <= 0) {
+      errors.push("Please enter a username");
     }
   if (password.length <= 4) {
     errors.push("Password should be at least 5 characters long");
   }
-  if (first.length <= 4) {
-    errors.push("First Name should be at least 5 characters long");
+  if (first.length <= 0) {
+    errors.push("Please enter your first name");
   }
-  if (last.length <= 4) {
-    errors.push("Last Name should be at least 5 characters long");
+  if (last.length <= 0) {
+    errors.push("Please enter your last name");
+  }
+  if (email.length <= 0) {
+    errors.push("Please enter an email");
   }
   return errors;
 }
@@ -69,13 +72,13 @@ handleSubmit(event) {
   event.preventDefault()
   const {user}= this.state;
 
-    const errors = validate(user.username, user.password, user.firstname, user.lastname);
+    const errors = validate(user.username, user.password, user.firstname, user.lastname, user.email);
     if (errors.length > 0) {
       this.setState({ errors });
       return;
     }
     else if (errors.length ===0) {
-        this.setState({username: "", password: "", firstname: "", lastname: ""});
+        this.setState({username: "", password: "", firstname: "", lastname: "", email: ""});
         this.setState({errors: []});
         this.addUser();
     }
