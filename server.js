@@ -5,12 +5,14 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql');
 const userRoute = require('./routes/users');
+const teamRoute = require('./routes/teams');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/users', userRoute);
+app.use('/teams', teamRoute);
 
 const selectAllUsers = 'SELECT * FROM users';
 const selectAllEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
