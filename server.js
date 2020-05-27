@@ -8,7 +8,9 @@ const path = require('path');
 const app = express();
 
 const selectAllUsers = 'SELECT * FROM users';
-const selectAllEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
+const selectTeamNames = 'SELECT name FROM team';
+const selectAllEvents = 'SELECT * FROM events';
+const selectTopEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
 TIME_FORMAT(time, "%h:%i %p")as time, location, description 
 FROM events
 ORDER BY YEAR(date) ASC, MONTH(date) ASC, DAY(date) ASC
@@ -27,15 +29,13 @@ const con = mysql.createConnection({
   user: process.env.user,
   password: process.env.password,
   database: process.env.database,
-
 });
 
-// eslint-disable-next-line consistent-return
 con.connect((err) => {
   if (err) {
     return err;
   }
-  console.log('connected!');
+  return 'connected';
 });
 
 app.use(cors());
@@ -48,6 +48,18 @@ app.get('/', (req, res) => {
 /* shows all users in users table */
 app.get('/users', (req, res) => {
   con.query(selectAllUsers, (err, results) => {
+    if (err) {
+      return res.send(err);
+    }
+    return res.json({
+      data: results,
+    });
+  });
+});
+
+/* shows all events in events table */
+app.get('/eventsBox', (req, res) => {
+  con.query(selectTopEvents, (err, results) => {
     if (err) {
       return res.send(err);
     }
@@ -78,24 +90,30 @@ app.get('/users/add', (req, res) => {
     firstname, lastname, email, username, password, type,
   };
   const insertUser = 'INSERT INTO users SET ?';
-  // eslint-disable-next-line consistent-return
   con.query(insertUser, body, (err) => {
     if (err) {
       return res.send(err);
     }
-    res.send('successfully added user');
+    return res.sendStatus(200);
   });
 });
 
-/* fake data for backend work */
-app.get('/api/events', (req, res) => {
-  const events = [
-    { id: 1, firstName: 'John', lastName: 'Doe' },
-    { id: 2, firstName: 'Joe', lastName: 'Swanson' },
-    { id: 3, firstName: 'Kanye', lastName: 'West' },
-  ];
-
-  res.json(events);
+app.post('/postEvent', (req, res) => {
+  // POST request for new Event.
+  const {
+    // should be camelcase for style guide but needs to match table columns
+    team_name, team_id, date, time, location, description,
+  } = req.query;
+  const body = {
+    team_name, team_id, date, time, location, description,
+  };
+  const sqlQuery = 'INSERT INTO events SET ?';
+  con.query(sqlQuery, body, (err) => {
+    if (err) {
+      return res.sendStatus(400);
+    }
+    return res.sendStatus(201);
+  });
 });
 
 const port = 5000;
