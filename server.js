@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
+const path = require('path');
 
 const app = express();
 
@@ -14,6 +15,13 @@ TIME_FORMAT(time, "%h:%i %p")as time, location, description
 FROM events
 ORDER BY YEAR(date) ASC, MONTH(date) ASC, DAY(date) ASC
 LIMIT 4;`;
+
+app.use(express.static(path.join(__dirname, 'my-app/build')));
+
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'my-app/build', 'index.html'));
+});
 
 /* connection with Google server */
 const con = mysql.createConnection({
@@ -31,10 +39,11 @@ con.connect((err) => {
 });
 
 app.use(cors());
-
+/*
 app.get('/', (req, res) => {
   res.send('hello from the server');
 });
+*/
 
 /* shows all users in users table */
 app.get('/users', (req, res) => {
@@ -109,4 +118,4 @@ app.post('/postEvent', (req, res) => {
 
 const port = 5000;
 
-app.listen(port, () => console.log(`Server started on port ${port}`));
+app.listen(process.env.PORT || port, () => console.log(`Server started on port ${port}`));

@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/my-app/node_modules
 
 # testing
 /coverage
@@ -11,7 +12,7 @@ jestExample.js
 jestExample.test.js
 
 # production
-/build
+#/build
 
 # misc
 .DS_Store
