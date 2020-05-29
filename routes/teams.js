@@ -25,10 +25,10 @@ connection.connect((err) => {
   console.log('Connected to Database!');
 });
 
-router.get('/', (req, res) => {
+router.get('/:name/:gender', (req, res) => {
   // GET method that returns a team based on name and gender.
-  const name = req.body.name;
-  const gender = req.body.gender;
+  const name = req.params.name;
+  const gender = req.params.gender;
 
   const sqlQuery = `SELECT * FROM team WHERE name = "${name}" AND gender = "${gender}";`;
   connection.query(sqlQuery, (err, rows) => {

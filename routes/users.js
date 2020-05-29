@@ -42,12 +42,11 @@ function encryptPassword(password) {
 }
 
 
-router.get('/', (req, res) => {
+router.get('/getUser/:userName/:password', (req, res) => {
   // GET request for user.
-  // console.log(`UserName = ${req.params.userName}`);
-  // console.log(`Password = ${req.params.password}`);
-  const userName = req.body.userName;
-  const encryptedPassword = encryptPassword(req.body.password);
+  // console.log('This is a GET request');
+  const userName = req.params.userName;
+  const encryptedPassword = encryptPassword(req.params.password);
   const sqlQuery = `SELECT * FROM users WHERE username = "${userName}" 
     AND password = "${encryptedPassword}";`;
 
