@@ -1,12 +1,13 @@
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-console */
+require('dotenv').config();
 const express = require('express');
 const crypto = require('crypto');
 const bodyParser = require('body-parser');
 
-const cryptoAlgorithm = 'aes-256-ctr';
-const cryptoPassword = '4g632jzrb26DETTsr20ls7v12bMWmERC';
-const cryptoIV = 'rb26DETT2JZGTE4g';
+const cryptoAlgorithm = process.env.cryptoAlgorithm;
+const cryptoPassword = process.env.cryptoPassword;
+const cryptoIV = process.env.cryptoIV;
 const router = express.Router();
 
 
@@ -16,10 +17,10 @@ router.use(bodyParser.json());
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host: '35.239.17.119',
-  user: 'root',
-  password: 'csc308sports',
-  database: 'clubsports',
+  host: process.env.host,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.database,
   multipleStatements: true,
 });
 

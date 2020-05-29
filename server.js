@@ -32,6 +32,7 @@ const con = mysql.createConnection({
 
 // eslint-disable-next-line consistent-return
 con.connect((err) => {
+  console.log(process.env.password);
   if (err) {
     return err;
   }
