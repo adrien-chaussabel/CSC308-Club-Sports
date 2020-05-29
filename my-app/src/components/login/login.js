@@ -1,3 +1,6 @@
+/* eslint-disable prefer-destructuring */
+/* eslint-disable no-alert */
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
@@ -30,6 +33,23 @@ class Login extends React.Component {
     this.handleUserChange = this.handleUserChange.bind(this);
   }
 
+  getUserServer() {
+    const userName = this.state.username;
+    const password = this.state.password;
+    fetch(`http://localhost:5000/users/getUser/${userName}/${password}`)
+      .then((response) => {
+        if (response.status === 404) {
+          alert('Failed to authenticate user');
+        } else {
+          this.setState({ username: '', password: '' });
+          this.setState({ errors: [] });
+          // eslint-disable-next-line react/prop-types
+          this.props.history.push('/');
+        }
+      })
+      .catch((err) => alert(err));
+  }
+
   handlePassChange(evt) {
     this.setState({
       password: evt.target.value,
@@ -40,24 +60,6 @@ class Login extends React.Component {
     this.setState({
       username: evt.target.value,
     });
-  }
-
-  getUserServer = _ => {
-    const userName = this.state.username;
-    const password = this.state.password;
-    fetch(`http://localhost:5000/users/getUser/${userName}/${password}`)
-    .then((response) => {
-      if(response.status === 404) {
-        alert('Failed to authenticate user');
-      }
-      else{
-        this.setState({ username: '', password: '' });
-        this.setState({ errors: [] });
-        // eslint-disable-next-line react/prop-types
-        this.props.history.push('/');
-      }
-    })
-    .catch(err => console.log(err));
   }
 
   handleSubmit(event) {
@@ -93,7 +95,7 @@ class Login extends React.Component {
               onChange={this.handlePassChange}
             />
             <button type="submit">Sign In</button>
-            <p className="message">New User? <Link to='/register'>Register</Link></p>
+            <p className="message">New User? <Link to="/register">Register</Link></p>
           </form>
         </div>
       </div>
