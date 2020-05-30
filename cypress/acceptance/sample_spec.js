@@ -5,7 +5,7 @@ describe('My first test', () => {
   });
 });
 
-describe('GIVEN I want to visit the CP CLub Sports website', () => {
+describe('GIVEN I want to visit the CP Club Sports website', () => {
   it('WHEN I paste the link, THEN the website loads', () => {
     cy.visit('http://localhost:3000');
   });
