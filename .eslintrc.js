@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
+    "cypress/globals": true,
   },
   extends: [
     'plugin:react/recommended',
@@ -21,6 +22,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'cypress'
   ],
   rules: {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
