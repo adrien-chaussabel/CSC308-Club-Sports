@@ -40,18 +40,21 @@
     "jest": "^24.9.0",
     "mocha": "^7.2.0",
     "nodemon": "^2.0.3",
-    "npm": "^6.14.5"
+    "npm": "^6.14.5",
+    "start-server-and-test": "^1.11.0",
+    "wait-on": "^5.0.0"
   },
   "scripts": {
     "install-both": "npm i && cd my-app && npm i",
     "test": "npm run test:cy && npm run test:jest",
-    "test:cy": "cypress run",
+    "test:cy": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && npm run cy:run\"",
     "test:jest": "jest __jest__ --coverage",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd my-app && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "cypress:open": "npx cypress open"
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
   },
   "repository": {
     "type": "git",
