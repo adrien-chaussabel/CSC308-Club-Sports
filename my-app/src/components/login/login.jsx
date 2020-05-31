@@ -1,10 +1,8 @@
-/* eslint-disable react/no-unused-state */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 /* eslint-disable no-console */
 import React from 'react';
 import '../../app.css';
 import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function validate(username, password) {
   const errors = [];
@@ -54,6 +52,7 @@ class Login extends React.Component {
   }
 
   handleSubmit(event) {
+    const { history } = this.props;
     event.preventDefault();
     const { username, password } = this.state;
     const errors = validate(username, password);
@@ -62,7 +61,7 @@ class Login extends React.Component {
     } else if (errors.length === 0) {
       this.setState({ username: '', password: '' });
       this.setState({ errors: [] });
-      this.props.history.push('/');
+      history.push('/');
     }
   }
 
@@ -81,16 +80,12 @@ class Login extends React.Component {
             ))}
             <input
               placeholder="Username"
-                // value={this.state.username}
-                // onChange={evt => this.setState({ username: evt.target.value })}
               onChange={this.handleUserChange}
               type="text"
             />
             <input
               type="password"
               placeholder="Password"
-                // value={this.state.password}
-                // onChange={evt => this.setState({ password: evt.target.value })}
               onChange={this.handlePassChange}
             />
             <button
@@ -109,4 +104,9 @@ class Login extends React.Component {
     );
   }
 }
+
+Login.propTypes = {
+  history: PropTypes.string.isRequired,
+};
+
 export default withRouter(Login);

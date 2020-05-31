@@ -8,7 +8,6 @@ const path = require('path');
 const app = express();
 
 const selectAllUsers = 'SELECT * FROM users';
-const selectTeamNames = 'SELECT name FROM team';
 const selectAllEvents = 'SELECT * FROM events';
 const selectTopEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
 TIME_FORMAT(time, "%h:%i %p")as time, location, description 
@@ -101,7 +100,7 @@ app.get('/users/add', (req, res) => {
 app.post('/postEvent', (req, res) => {
   // POST request for new Event.
   const {
-    // should be camelcase for style guide but needs to match table columns
+    // eslint-disable-next-line camelcase
     team_name, team_id, date, time, location, description,
   } = req.query;
   const body = {

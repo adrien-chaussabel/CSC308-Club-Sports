@@ -31,7 +31,8 @@ app.get('/users', function(req, res){
 });
 
 app.get('/adduser', (req, res) => {
-    let body = {name=req.body.fullname,
+    let body = {
+        name = req.body.fullname,
         username = req.body.username,
         pass = req.body.password};
     let sql = 'INSERT INTO users SET ?'
