@@ -3,13 +3,10 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 const mysql = require('mysql');
-<<<<<<< HEAD
 const userRoute = require('./routes/users');
 const teamRoute = require('./routes/teams');
-=======
-const path = require('path');
->>>>>>> master
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -43,22 +40,15 @@ const con = mysql.createConnection({
 });
 
 con.connect((err) => {
-  console.log(process.env.password);
   if (err) {
     return err;
   }
   return 'connected';
 });
 
-<<<<<<< HEAD
-=======
-app.use(cors());
-/*
->>>>>>> master
 app.get('/', (req, res) => {
   res.send('hello from the server');
 });
-*/
 
 /* shows all events in events table */
 app.get('/eventsBox', (req, res) => {

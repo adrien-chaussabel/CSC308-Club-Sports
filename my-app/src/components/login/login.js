@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-alert */
 /* eslint-disable react/destructuring-assignment */
-=======
->>>>>>> master
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
@@ -34,7 +31,6 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handlePassChange = this.handlePassChange.bind(this);
     this.handleUserChange = this.handleUserChange.bind(this);
-<<<<<<< HEAD
   }
 
   getUserServer() {
@@ -52,8 +48,6 @@ class Login extends React.Component {
         }
       })
       .catch((err) => alert(err));
-=======
->>>>>>> master
   }
 
   handlePassChange(evt) {
@@ -76,14 +70,7 @@ class Login extends React.Component {
     if (errors.length > 0) {
       this.setState({ errors });
     } else if (errors.length === 0) {
-<<<<<<< HEAD
       this.getUserServer();
-=======
-      this.setState({ username: '', password: '' });
-      this.setState({ errors: [] });
-      // eslint-disable-next-line react/prop-types
-      this.props.history.push('/');
->>>>>>> master
     }
   }
 
@@ -97,15 +84,9 @@ class Login extends React.Component {
               <p key={error}>Error: {error}</p>))}
             <h5>Username</h5>
             <input
-<<<<<<< HEAD
               type="text"
               placeholder="Enter Username"
               onChange={this.handleUserChange}
-=======
-              placeholder="Enter Username"
-              onChange={this.handleUserChange}
-              type="text"
->>>>>>> master
             />
             <h5>Password</h5>
             <input
