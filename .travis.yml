@@ -4,4 +4,4 @@ node_js:
   - node
 
   install:
-  - npm run install-both
+  - npm run ci-both

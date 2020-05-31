@@ -54,7 +54,8 @@
     "client": "cd my-app && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run"
+    "cy:run": "npx cypress run",
+    "ci-both": "npm ci && cd my-app && npm ci"
   },
   "repository": {
     "type": "git",
