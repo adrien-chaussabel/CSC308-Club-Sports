@@ -90,7 +90,7 @@ class Register extends React.Component {
         <div className="form">
           <form onSubmit={this.handleSubmit}>
             {errors.map((error) => (
-              <p key={error}>
+              <p id="error" key={error}>
                 Error:
                 {' '}
                 {error}

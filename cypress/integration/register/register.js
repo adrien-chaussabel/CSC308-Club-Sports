@@ -29,19 +29,35 @@ When('I type in a valid email', () => {
 });
 
 When('I type in a valid username', () => {
-  cy.get('[type="email"]').type('example@valid.com');
+  cy.get('input#username').type('example_user_123');
 });
 
 When('I select a user type', () => {
-  cy.get('input#student').select();
+  cy.get('input#student').click();
 });
 
-When('I sumbit the register form', () => {
+When('I submit the register form', () => {
   cy.get('[type="submit"]').click();
 });
 
-Then('I should get an error message', () => {
+Then('I should get the invalid email error alert', () => {
   cy.get('[type="email"]').then(($input) => {
     expect($input[0].validationMessage).contains('Please include an \'@\'');
   });
+});
+
+Then('I should get an error for no first name', () => {
+  cy.get('p#error').should('has.text', 'Error: Please enter your first name');
+});
+
+Then('I should get an error for no last name', () => {
+  cy.get('p#error').should('has.text', 'Error: Please enter your last name');
+});
+
+Then('I should get an error for no username', () => {
+  cy.get('p#error').should('has.text', 'Error: Please enter a username');
+});
+
+Then('I should get an error for short password', () => {
+  cy.get('p#error').should('has.text', 'Error: Password should be at least 5 characters long');
 });
