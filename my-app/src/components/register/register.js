@@ -107,6 +107,7 @@ render() {
               />
               <h5>Email</h5>
               <input 
+              id="email"
               type="email"
               placeholder="Enter Email"
               onChange={e => this.setState({user: {...user, email: e.target.value }})} 
@@ -152,7 +153,7 @@ render() {
                 onChange={e => this.setState({user: {...user, type: e.target.value }})}></input>
                 <span class="checkmark"></span>
               </label>
-              <button type="submit">Register</button>
+              <button type="submit" id="submitRegForm">Register</button>
               <p className="message">Already registered? <Link to='/login'>Sign In</Link></p>
               </form>
           </div>
