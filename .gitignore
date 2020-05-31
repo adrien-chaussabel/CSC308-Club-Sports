@@ -10,6 +10,8 @@
 /coverage
 jestExample.js
 jestExample.test.js
+cypress/videos
+cypress/screenshots
 
 # production
 #/build
