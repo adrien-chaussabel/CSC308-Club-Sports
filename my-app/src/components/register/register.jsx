@@ -98,30 +98,35 @@ class Register extends React.Component {
             ))}
             <h5>First Name</h5>
             <input
+              id="firstname"
               type="text"
               placeholder="Enter First Name"
               onChange={(e) => this.setState({ user: { ...user, firstname: e.target.value } })}
             />
             <h5>Last Name</h5>
             <input
+              id="lastname"
               type="text"
               placeholder="Enter Last Name"
               onChange={(e) => this.setState({ user: { ...user, lastname: e.target.value } })}
             />
             <h5>Email</h5>
             <input
+              id="email"
               type="email"
               placeholder="Enter Email"
               onChange={(e) => this.setState({ user: { ...user, email: e.target.value } })}
             />
             <h5>Username</h5>
             <input
+              id="username"
               type="text"
               placeholder="Enter Username"
               onChange={(e) => this.setState({ user: { ...user, username: e.target.value } })}
             />
             <h5>Password</h5>
             <input
+              id="password"
               type="password"
               placeholder="Enter Password"
               onChange={(e) => this.setState({ user: { ...user, password: e.target.value } })}
