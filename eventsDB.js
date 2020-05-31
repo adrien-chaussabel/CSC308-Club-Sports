@@ -10,7 +10,7 @@ const readRouter = express.Router();
 const writeRouter = express.Router();
 const updateRouter = express.Router();
 const deleteRouter = express.Router();
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '8080';
 
 app.use(bodyParser.json());
 app.use('/viewevents', readRouter);
@@ -73,7 +73,11 @@ readRouter.get('/eventsColumn', (req, res) => {
 });
 
 // Handling POST Request.
+<<<<<<< HEAD
 writeRouter.post('/postEvent', (req, res) => {
+=======
+writeRouter.post('/postEvent', (res, req) => {
+>>>>>>> master
   // POST request for new Event.
   const eventSport = req.body.sport;
   const eventDate = req.body.date;
@@ -95,7 +99,11 @@ writeRouter.post('/postEvent', (req, res) => {
   });
 });
 
+<<<<<<< HEAD
 updateRouter.post('/updateEvent', (req, res) => {
+=======
+updateRouter.post('/updateEvent', (res, req) => {
+>>>>>>> master
   // POST request for updating existing Event.
   const eventID = req.body.id;
   const eventSport = req.body.sport;
@@ -119,7 +127,11 @@ updateRouter.post('/updateEvent', (req, res) => {
 });
 
 // Handling DELETE request.
+<<<<<<< HEAD
 deleteRouter.delete('/deleteEvent', (req, res) => {
+=======
+deleteRouter.delete('/deleteEvent', (res, req) => {
+>>>>>>> master
   // DELETE request that deletes events based on event id.
   const eventID = req.body.id;
   const sqlQuery = `DELETE FROM events WHERE id = ${eventID};`;

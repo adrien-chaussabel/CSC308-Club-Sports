@@ -4,14 +4,17 @@
 /node_modules
 /.pnp
 .pnp.js
+/my-app/node_modules
 
 # testing
 /coverage
 jestExample.js
 jestExample.test.js
+cypress/videos
+cypress/screenshots
 
 # production
-/build
+#/build
 
 # misc
 .DS_Store

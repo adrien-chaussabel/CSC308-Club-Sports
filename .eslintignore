@@ -1,1 +1,2 @@
 my-app/src/serviceWorker.js
+cypress/integration/examples
