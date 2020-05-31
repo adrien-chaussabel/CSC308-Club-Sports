@@ -37,8 +37,7 @@
     "nodemon": "^2.0.3"
   },
   "scripts": {
-    "install-depend": "npm install express concurrently nodemon mysql cors dotenv && cd my-app && npm install && npm install react-router-dom",
-    "install-both": "npm i && cd my-app npm i",
+    "install-both": "npm i && cd my-app && npm i",
     "test": "npm run test:cy && npm run test:jest",
     "test:cy": "cypress run",
     "test:jest": "jest __jest__ --coverage",

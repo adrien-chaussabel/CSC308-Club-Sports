@@ -4,7 +4,9 @@
 
 `git clone {github link}`
 
-`npm install`
+`npm run install-both` to install npm dependencies for frontend and backend
+
+&nbsp;&nbsp;&nbsp;&nbsp;Alternatively, you can run `npm i` in the root directory and `npm i` in the my-app directory.
 
 `npm run dev ` to run both frontend and backend
 
