@@ -1,7 +1,7 @@
 Feature: Open the website
 
 @focus
-Scenario: Show the home page
+Scenario: Invalid email format when registering
   Given I open the register page
   When I type in an invalid email
   When I sumbit the register form
