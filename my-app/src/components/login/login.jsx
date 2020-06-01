@@ -16,8 +16,8 @@ function validate(username, password) {
 }
 
 class Login extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       username: ' ',
       password: ' ',
@@ -72,18 +72,20 @@ class Login extends React.Component {
         <div className="form">
           <form onSubmit={this.handleSubmit}>
             {errors.map((error) => (
-              <p key={error}>
+              <p id="error" key={error}>
                 Error:
                 {' '}
                 {error}
               </p>
             ))}
             <input
+              id="username"
               placeholder="Username"
               onChange={this.handleUserChange}
               type="text"
             />
             <input
+              id="password"
               type="password"
               placeholder="Password"
               onChange={this.handlePassChange}
