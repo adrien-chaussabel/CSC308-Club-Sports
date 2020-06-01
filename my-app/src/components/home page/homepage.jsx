@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../app.css';
-import Title from './title';
-import Info from './info';
+import Title from './Title';
+import Info from './Info';
 import Events from '../events/events';
-import Gallery from './carouselHome';
+import Gallery from './CarouselHome';
 
 
 const HomePage = () => (

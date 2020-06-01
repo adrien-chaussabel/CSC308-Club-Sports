@@ -6,12 +6,12 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import Register from '../register/register';
-import Login from '../login/login';
-import HomePage from './homepage';
+import Register from '../register/Register';
+import Login from '../login/Login';
+import HomePage from './HomePage';
 import FormsPage from '../forms/forms';
 import NewEvent from '../events/newEvent';
-import SportsDropDown from './sportsdropdown';
+import SportsDropDown from './SportsDropDown';
 
 
 /* TODO: add link to sports page on menu bar */

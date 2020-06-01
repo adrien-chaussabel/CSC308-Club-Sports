@@ -5,7 +5,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import SportsPage from '../sports/sports';
+import SportsPage from '../sports/SportsPage';
 
 const SportsDropDown = () => (
   <Router>
