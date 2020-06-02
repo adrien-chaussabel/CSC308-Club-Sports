@@ -8,13 +8,14 @@ import {
 } from 'react-router-dom';
 import Register from '../register/Register';
 import Login from '../login/Login';
+
 import HomePage from './HomePage';
 import FormsPage from '../forms/forms';
 import NewEvent from '../events/newEvent';
 import SportsDropDown from './SportsDropDown';
 
-
 /* TODO: add link to sports page on menu bar */
+
 const Menu = () => (
   <Router>
     <div className="menu">

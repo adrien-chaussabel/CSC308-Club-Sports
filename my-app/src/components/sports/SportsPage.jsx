@@ -12,7 +12,7 @@ import logo from './button.png';
 
 const SportsPage = () => (
   <div>
-    <SubMenu />
+    <SportsMenu />
     <SportsTitle />
     <Follow />
     <SportsInfoBottom />
@@ -20,7 +20,7 @@ const SportsPage = () => (
   </div>
 );
 
-const SubMenu = () => (
+const SportsMenu = () => (
   <Router>
     <div className="menu2">
       <h1>SWIM CLUB</h1>
