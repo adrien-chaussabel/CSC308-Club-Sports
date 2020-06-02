@@ -19,3 +19,11 @@ Scenario: Blank form submitted
   Given I open the login page
   When I submit the login form
   Then I should see an enter username and password error
+
+  @focus
+Scenario: Account not verified
+  Given I open the login page
+  When I enter a username that is not in the database
+  When I type a valid password
+  When I submit the login form
+  Then I should see the incorrect username or password error

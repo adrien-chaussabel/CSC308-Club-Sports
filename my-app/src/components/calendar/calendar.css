@@ -5,10 +5,12 @@
 .Calendar1{
     z-index: 0;
     position: absolute;
+    padding-top: 100px;
+    padding-bottom: 100px;
     
   }
 .fc h2 {
-    font-size: 50px;
+    font-size: 30px;
     color: #2D6041;
  }
  .fc-event {
