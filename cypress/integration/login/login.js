@@ -5,7 +5,7 @@ Given('I open the login page', () => {
 });
 
 When('I type a valid username', () => {
-  cy.get('input#username').type('example_user_123');
+  cy.get('input#username').type('valid_username');
 });
 
 When('I type a valid password', () => {
