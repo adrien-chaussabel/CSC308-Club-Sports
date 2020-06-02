@@ -1,14 +1,21 @@
 /* eslint-disable no-console */
 require('dotenv').config();
 const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
-const mysql = require('mysql');
 const path = require('path');
+const mysql = require('mysql');
+const userRoute = require('./routes/users');
+const teamRoute = require('./routes/teams');
 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors());
+app.use('/users', userRoute);
+app.use('/teams', teamRoute);
 
 const selectAllUsers = 'SELECT * FROM users';
-const selectTeamNames = 'SELECT name FROM team';
 const selectAllEvents = 'SELECT * FROM events';
 const selectTopEvents = `SELECT id, team_name, DATE_FORMAT(date, "%M %d") as date, 
 TIME_FORMAT(time, "%h:%i %p")as time, location, description 
@@ -101,7 +108,7 @@ app.get('/users/add', (req, res) => {
 app.post('/postEvent', (req, res) => {
   // POST request for new Event.
   const {
-    // should be camelcase for style guide but needs to match table columns
+    // eslint-disable-next-line camelcase
     team_name, team_id, date, time, location, description,
   } = req.query;
   const body = {

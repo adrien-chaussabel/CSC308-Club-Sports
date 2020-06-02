@@ -1,25 +1,23 @@
-/* eslint-disable react/no-unused-state */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 /* eslint-disable no-console */
 import React from 'react';
 import '../../app.css';
 import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function validate(username, password) {
   const errors = [];
-  if (username.length < 6) {
-    errors.push('Username should be at least 5 characters long');
+  if (username.length <= 1) {
+    errors.push('Please enter a username');
   }
   if (password.length < 6) {
-    errors.push('Password should be at least 5 characters long');
+    errors.push('Please enter a password');
   }
   return errors;
 }
 
 class Login extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       username: ' ',
       password: ' ',
@@ -30,15 +28,21 @@ class Login extends React.Component {
     this.handleUserChange = this.handleUserChange.bind(this);
   }
 
-  componentDidMount() {
-    this.getUsers();
-  }
-
-  getUsers() {
-    fetch('/user')
-      .then((response) => response.json())
-      .then((response) => this.setState({ users: response.data }))
-      .catch((err) => console.error(err));
+  getUserServer() {
+    const userName = this.state.username;
+    const password = this.state.password;
+    fetch(`http://localhost:5000/users/getUser/${userName}/${password}`)
+      .then((response) => {
+        if (response.status === 404) {
+          alert('Failed to authenticate user');
+        } else {
+          this.setState({ username: '', password: '' });
+          this.setState({ errors: [] });
+          // eslint-disable-next-line react/prop-types
+          this.props.history.push('/');
+        }
+      })
+      .catch((err) => alert(err));
   }
 
   handlePassChange(evt) {
@@ -60,9 +64,7 @@ class Login extends React.Component {
     if (errors.length > 0) {
       this.setState({ errors });
     } else if (errors.length === 0) {
-      this.setState({ username: '', password: '' });
-      this.setState({ errors: [] });
-      this.props.history.push('/');
+      this.getUserServer();
     }
   }
 
@@ -73,24 +75,22 @@ class Login extends React.Component {
         <div className="form">
           <form onSubmit={this.handleSubmit}>
             {errors.map((error) => (
-              <p key={error}>
+              <p id="error" key={error}>
                 Error:
                 {' '}
                 {error}
               </p>
             ))}
             <input
+              id="username"
               placeholder="Username"
-                // value={this.state.username}
-                // onChange={evt => this.setState({ username: evt.target.value })}
               onChange={this.handleUserChange}
               type="text"
             />
             <input
+              id="password"
               type="password"
               placeholder="Password"
-                // value={this.state.password}
-                // onChange={evt => this.setState({ password: evt.target.value })}
               onChange={this.handlePassChange}
             />
             <button
@@ -109,4 +109,9 @@ class Login extends React.Component {
     );
   }
 }
+
+Login.propTypes = {
+  history: PropTypes.string.isRequired,
+};
+
 export default withRouter(Login);

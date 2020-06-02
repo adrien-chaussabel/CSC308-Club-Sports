@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-boolean-value */
-/* eslint-disable react/jsx-filename-extension */
-
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 
@@ -14,11 +11,11 @@ function Gallery() {
   return (
     <div style={styles}>
       <Carousel
-        dynamicHeight={true}
+        dynamicHeight
         showThumbs={false}
-        infiniteLoop={true}
+        infiniteLoop
         showStatus={false}
-        autoPlay={true}
+        autoPlay
         transitionTime={300}
         showArrows={false}
       >

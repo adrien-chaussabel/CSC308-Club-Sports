@@ -1,0 +1,23 @@
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+@import '~@fullcalendar/timegrid/main.css';
+
+.Calendar1{
+    z-index: 0;
+    position: absolute;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+  }
+.fc h2 {
+    font-size: 30px;
+    color: #2D6041;
+ }
+ .fc-event {
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 12px;
+}
+.fc-day-grid-event .fc-content {
+    white-space: normal; 
+ }

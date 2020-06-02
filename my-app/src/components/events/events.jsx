@@ -1,5 +1,3 @@
-/* eslint-disable no-shadow */
-/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable no-console */
 import React, { Component } from 'react';
 import './events.css';
@@ -36,14 +34,14 @@ class Events extends Component {
           <img src="/calendar.png" alt="test" />
         </div>
         <div className="eventbox3">
-          { events.map((events) => (
-            <h2 key={events.id}>
-              { events.date }
+          { events.map((e) => (
+            <h2 key={e.id}>
+              { e.date }
               {' '}
-              <h3>{events.team_name}</h3>
-              {events.location}
+              <h3>{e.team_name}</h3>
+              {e.location}
               {' '}
-              {events.time}
+              {e.time}
               {' '}
               <a href="#details">see details</a>
               <h5>___________________________________________</h5>
