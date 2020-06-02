@@ -42,31 +42,37 @@ class Register extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    this.getUsers();
-  }
-
-  getUsers() {
-    fetch('/users')
-      .then((response) => response.json())
-      .then((response) => this.setState({ users: response.data }))
-      .catch((err) => console.error(err));
-  }
-
-  addUser() {
-    const { user } = this.state;
+  addUserServer() {
+    // Method that adds users to the database using the backend server.
     const { history } = this.props;
-    fetch(`/users/add?firstname=${user.firstname}
-    &lastname=${user.lastname}
-    &email=${user.email}
-    &username=${user.username}
-    &password=${user.password}
-    &type=${user.type}`)
-      .then((response) => response.json())
-      .then(this.getUsers)
-      .catch((err) => console.error(err));
-    history.push('/login');
-    alert(`User ${user.username} was registered`);
+    const firstName = this.state.user.firstname;
+    const lastName = this.state.user.lastname;
+    const email = this.state.user.email;
+    const userName = this.state.user.username;
+    const password = this.state.user.password;
+    const type = this.state.user.type;
+    // console.log(`${firstName}, ${lastName}, ${email}, ${userName}, ${password}, ${type}`);
+    fetch('http://localhost:5000/users/postUser', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        'username': userName,
+        'password': password,
+        'email': email,
+        'firstName': firstName,
+        'lastName': lastName,
+        'type': type,
+      }),
+    })
+      .then((response) => {
+        if (response.status === 201) {
+          history.push('/login');
+          alert(`User ${userName} was registered`);
+        } else {
+          alert(`User ${userName} could not be registered`);
+        }
+      })
+      .catch((err) => console.log(err));
   }
 
   handleSubmit(event) {
@@ -78,7 +84,11 @@ class Register extends React.Component {
       this.setState({ errors });
     } else if (errors.length === 0) {
       this.setState({ errors: [] });
-      this.addUser();
+      this.addUserServer();
+      this.setState({
+        username: '', password: '', firstname: '', lastname: '', email: '',
+      });
+      this.setState({ errors: [] });
     }
   }
 
@@ -132,7 +142,6 @@ class Register extends React.Component {
               onChange={(e) => this.setState({ user: { ...user, password: e.target.value } })}
             />
             <h5>Select type of User: </h5>
-
             <label htmlFor="student" className="container">
               Student
               <input

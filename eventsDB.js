@@ -73,11 +73,7 @@ readRouter.get('/eventsColumn', (req, res) => {
 });
 
 // Handling POST Request.
-<<<<<<< HEAD
-writeRouter.post('/postEvent', (req, res) => {
-=======
 writeRouter.post('/postEvent', (res, req) => {
->>>>>>> master
   // POST request for new Event.
   const eventSport = req.body.sport;
   const eventDate = req.body.date;
@@ -99,11 +95,7 @@ writeRouter.post('/postEvent', (res, req) => {
   });
 });
 
-<<<<<<< HEAD
-updateRouter.post('/updateEvent', (req, res) => {
-=======
 updateRouter.post('/updateEvent', (res, req) => {
->>>>>>> master
   // POST request for updating existing Event.
   const eventID = req.body.id;
   const eventSport = req.body.sport;
@@ -127,11 +119,7 @@ updateRouter.post('/updateEvent', (res, req) => {
 });
 
 // Handling DELETE request.
-<<<<<<< HEAD
-deleteRouter.delete('/deleteEvent', (req, res) => {
-=======
 deleteRouter.delete('/deleteEvent', (res, req) => {
->>>>>>> master
   // DELETE request that deletes events based on event id.
   const eventID = req.body.id;
   const sqlQuery = `DELETE FROM events WHERE id = ${eventID};`;

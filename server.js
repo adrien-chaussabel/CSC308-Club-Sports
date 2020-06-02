@@ -73,6 +73,17 @@ app.get('/events', (req, res) => {
   });
 });
 
+app.get('/users', (req, res) => {
+  con.query(selectAllUsers, (err, results) => {
+    if (err) {
+      return res.send(err);
+    }
+    return res.json({
+      data: results,
+    });
+  });
+});
+
 /* adds user to users table */
 app.get('/users/add', (req, res) => {
   const {
