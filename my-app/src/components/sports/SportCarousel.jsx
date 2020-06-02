@@ -8,7 +8,7 @@ const styles = {
   maxWidth: '600px',
 };
 
-function App() {
+function SportCarousel() {
   return (
     <div style={styles}>
       <Carousel
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default SportCarousel;

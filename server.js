@@ -45,8 +45,23 @@ con.connect((err) => {
   return 'connected';
 });
 
+app.use(cors());
+/*
 app.get('/', (req, res) => {
   res.send('hello from the server');
+});
+*/
+
+/* shows all users in users table */
+app.get('/users', (req, res) => {
+  con.query(selectAllUsers, (err, results) => {
+    if (err) {
+      return res.send(err);
+    }
+    return res.json({
+      data: results,
+    });
+  });
 });
 
 /* shows all events in events table */
@@ -64,17 +79,6 @@ app.get('/eventsBox', (req, res) => {
 /* shows all events in events table */
 app.get('/events', (req, res) => {
   con.query(selectAllEvents, (err, results) => {
-    if (err) {
-      return res.send(err);
-    }
-    return res.json({
-      data: results,
-    });
-  });
-});
-
-app.get('/users', (req, res) => {
-  con.query(selectAllUsers, (err, results) => {
     if (err) {
       return res.send(err);
     }
