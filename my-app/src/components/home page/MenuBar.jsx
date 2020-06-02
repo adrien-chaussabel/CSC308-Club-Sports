@@ -13,6 +13,7 @@ import HomePage from './HomePage';
 import FormsPage from '../forms/forms';
 import NewEvent from '../events/newEvent';
 import SportsDropDown from './SportsDropDown';
+import CalendarPage from '../calendar/calendar';
 
 /* TODO: add link to sports page on menu bar */
 
@@ -24,7 +25,7 @@ const Menu = () => (
       <Link to="/login">LOGIN</Link>
       <Link to="/forms">FORMS</Link>
       <SportsDropDown />
-      <Link to="calendar">CALENDAR</Link>
+      <Link to="/calendar">CALENDAR</Link>
       <Link to="/">HOME</Link>
     </div>
     <Switch>
@@ -32,6 +33,7 @@ const Menu = () => (
       <Route path="/forms" component={FormsPage} />
       <Route exact path="/register" component={Register} />
       <Route exact path="/newEvent" component={NewEvent} />
+      <Route exact path="/calendar" component={CalendarPage} />
       <Route path="/login">
         <Login />
       </Route>
