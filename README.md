@@ -1,6 +1,8 @@
 # CSC308-Club-Sports
 
-## How to Run:
+---
+
+## Setting up the codebase:
 
 `git clone {github link}`
 
@@ -14,13 +16,34 @@
 
 `npm run client ` to run just frontend
 
+---
+
 ## Style Guide:
 https://github.com/airbnb/javascript
 
-## Prototype:
+`npm run get-report ` to generate am html static code analysis report, saved in `report-output.html`
 
 ---
+
+## Tests:
+
+Unit tests are written using Jest, and stored in the `__jest__` folder
+
+Acceptance tests are written using Cypress and the Cucumber plugin, and are stored in the `cypress/integration` folder
+
+`npm run test:jest ` will run the jest tests in the proper folder
+
+`npm run test:cy ` will run launch the server and run the cypress acceptance tests
+
+`npm run test ` will run the above two commands
+
+---
+
+## Prototype:
+
 https://www.figma.com/file/rwvDW4MBXvO3duub7Jva10/Club-Sports?node-id=0%3A1
+
+---
 
 ## System Architecture (Feb 7 Class Assignment)
 
