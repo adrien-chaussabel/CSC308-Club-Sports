@@ -60,7 +60,6 @@
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
     "ci-both": "npm ci && cd my-app && npm ci",
-    "build": "cd my-app & npm run build",
     "get-report": "npx eslint -f html -o report-output.html --ext .jsx --ext .js ."
   },
   "repository": {
