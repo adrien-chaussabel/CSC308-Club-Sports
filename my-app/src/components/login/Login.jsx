@@ -29,9 +29,9 @@ class Login extends React.Component {
   }
 
   getUserServer() {
-    const { userName } = this.state;
+    const { username } = this.state;
     const { password } = this.state;
-    fetch(`http://localhost:5000/users/getUser/${userName}/${password}`)
+    fetch(`http://localhost:5000/users/getUser/${username}/${password}`)
       .then((response) => {
         if (response.status === 404) {
           alert('Failed to authenticate user');
