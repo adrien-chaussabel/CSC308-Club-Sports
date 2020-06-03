@@ -28,6 +28,7 @@ module.exports = {
     'cypress'
   ],
   rules: {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    'no-alert': 'off',
+    'no-console': 'off',
   },
 };

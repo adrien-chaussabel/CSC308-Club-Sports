@@ -29,8 +29,8 @@ class Login extends React.Component {
   }
 
   getUserServer() {
-    const userName = this.state.username;
-    const password = this.state.password;
+    const { userName } = this.state;
+    const { password } = this.state;
     fetch(`http://localhost:5000/users/getUser/${userName}/${password}`)
       .then((response) => {
         if (response.status === 404) {

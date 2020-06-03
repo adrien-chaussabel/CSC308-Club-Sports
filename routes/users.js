@@ -1,13 +1,12 @@
-/* eslint-disable prefer-destructuring */
 /* eslint-disable no-console */
 require('dotenv').config();
 const express = require('express');
 const crypto = require('crypto');
 const bodyParser = require('body-parser');
 
-const cryptoAlgorithm = process.env.cryptoAlgorithm;
-const cryptoPassword = process.env.cryptoPassword;
-const cryptoIV = process.env.cryptoIV;
+const { cryptoAlgorithm } = process.env;
+const { cryptoPassword } = process.env;
+const { cryptoIV } = process.env;
 const router = express.Router();
 
 
@@ -46,7 +45,7 @@ function encryptPassword(password) {
 router.get('/getUser/:userName/:password', (req, res) => {
   // GET request for user.
   // console.log('This is a GET request');
-  const userName = req.params.userName;
+  const { userName } = req.params;
   const encryptedPassword = encryptPassword(req.params.password);
   const sqlQuery = `SELECT * FROM users WHERE username = "${userName}" 
     AND password = "${encryptedPassword}";`;
@@ -68,15 +67,13 @@ router.get('/getUser/:userName/:password', (req, res) => {
 router.post('/postUser', (req, res) => {
   // POST request for adding a new user.
   console.log(req.body);
-  const userName = req.body.userName;
   const password = encryptPassword(req.body.password);
-  const email = req.body.email;
-  const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-  const type = req.body.type;
+  const {
+    username, email, firstName, lastName, type,
+  } = req.body;
 
   const sqlQuery = `INSERT INTO users (firstName, lastName, email, username, password, type)
-    values ("${firstName}", "${lastName}", "${email}", "${userName}", "${password}", 
+    values ("${firstName}", "${lastName}", "${email}", "${username}", "${password}", 
     "${type}");`;
 
   connection.query(sqlQuery, (err) => {
@@ -91,13 +88,13 @@ router.post('/postUser', (req, res) => {
 
 router.post('/updateUser', (req, res) => {
   // POST request for updating am existing user.
-  const userName = req.body.userName;
+  const { userName } = req.body;
   const password = encryptPassword(req.body.password);
-  const email = req.body.email;
-  const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-  const type = req.body.type;
-  const oldUserName = req.body.oldUserName;
+  const { email } = req.body;
+  const { firstName } = req.body;
+  const { lastName } = req.body;
+  const { type } = req.body;
+  const { oldUserName } = req.body;
   const oldPassword = encryptPassword(req.body.oldPassword);
 
   const sqlQuery = `UPDATE users SET firstName = "${firstName}", lastName = "${lastName}", 
