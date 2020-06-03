@@ -1,3 +1,5 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-alert */
 /* eslint-disable no-console */
 import React from 'react';
 import '../../app.css';
@@ -31,7 +33,14 @@ class Login extends React.Component {
   getUserServer() {
     const { username } = this.state;
     const { password } = this.state;
-    fetch(`http://localhost:5000/users/getUser/${username}/${password}`)
+    fetch('http://localhost:5000/users/getUser', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    })
       .then((response) => {
         if (response.status === 404) {
           alert('Failed to authenticate user');

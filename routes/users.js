@@ -42,12 +42,12 @@ function encryptPassword(password) {
 }
 
 
-router.get('/getUser/:userName/:password', (req, res) => {
+router.post('/getUser', (req, res) => {
   // GET request for user.
   // console.log('This is a GET request');
-  const { userName } = req.params;
-  const encryptedPassword = encryptPassword(req.params.password);
-  const sqlQuery = `SELECT * FROM users WHERE username = "${userName}" 
+  const { username } = req.body;
+  const encryptedPassword = encryptPassword(req.body.password);
+  const sqlQuery = `SELECT * FROM users WHERE username = "${username}"
     AND password = "${encryptedPassword}";`;
 
   connection.query(sqlQuery, (err, rows) => {
@@ -87,7 +87,7 @@ router.post('/postUser', (req, res) => {
 });
 
 router.post('/updateUser', (req, res) => {
-  // POST request for updating am existing user.
+  // POST request for updating an existing user.
   const { userName } = req.body;
   const password = encryptPassword(req.body.password);
   const { email } = req.body;
