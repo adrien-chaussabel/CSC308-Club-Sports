@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'my-app/build', 'index.html'));
 });
 
+app.get('/basic', (req, res) => {
+  res.sendStatus(200);
+});
+
 /* connection with Google server */
 const con = mysql.createConnection({
   host: process.env.host,
@@ -80,3 +84,5 @@ app.get('/users/add', (req, res) => {
 const port = 5000;
 
 app.listen(process.env.PORT || port, () => console.log(`Server started on port ${port}`));
+
+module.exports = app;

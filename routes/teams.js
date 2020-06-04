@@ -21,7 +21,7 @@ connection.connect((err) => {
   if (err) {
     return err;
   }
-  console.log('Connected to Database!');
+  // console.log('Connected to Database!');
   return 0;
 });
 
@@ -83,6 +83,20 @@ router.post('/update', (req, res) => {
       res.sendStatus(500);
     } else {
       res.sendStatus(200);
+    }
+  });
+});
+
+router.delete('/deleteTeam/:name/:gender', (req, res) => {
+  const { name } = req.params;
+  const { gender } = req.params;
+
+  const sqlQuery = `DELETE FROM team WHERE name = "${name}" AND gender = "${gender}";`;
+  connection.query(sqlQuery, (err) => {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      res.sendStatus(404);
     }
   });
 });

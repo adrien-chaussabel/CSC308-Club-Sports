@@ -20,7 +20,7 @@ connection.connect((err) => {
   if (err) {
     return err;
   }
-  console.log('Connected to Database!');
+  // console.log('Connected to Database!');
   return 0;
 });
 

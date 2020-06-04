@@ -29,7 +29,7 @@ connection.connect((err) => {
   if (err) {
     return err;
   }
-  console.log('Connected to Database!');
+  // console.log('Connected to Database!');
 });
 
 
@@ -44,7 +44,6 @@ function encryptPassword(password) {
 
 router.post('/getUser', (req, res) => {
   // GET request for user.
-  // console.log('This is a GET request');
   const { username } = req.body;
   const encryptedPassword = encryptPassword(req.body.password);
   const sqlQuery = `SELECT * FROM users WHERE username = "${username}"
@@ -66,7 +65,7 @@ router.post('/getUser', (req, res) => {
 
 router.post('/postUser', (req, res) => {
   // POST request for adding a new user.
-  console.log(req.body);
+  // console.log(req.body);
   const password = encryptPassword(req.body.password);
   const {
     username, email, firstName, lastName, type,
