@@ -39,6 +39,21 @@ Acceptance tests are written using Cypress and the Cucumber plugin, and are stor
 
 ---
 
+## Continuous Integration:
+
+We are using Travis CI for this project
+
+https://travis-ci.com/github/adrien-chaussabel/CSC308-Club-Sports
+
+
+---
+
+## Deployment:
+
+Deploted using heroku on: https://club-sports-hub.herokuapp.com/
+
+---
+
 ## Prototype:
 
 https://www.figma.com/file/rwvDW4MBXvO3duub7Jva10/Club-Sports?node-id=0%3A1
