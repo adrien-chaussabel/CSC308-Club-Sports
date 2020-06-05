@@ -23,7 +23,7 @@ function Gallery() {
           <img width="700" height="455" src="https://www.sanluisobispo.com/sports/college/cal-poly/tm6s8x/picture221492215/alternates/LANDSCAPE_768/IdahoCalPolyFootball0155" alt="Football" />
         </div>
         <div>
-          <img width="700" height="455" src="https://www.dailybulletin.com/wp-content/uploads/migration/2014/201403/SPORTS_140319431_AR_0_YZOYHTSKYTWC.jpg?w=535" alt="NCAA" />
+          <img width="700" height="455" src="/lacrosse.jpg" alt="Lacrosse" />
         </div>
         <div>
           <img width="700" height="445" src="/PlaceHolderImage.jpg" alt="Rugby" />
