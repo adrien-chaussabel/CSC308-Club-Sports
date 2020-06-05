@@ -15,6 +15,7 @@
     "env": "0.0.2",
     "epress": "0.0.1-security",
     "express": "^4.17.1",
+    "jest-cli": "^26.0.1",
     "mysql": "^2.18.1",
     "node": "^13.9.0",
     "react": "^16.13.1",
@@ -22,7 +23,8 @@
     "react-responsive-carousel": "^3.2.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
-    "reactstrap": "^8.4.1"
+    "reactstrap": "^8.4.1",
+    "supertest": "^4.0.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
@@ -51,7 +53,7 @@
   "scripts": {
     "install-both": "npm i && cd my-app && npm i",
     "test": "npm run test:cy && npm run test:jest",
-    "test:cy": "npm run dev & npx wait-on http://localhost:3000 & npm run cy:run",
+    "test:cy": "start-server-and-test dev http://localhost:3000 cy:run",
     "test:jest": "jest __jest__ --coverage",
     "start": "node server.js",
     "server": "nodemon server.js",
