@@ -49,9 +49,9 @@ const SportsInfo = () => (
       Board of Directors which meets each month. All members are welcome at each meeting
       and encouraged to be involved in team activities and fundraisers.
     </h2>
-    <img src="/web.jpg" alt="web icon" />
-    <img src="/instagram.jpg" alt="instagram" />
-    <img src="/facebook.jpg" alt="facebook" />
+    <img src="/web.png" alt="web icon" />
+    <img src="/instagram.png" alt="instagram" />
+    <img src="/facebook.png" alt="facebook" />
   </div>
 );
 

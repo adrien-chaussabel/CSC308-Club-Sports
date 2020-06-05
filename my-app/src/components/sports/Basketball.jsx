@@ -38,7 +38,7 @@ const SportsMenu = () => (
 
 const SportsInfo = () => (
   <div className="sportsinfo">
-    <h1>ABOUT BASKETBALL CLUB</h1>
+    <h1>ABOUT CAL POLY BASKETBALL CLUB</h1>
     <h2>
       Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
       has over 100 members and is constantly growing. We offer high quality professional
@@ -49,9 +49,9 @@ const SportsInfo = () => (
       Board of Directors which meets each month. All members are welcome at each meeting
       and encouraged to be involved in team activities and fundraisers.
     </h2>
-    <img src="/web.jpg" alt="web icon" />
-    <img src="/instagram.jpg" alt="instagram" />
-    <img src="/facebook.jpg" alt="facebook" />
+    <img src="/web.png" alt="web icon" />
+    <img src="/instagram.png" alt="instagram" />
+    <img src="/facebook.png" alt="facebook" />
   </div>
 );
 
