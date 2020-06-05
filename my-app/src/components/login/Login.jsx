@@ -3,6 +3,8 @@ import React from 'react';
 import '../../app.css';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import props from 'prop-types';
+
 
 function validate(username, password) {
   const errors = [];
@@ -31,6 +33,8 @@ class Login extends React.Component {
   getUserServer() {
     const userName = this.state.username;
     const password = this.state.password;
+    const {foo} = props.location.state
+    console.log(foo) 
     fetch(`http://localhost:5000/users/getUser/${userName}/${password}`)
       .then((response) => {
         if (response.status === 404) {
