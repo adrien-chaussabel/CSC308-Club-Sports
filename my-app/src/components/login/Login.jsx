@@ -31,7 +31,14 @@ class Login extends React.Component {
     const { username } = this.state;
     const { password } = this.state;
     const { history } = this.props;
-    fetch(`http://localhost:5000/users/getUser/${username}/${password}`)
+    fetch('http://localhost:5000/users/getUser', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    })
       .then((response) => {
         if (response.status === 404) {
           alert('Failed to authenticate user');

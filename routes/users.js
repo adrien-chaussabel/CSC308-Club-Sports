@@ -1,35 +1,12 @@
 require('dotenv').config();
-const express = require('express');
 const crypto = require('crypto');
-const bodyParser = require('body-parser');
+const express = require('express');
 
 const { cryptoAlgorithm } = process.env;
 const { cryptoPassword } = process.env;
 const { cryptoIV } = process.env;
 const router = express.Router();
-
-
-router.use(bodyParser.urlencoded({ extended: true }));
-router.use(bodyParser.json());
-
-const mysql = require('mysql');
-
-const connection = mysql.createConnection({
-  host: process.env.host,
-  user: process.env.user,
-  password: process.env.password,
-  database: process.env.database,
-  multipleStatements: true,
-});
-
-
-connection.connect((err) => {
-  if (err) {
-    return err;
-  }
-  console.log('Connected to Database!');
-  return 0;
-});
+const connection = require('../databaseCon');
 
 
 function encryptPassword(password) {
@@ -41,12 +18,11 @@ function encryptPassword(password) {
 }
 
 
-router.get('/getUser/:userName/:password', (req, res) => {
+router.post('/getUser', (req, res) => {
   // GET request for user.
-  // console.log('This is a GET request');
-  const { userName } = req.params;
-  const encryptedPassword = encryptPassword(req.params.password);
-  const sqlQuery = `SELECT * FROM users WHERE username = "${userName}" 
+  const { username } = req.body;
+  const encryptedPassword = encryptPassword(req.body.password);
+  const sqlQuery = `SELECT * FROM users WHERE username = "${username}"
     AND password = "${encryptedPassword}";`;
 
   connection.query(sqlQuery, (err, rows) => {
@@ -59,13 +35,14 @@ router.get('/getUser/:userName/:password', (req, res) => {
       res.sendStatus(404);
       return;
     }
+    // console.log(rows);
     res.send(rows);
   });
 });
 
 router.post('/postUser', (req, res) => {
   // POST request for adding a new user.
-  console.log(req.body);
+  // console.log(req.body);
   const password = encryptPassword(req.body.password);
   const {
     username, email, firstName, lastName, type,
@@ -86,7 +63,7 @@ router.post('/postUser', (req, res) => {
 });
 
 router.post('/updateUser', (req, res) => {
-  // POST request for updating am existing user.
+  // POST request for updating an existing user.
   const { userName } = req.body;
   const password = encryptPassword(req.body.password);
   const { email } = req.body;
@@ -105,6 +82,19 @@ router.post('/updateUser', (req, res) => {
       res.sendStatus(500);
     } else {
       res.sendStatus(200);
+    }
+  });
+});
+
+router.delete('/deleteUser/:username', (req, res) => {
+  const { username } = req.params;
+
+  const sqlQuery = `DELETE FROM users WHERE username = "${username}";`;
+  connection.query(sqlQuery, (err) => {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      res.sendStatus(404);
     }
   });
 });
