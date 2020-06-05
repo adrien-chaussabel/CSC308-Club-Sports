@@ -24,7 +24,7 @@
 
 * Then, you can run the production build through `npm start` and visiting http://localhost:5000
 
-Contact achaussa@calpoly.edu for database and password information to fill out envrionments variables
+Contact achaussa@calpoly.edu for database and password encryption information to fill out envrionments variables
 
 &nbsp;&nbsp;&nbsp;&nbsp;Alternatively, you can access envrionment variables through GitHub repo Secrets
 
