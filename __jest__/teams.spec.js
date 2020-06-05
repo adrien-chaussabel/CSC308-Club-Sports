@@ -1,5 +1,5 @@
 const supertest = require('supertest');
-const app = require('../server');
+const app = require('../app');
 
 test('basic Test', () => {
   expect(4).toBe(4);
