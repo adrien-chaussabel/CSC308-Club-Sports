@@ -30,6 +30,7 @@ class Login extends React.Component {
   getUserServer() {
     const { username } = this.state;
     const { password } = this.state;
+    const { history } = this.props;
     fetch('http://localhost:5000/users/getUser', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
