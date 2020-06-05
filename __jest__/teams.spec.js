@@ -1,5 +1,9 @@
 const supertest = require('supertest');
-const app = require('../app');
+const { app, con } = require('../app');
+
+afterAll(() => {
+  con.end();
+});
 
 test('basic Test', () => {
   expect(4).toBe(4);
@@ -197,9 +201,10 @@ describe('Test#1 for the DELETE method in events.js', () => {
       about: 'COED FOOTBALL TEAM',
     });
   });
-  it('Deletes the entry added', async () => {
+  it('Deletes the entry added', async (done) => {
     const response = await supertest(app).delete('/teams/deleteEvent/Football/coed');
     expect(response.status).toBe(404);
+    done();
   });
 });
 

@@ -3,10 +3,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const mysql = require('mysql');
 const userRoute = require('./routes/users');
 const teamRoute = require('./routes/teams');
 const eventRoute = require('./routes/events');
+const con = require('./databaseCon');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,6 +31,9 @@ app.get('/basic', (req, res) => {
 });
 
 /* connection with Google server */
+
+
+/*
 const con = mysql.createConnection({
   host: process.env.host,
   user: process.env.user,
@@ -44,6 +47,7 @@ con.connect((err) => {
   }
   return 'connected';
 });
+*/
 
 app.use(cors());
 /*
@@ -82,4 +86,4 @@ app.get('/users/add', (req, res) => {
 });
 
 
-module.exports = app;
+module.exports = { app, con };

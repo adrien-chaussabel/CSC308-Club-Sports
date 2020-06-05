@@ -1,34 +1,12 @@
 require('dotenv').config();
-const express = require('express');
 const crypto = require('crypto');
-const bodyParser = require('body-parser');
+const express = require('express');
 
 const { cryptoAlgorithm } = process.env;
 const { cryptoPassword } = process.env;
 const { cryptoIV } = process.env;
 const router = express.Router();
-
-
-router.use(bodyParser.urlencoded({ extended: true }));
-router.use(bodyParser.json());
-
-const mysql = require('mysql');
-
-const connection = mysql.createConnection({
-  host: process.env.host,
-  user: process.env.user,
-  password: process.env.password,
-  database: process.env.database,
-  multipleStatements: true,
-});
-
-
-connection.connect((err) => {
-  if (err) {
-    return err;
-  }
-  // console.log('Connected to Database!');
-});
+const connection = require('../databaseCon');
 
 
 function encryptPassword(password) {

@@ -53,7 +53,7 @@
   "scripts": {
     "install-both": "npm i && cd my-app && npm i",
     "test": "npm run test:cy && npm run test:jest",
-    "test:cy": "npm run dev & npx wait-on http://localhost:3000 & npm run cy:run",
+    "test:cy": "start-server-and-test dev http://localhost:3000 cy:run",
     "test:jest": "jest __jest__ --coverage",
     "start": "node server.js",
     "server": "nodemon server.js",

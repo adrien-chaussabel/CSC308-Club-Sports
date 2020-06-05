@@ -1,5 +1,9 @@
 const supertest = require('supertest');
-const app = require('../app');
+const { app, con } = require('../app');
+
+afterAll(() => {
+  con.end();
+});
 
 describe('Test#1 for POST method that retrives a user data', () => {
   it('Tests with a valid username and valid password', async () => {
