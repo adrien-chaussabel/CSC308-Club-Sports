@@ -41,14 +41,16 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT VOLLEYBALL CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    The Cal Poly Women\'s Volleyball club offers 
+    intercollegiate competition at the club volleyball level. 
+    The club was founded so that Cal Poly female athletes who love volleyball 
+    can compete at a club level while still achieving academic success as full 
+    time students. The club competes in the Northern California Collegiate Volleyball 
+    League during months of January, February, and March with two strong teams representing Cal Poly. 
+    Tryouts, practices, and tournaments are held during the season as before winter quarter begins. 
+    The Women\'s Volleyball club is now back to back national champions of the National 
+    Collegiate Volleyball Federation\'s National Championship.
+
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

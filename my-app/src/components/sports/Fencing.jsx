@@ -41,14 +41,12 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT FENCING CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+   En garde! The Fencing Club offers both men and women members the opportunity 
+   to learn the art of modern swordplay. The club provides instruction 
+   in the three different fencing weapons: foil, epee, and sabre. Competitive club members compete year round. 
+   The Cal Poly Fencing Team has been one of the top competitors in collegiate and USFA tournaments in California. 
+   In addition to competitive pursuits, the Cal Poly Fencing Team is dedicated to introducing new people of all ages
+    to our sport and teaching them what it means to be a fencer.
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

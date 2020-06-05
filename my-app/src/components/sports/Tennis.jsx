@@ -41,14 +41,14 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT TENNIS CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+      The Cal Poly Club Tennis Team is a co-ed, student-run team under the USTA\'s Tennis 
+      on Campus program. Our goal is to give tennis players more opportunities for competitive 
+      play against other universities. We have tryouts in the beginning of the school year, practice 
+      3-4 times per week, and travel to tournaments once or twice a month. Tennis on Campus uses 
+      the World Team Tennis format, which involves one set of men\'s singles and doubles, women\'s 
+      singles and doubles, and mixed doubles. Our team competes towards a National Championship in April, 
+      so we play almost all year.'
+
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

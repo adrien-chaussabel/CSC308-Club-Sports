@@ -41,14 +41,11 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT LACROSSE  CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    Lacrosse has been active for 17 years and has approximately 
+    40 members each season. The club competes in the Western Collegiate Lacrosse League 
+    (WCLL) Division 1 against clubs such as UCLA, Davis, Stanford, and Berkeley and are 
+    competitive nationally. Currently, the Men\'s Lacrosse team is ranked 21st in the nation.
+
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

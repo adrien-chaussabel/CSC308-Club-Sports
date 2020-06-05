@@ -41,14 +41,15 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT WATER POLO CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    The Cal Poly Water Polo Club is consistently
+     ranked nationally every year. They are five-time National Champions 
+     and look to continue with that tradition. Club members practice and perform at a
+      competitive collegiate level. The team consistently has several players who are
+       nationally recognized and awarded All-American honors. 
+       The season begins at the start of September and ends in 
+       the middle of November. Last season, the Men\'s Water Polo 
+       team was awarded Team of the Decade honors by the Collegiate Water Polo Association.
+
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

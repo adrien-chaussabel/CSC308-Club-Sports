@@ -41,14 +41,12 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT HOCKEY CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    Cal Poly Field Hockey competes as a member of the Western Collegiate Field Hockey Conference, 
+    competing against UC Santa Barbara, UC Davis, Chico State, Santa Clara, Claremont, UC San Diego, 
+    and USC. Cal Poly took the WCFHC Conference Title in 2004, 2005, 2006, and 2008 and took second place in 2007 
+    and 2009. Cal Poly took first place at Cal Cup, an international field hockey tournament, in 2008 and 
+    second place in 2009. In 2010, Cal Poly took the National title in Santa Barbara, finishing the season 
+    with an undefeated record. The team continues to excel and enjoys playing field hockey whenever possible.
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

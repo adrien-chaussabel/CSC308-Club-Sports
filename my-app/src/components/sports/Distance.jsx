@@ -41,14 +41,12 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT DISTSNCE CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    Our mission for the Cal Poly Distance Club is to offer enjoyable running for everybody on campus. 
+     No matter what ability level, current endurance, or time commitment, we welcome any, and every runner 
+     at Cal Poly to join. Our top competitive athletes train everyday, and year-round. We also encourage 
+     beginning runners to come out and try the sport.\n\n	We compete in cross country from September to 
+     December in open and National Intercollegiate Running Club Association (NIRCA) races. We also compete in
+      long-distance track from March to May in open and National Club Track & Field Association races (NCTFA).
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

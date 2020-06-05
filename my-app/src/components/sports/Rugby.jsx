@@ -41,14 +41,16 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT RUGBY CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+   The Cal Poly Rugby team provides athletes with a competitive environment 
+   that requires physical conditioning and discipline. Membership numbers range from 
+   75 to 100 athletes each year. The Rugby team consistently finishes their 
+   competitive season as a Nationally-ranked top 10 team, bringing national 
+   and international attention to the University. Pre-season training 
+   runs September through December, giving the team a chance to develop 
+   student-athletes through a limited number of games and a comprehensive 
+   program of skills, strength, and conditioning. League season begins in 
+   January and runs until the end of May.'
+
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

@@ -41,14 +41,10 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT BASKETBALL CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    Cal Poly Club Basketball is an organization for competitive players to continue their love for 
+    the game past the high school level. The club travels to schools to play games on weekends, alternately 
+    hosting games on other weekends. Our two biggest events of the year are the NIRSA Regionals and NIRSA 
+    Nationals tournaments.
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

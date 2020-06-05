@@ -41,14 +41,16 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT WATER SKI CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    The Cal Poly Water Ski Team\'s purpose is to provide s
+    tudents with access to competitive water skiing, practice, 
+    and coaching in slalom, trick and jump. Tournaments 
+    provide fun opportunities to meet other skiers from schools 
+    throughout the west coast, while skiing at world-class sites. 
+    Cal Poly is a part of the Western conference and ranked 6th 
+    place for the 2013 season. Tournaments 
+    are sanctioned by the National Collegiate Water 
+    Ski Association. We look forward to hearing from you!
+
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

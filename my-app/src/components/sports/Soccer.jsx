@@ -41,14 +41,12 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT SOCCER CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    The Cal Poly Soccer Club has grown into one of the top college club soccer 
+    programs in the Nation. The team recently finished 2nd in the California League 
+    and competing in the NCCS Championships in Phoenix, AZ. The program includes 2 
+    teams, and is comprised of over 50 student-athletes. Both teams compete in the 
+    West Coast Soccer Association against teams from Stanford, UC Santa Barbara, UC Santa Cruz, and USC.
+ 
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

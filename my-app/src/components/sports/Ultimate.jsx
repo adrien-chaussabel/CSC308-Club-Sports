@@ -41,14 +41,11 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT ULTIMATE CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+     The Ultimate team travels and competes in tournaments throughout California 
+     against other college club teams such as UCSB, UCLA, and UCSC and more. 
+     Tournaments begin in November and run through May. They compete in 2-3 tournaments 
+     per quarter including the USA Ultimate southwestern regional tournament. 
+     Practices are held three times a week and no experience is necessary.
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

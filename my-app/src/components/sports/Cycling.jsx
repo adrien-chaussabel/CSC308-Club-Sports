@@ -41,14 +41,13 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT CYCLING CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+   Cal Poly Cycling is both a social and competitive organization, 
+   for those interested in joining a collection of like-minded individuals. 
+   Our members, who join 100-150 annual participants, engage in exploration, 
+   weekly ride options, racing, socials, and community events. Through the Western Collegiate 
+   Cycling Conference, mountain racing extends from September-November, while road racing occurs
+    from February-May. To join Cal Poly Cycling, no experience is needed. We look forward to seeing you soon. 
+
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

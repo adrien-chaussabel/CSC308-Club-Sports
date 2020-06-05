@@ -41,14 +41,17 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT SAILING CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    The Cal Poly Sailing team is a competitive Club Sport team at Cal Poly 
+    and stands as one of the school\'s oldest in existence. The team competes in 
+    regattas sanctioned by the Inter-Collegiate Sailing Association of North America. 
+    The Sailing team competes in the Pacific Coast Collegiate Sailing Conference against 
+    schools from up and down the West Coast. The teams that they compete against in regular 
+    season regattas include Hawaii, Princeton, Stanford, UC Berkeley, UCLA, and USC. Their 
+    competitive season, which is made up of 5 ranked regattas, takes place mostly during the 
+    Winter Quarter, but the team participates in as many off-season regattas as possible. 
+    The team is highly committed to excelling in their division and 
+    practice at least twice a week, year-round.'
+
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />

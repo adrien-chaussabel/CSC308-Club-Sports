@@ -41,14 +41,16 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT SURF CLUB</h1>
     <h2>
-      Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club
-      has over 100 members and is constantly growing. We offer high quality professional
-      coaching that can reach swimmers of all ability. The goal of our team is to provide
-      every member an opportunity to improve their swimming skills and achieve success
-      at his or her level of ability, from beginner to international competitor.
-      Come by and check us out! We are a non profit club, that is run by its elected
-      Board of Directors which meets each month. All members are welcome at each meeting
-      and encouraged to be involved in team activities and fundraisers.
+    As good, big waves litter the coastline of Central California, 
+    it is no surprise that Cal Poly is home to an excellent group of student surfers. 
+    Comprised of both men and women who either short-board or long-board, the surf team competes
+     against 20 other California universities over the course of five surf contests. Between November
+      and March, the team travels about once a month to beaches like Black\'s Beach in San Diego,
+       C Street in Ventura, and Trestle\'s in San Clemente to surf in contests. Surfers score 
+       points for our team by impressing the judges and advancing through an array of playoff-style 
+       brackets. The Surf team competes in the Southwest College Division of the National Scholastic 
+       Surfing Association (NSSA) with schools like UCSB and San Diego State.
+
     </h2>
     <img src="web.jpg" alt="web icon" />
     <img src="instagram.jpg" alt="asdf" />
