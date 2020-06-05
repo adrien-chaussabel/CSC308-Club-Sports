@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import logo from './button.png';
 
 const HockeyPage = () => (
   <div>
@@ -50,9 +49,9 @@ const SportsInfo = () => (
       Board of Directors which meets each month. All members are welcome at each meeting
       and encouraged to be involved in team activities and fundraisers.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src="/web.jpg" alt="web icon" />
+    <img src="/instagram.jpg" alt="instagram" />
+    <img src="/facebook.jpg" alt="facebook" />
   </div>
 );
 
@@ -71,7 +70,7 @@ const SportsInfoBottom = () => (
 
 const Follow = () => (
   <div className="follow">
-    <img src={logo} alt="button" />
+    <img src="/button.png" alt="button" />
     <button type="button" className="dropbtn">
       {' '}
       FOLLOW
