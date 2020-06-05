@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const RugbyPage = () => (
   <div>
@@ -41,20 +44,19 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT RUGBY CLUB</h1>
     <h2>
-   The Cal Poly Rugby team provides athletes with a competitive environment 
-   that requires physical conditioning and discipline. Membership numbers range from 
-   75 to 100 athletes each year. The Rugby team consistently finishes their 
-   competitive season as a Nationally-ranked top 10 team, bringing national 
-   and international attention to the University. Pre-season training 
-   runs September through December, giving the team a chance to develop 
-   student-athletes through a limited number of games and a comprehensive 
-   program of skills, strength, and conditioning. League season begins in 
-   January and runs until the end of May.'
-
+      The Cal Poly Rugby team provides athletes with a competitive environment
+      that requires physical conditioning and discipline. Membership numbers range from
+      75 to 100 athletes each year. The Rugby team consistently finishes their
+      competitive season as a Nationally-ranked top 10 team, bringing national
+      and international attention to the University. Pre-season training
+      runs September through December, giving the team a chance to develop
+      student-athletes through a limited number of games and a comprehensive
+      program of skills, strength, and conditioning. League season begins in
+      January and runs until the end of May.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jp" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const BasketballPage = () => (
   <div>
@@ -41,14 +44,17 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT BASKETBALL CLUB</h1>
     <h2>
-    Cal Poly Club Basketball is an organization for competitive players to continue their love for 
-    the game past the high school level. The club travels to schools to play games on weekends, alternately 
-    hosting games on other weekends. Our two biggest events of the year are the NIRSA Regionals and NIRSA 
-    Nationals tournaments.
+      Cal Poly Club Basketball is an organization for competitive
+      players to continue their love for
+      the game past the high school level. The club travels to schools
+      to play games on weekends, alternately
+      hosting games on other weekends. Our two biggest events of the year
+      are the NIRSA Regionals and NIRSA
+      Nationals tournaments.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

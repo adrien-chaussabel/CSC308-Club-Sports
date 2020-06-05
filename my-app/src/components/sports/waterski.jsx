@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const WaterSkiPage = () => (
   <div>
@@ -41,20 +44,19 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT WATER SKI CLUB</h1>
     <h2>
-    The Cal Poly Water Ski Team\'s purpose is to provide s
-    tudents with access to competitive water skiing, practice, 
-    and coaching in slalom, trick and jump. Tournaments 
-    provide fun opportunities to meet other skiers from schools 
-    throughout the west coast, while skiing at world-class sites. 
-    Cal Poly is a part of the Western conference and ranked 6th 
-    place for the 2013 season. Tournaments 
-    are sanctioned by the National Collegiate Water 
-    Ski Association. We look forward to hearing from you!
-
+      The Cal Poly Water Ski Team purpose is to provide
+      tudents with access to competitive water skiing, practice,
+      and coaching in slalom, trick and jump. Tournaments
+      provide fun opportunities to meet other skiers from schools
+      throughout the west coast, while skiing at world-class sites.
+      Cal Poly is a part of the Western conference and ranked 6th
+      place for the 2013 season. Tournaments
+      are sanctioned by the National Collegiate Water
+      Ski Association. We look forward to hearing from you!
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

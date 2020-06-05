@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const SoccerPage = () => (
   <div>
@@ -41,16 +44,16 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT SOCCER CLUB</h1>
     <h2>
-    The Cal Poly Soccer Club has grown into one of the top college club soccer 
-    programs in the Nation. The team recently finished 2nd in the California League 
-    and competing in the NCCS Championships in Phoenix, AZ. The program includes 2 
-    teams, and is comprised of over 50 student-athletes. Both teams compete in the 
-    West Coast Soccer Association against teams from Stanford, UC Santa Barbara, UC Santa Cruz, and USC.
- 
+      The Cal Poly Soccer Club has grown into one of the top college club soccer
+      programs in the Nation. The team recently finished 2nd in the California League
+      and competing in the NCCS Championships in Phoenix, AZ. The program includes 2
+      teams, and is comprised of over 50 student-athletes. Both teams compete in the
+      West Coast Soccer Association against teams
+      from Stanford, UC Santa Barbara, UC Santa Cruz, and USC.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

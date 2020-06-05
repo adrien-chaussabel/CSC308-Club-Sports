@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const HockeyPage = () => (
   <div>
@@ -41,16 +44,22 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT HOCKEY CLUB</h1>
     <h2>
-    Cal Poly Field Hockey competes as a member of the Western Collegiate Field Hockey Conference, 
-    competing against UC Santa Barbara, UC Davis, Chico State, Santa Clara, Claremont, UC San Diego, 
-    and USC. Cal Poly took the WCFHC Conference Title in 2004, 2005, 2006, and 2008 and took second place in 2007 
-    and 2009. Cal Poly took first place at Cal Cup, an international field hockey tournament, in 2008 and 
-    second place in 2009. In 2010, Cal Poly took the National title in Santa Barbara, finishing the season 
-    with an undefeated record. The team continues to excel and enjoys playing field hockey whenever possible.
+      Cal Poly Field Hockey competes as a member of the
+      Western Collegiate Field Hockey Conference,
+      competing against UC Santa Barbara, UC Davis,
+      Chico State, Santa Clara, Claremont, UC San Diego,
+      and USC. Cal Poly took the WCFHC Conference
+      Title in 2004, 2005, 2006, and 2008 and took second place in 2007
+      and 2009. Cal Poly took first place at Cal Cup,
+      an international field hockey tournament, in 2008 and
+      second place in 2009. In 2010, Cal Poly took the
+      National title in Santa Barbara, finishing the season
+      with an undefeated record. The team continues to
+      excel and enjoys playing field hockey whenever possible.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

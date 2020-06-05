@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const SwimPage = () => (
   <div>
@@ -50,9 +53,9 @@ const SportsInfo = () => (
       Board of Directors which meets each month. All members are welcome at each meeting
       and encouraged to be involved in team activities and fundraisers.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

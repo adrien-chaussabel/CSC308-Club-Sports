@@ -9,6 +9,10 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
+
 
 const BowlingPage = () => (
   <div>
@@ -41,17 +45,21 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT BOWLING CLUB</h1>
     <h2>
-     Our mission for the Cal Poly Disz Club is to offer enjoyable running for everybody on campus. 
-     No matter what ability level, current endurance, or time commitment, we welcome any, and every runner 
-     at Cal Poly to join. Our top competitive athletes train everyday, and year-round. We also encourage 
-     beginning runners to come out and try the sport.\n\n	We compete in cross country from September to 
-     December in open and National Intercollegiate Running Club Association (NIRCA) races. We also compete in
-      long-distance track from March to May in open and National Club Track & Field Association races (NCTFA).
-
+      Our mission for the Cal Poly Disz Club is to offer enjoyable running for everybody on campus.
+      No matter what ability level, current endurance, or time commitment,
+      we welcome any, and every runner
+      at Cal Poly to join. Our top competitive athletes train everyday,
+      and year-round. We also encourage
+      beginning runners to come out and try the sport.\n\n
+      We compete in cross country from September to
+      December in open and National Intercollegiate Running
+      Club Association (NIRCA) races. We also compete in
+      long-distance track from March to May in open and National
+      Club Track & Field Association races (NCTFA).
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

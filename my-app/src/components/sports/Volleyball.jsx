@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const VolleyballPage = () => (
   <div>
@@ -41,20 +44,22 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT VOLLEYBALL CLUB</h1>
     <h2>
-    The Cal Poly Women\'s Volleyball club offers 
-    intercollegiate competition at the club volleyball level. 
-    The club was founded so that Cal Poly female athletes who love volleyball 
-    can compete at a club level while still achieving academic success as full 
-    time students. The club competes in the Northern California Collegiate Volleyball 
-    League during months of January, February, and March with two strong teams representing Cal Poly. 
-    Tryouts, practices, and tournaments are held during the season as before winter quarter begins. 
-    The Women\'s Volleyball club is now back to back national champions of the National 
-    Collegiate Volleyball Federation\'s National Championship.
-
+      The Cal Poly Women Volleyball club offers
+      intercollegiate competition at the club volleyball level.
+      The club was founded so that Cal Poly female athletes who love volleyball
+      can compete at a club level while still achieving academic success as full
+      time students. The club competes in the Northern California Collegiate Volleyball
+      League during months of January, February, and March
+      with two strong teams representing Cal Poly.
+      Tryouts, practices, and tournaments are held
+      during the season as before winter quarter begins.
+      The Women Volleyball club is
+      now back to back national champions of the National
+      Collegiate Volleyball Federation National Championship.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

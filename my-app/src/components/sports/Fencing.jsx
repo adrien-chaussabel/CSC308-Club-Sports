@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const FencingPage = () => (
   <div>
@@ -41,16 +44,19 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT FENCING CLUB</h1>
     <h2>
-   En garde! The Fencing Club offers both men and women members the opportunity 
-   to learn the art of modern swordplay. The club provides instruction 
-   in the three different fencing weapons: foil, epee, and sabre. Competitive club members compete year round. 
-   The Cal Poly Fencing Team has been one of the top competitors in collegiate and USFA tournaments in California. 
-   In addition to competitive pursuits, the Cal Poly Fencing Team is dedicated to introducing new people of all ages
-    to our sport and teaching them what it means to be a fencer.
+      En garde! The Fencing Club offers both men and women members the opportunity
+      to learn the art of modern swordplay. The club provides instruction
+      in the three different fencing weapons: foil, epee, and sabre.
+      Competitive club members compete year round.
+      The Cal Poly Fencing Team has been one of the top competitors in
+      collegiate and USFA tournaments in California.
+      In addition to competitive pursuits, the Cal Poly
+      Fencing Team is dedicated to introducing new people of all ages
+      to our sport and teaching them what it means to be a fencer.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jp" />
   </div>
 );
 

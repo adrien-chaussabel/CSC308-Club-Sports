@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const LaccrosePage = () => (
   <div>
@@ -41,15 +44,14 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT LACROSSE  CLUB</h1>
     <h2>
-    Lacrosse has been active for 17 years and has approximately 
-    40 members each season. The club competes in the Western Collegiate Lacrosse League 
-    (WCLL) Division 1 against clubs such as UCLA, Davis, Stanford, and Berkeley and are 
-    competitive nationally. Currently, the Men\'s Lacrosse team is ranked 21st in the nation.
-
+      Lacrosse has been active for 17 years and has approximately
+      40 members each season. The club competes in the Western Collegiate Lacrosse League
+      (WCLL) Division 1 against clubs such as UCLA, Davis, Stanford, and Berkeley and are
+      competitive nationally. Currently, the Lacrosse team is ranked 21st in the nation.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

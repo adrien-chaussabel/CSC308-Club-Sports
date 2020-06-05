@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const TriathlonPage = () => (
   <div>
@@ -41,13 +44,12 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT TRIATHLON CLUB</h1>
     <h2>
-    The Cal Poly Triathlon Club is a community of over 130 student-athletes. 
-    The club welcomes all interested individuals, regardless of prior experience in the sport.
-
+      The Cal Poly Triathlon Club is a community of over 130 student-athletes.
+      The club welcomes all interested individuals, regardless of prior experience in the sport.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

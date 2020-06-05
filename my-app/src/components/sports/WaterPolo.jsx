@@ -9,6 +9,10 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
+
 
 const WaterPoloPage = () => (
   <div>
@@ -41,22 +45,21 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT WATER POLO CLUB</h1>
     <h2>
-    The Cal Poly Water Polo Club is consistently
-     ranked nationally every year. They are five-time National Champions 
-     and look to continue with that tradition. Club members practice and perform at a
+      The Cal Poly Water Polo Club is consistently
+      ranked nationally every year. They are five-time National Champions
+      and look to continue with that tradition. Club members practice and perform at a
       competitive collegiate level. The team consistently has several players who are
-       nationally recognized and awarded All-American honors. 
-       The season begins at the start of September and ends in 
-       the middle of November. Last season, the Men\'s Water Polo 
-       team was awarded Team of the Decade honors by the Collegiate Water Polo Association.
-
+      nationally recognized and awarded All-American honors.
+      The season begins at the start of September and ends in
+      the middle of November. Last season, the Men Water Polo
+      team was awarded Team of the Decade honors
+      by the Collegiate Water Polo Association.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
-
 const SportsInfoBottom = () => (
   <div className="sportsinfobottom">
     <h1>

@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const CyclingPage = () => (
   <div>
@@ -41,17 +44,18 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT CYCLING CLUB</h1>
     <h2>
-   Cal Poly Cycling is both a social and competitive organization, 
-   for those interested in joining a collection of like-minded individuals. 
-   Our members, who join 100-150 annual participants, engage in exploration, 
-   weekly ride options, racing, socials, and community events. Through the Western Collegiate 
-   Cycling Conference, mountain racing extends from September-November, while road racing occurs
-    from February-May. To join Cal Poly Cycling, no experience is needed. We look forward to seeing you soon. 
+      Cal Poly Cycling is both a social and competitive organization,
+      for those interested in joining a collection of like-minded individuals.
+      Our members, who join 100-150 annual participants, engage in exploration,
+      weekly ride options, racing, socials, and community events. Through the Western Collegiate
+      Cycling Conference, mountain racing extends from September-November, while road racing occurs
+      from February-May. To join Cal Poly Cycling, no experience is needed.
+      We look forward to seeing you soon.
 
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

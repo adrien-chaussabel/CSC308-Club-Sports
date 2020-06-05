@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const UltimatePage = () => (
   <div>
@@ -41,15 +44,15 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT ULTIMATE CLUB</h1>
     <h2>
-     The Ultimate team travels and competes in tournaments throughout California 
-     against other college club teams such as UCSB, UCLA, and UCSC and more. 
-     Tournaments begin in November and run through May. They compete in 2-3 tournaments 
-     per quarter including the USA Ultimate southwestern regional tournament. 
-     Practices are held three times a week and no experience is necessary.
+      The Ultimate team travels and competes in tournaments throughout California
+      against other college club teams such as UCSB, UCLA, and UCSC and more.
+      Tournaments begin in November and run through May. They compete in 2-3 tournaments
+      per quarter including the USA Ultimate southwestern regional tournament.
+      Practices are held three times a week and no experience is necessary.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

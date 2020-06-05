@@ -9,6 +9,9 @@ import {
 import SportCarousel from './SportCarousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import logo from './button.png';
+import instagram from './instagram.png';
+import web from './web.png';
+import facebook from './facebook.png';
 
 const TennisPage = () => (
   <div>
@@ -41,18 +44,18 @@ const SportsInfo = () => (
   <div className="sportsinfo">
     <h1>ABOUT TENNIS CLUB</h1>
     <h2>
-      The Cal Poly Club Tennis Team is a co-ed, student-run team under the USTA\'s Tennis 
-      on Campus program. Our goal is to give tennis players more opportunities for competitive 
-      play against other universities. We have tryouts in the beginning of the school year, practice 
-      3-4 times per week, and travel to tournaments once or twice a month. Tennis on Campus uses 
-      the World Team Tennis format, which involves one set of men\'s singles and doubles, women\'s 
-      singles and doubles, and mixed doubles. Our team competes towards a National Championship in April, 
-      so we play almost all year.'
-
+      The Cal Poly Club Tennis Team is a co-ed, student-run team under the USTA Tennis
+      on Campus program. Our goal is to give tennis players more opportunities for competitive
+      play against other universities. We have tryouts in the beginning of the school year, practice
+      3-4 times per week, and travel to tournaments once or twice a month. Tennis on Campus uses
+      the World Team Tennis format, which involves one set of men singles and doubles, women
+      singles and doubles, and mixed doubles. Our team competes towards a
+      National Championship in April,
+      so we play almost all year.
     </h2>
-    <img src="web.jpg" alt="web icon" />
-    <img src="instagram.jpg" alt="asdf" />
-    <img src="facebook.jpg" alt="asdf" />
+    <img src={web} alt="web.jpg" />
+    <img src={instagram} alt="instagram.jpg" />
+    <img src={facebook} alt="facebook.jpg" />
   </div>
 );
 

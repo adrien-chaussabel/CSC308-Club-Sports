@@ -4,7 +4,6 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
-
 function validate(username, password) {
   const errors = [];
   if (username.length <= 1) {
