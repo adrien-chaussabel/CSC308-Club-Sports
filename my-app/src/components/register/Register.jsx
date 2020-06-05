@@ -43,6 +43,7 @@ class Register extends React.Component {
 
   addUserServer() {
     // Method that adds users to the database using the backend server.
+    const baseUrl = window.location.origin;
     const { history } = this.props;
     const { user } = this.state;
 
@@ -50,7 +51,7 @@ class Register extends React.Component {
       firstName, lastName, email, username, password, type,
     } = user;
     console.log(`${firstName}, ${lastName}, ${email}, ${username}, ${password}, ${type}`);
-    fetch('http://localhost:5000/users/postUser', {
+    fetch(`${baseUrl}/users/postUser`, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

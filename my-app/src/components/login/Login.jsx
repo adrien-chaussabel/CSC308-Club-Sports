@@ -28,10 +28,11 @@ class Login extends React.Component {
   }
 
   getUserServer() {
+    const baseUrl = window.location.origin;
     const { username } = this.state;
     const { password } = this.state;
     const { history } = this.props;
-    fetch('http://localhost:5000/users/getUser', {
+    fetch(`${baseUrl}/users/getUser`, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
