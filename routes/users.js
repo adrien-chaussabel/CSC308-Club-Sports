@@ -59,6 +59,7 @@ router.post('/getUser', (req, res) => {
       res.sendStatus(404);
       return;
     }
+    // console.log(rows);
     res.send(rows);
   });
 });
@@ -105,6 +106,19 @@ router.post('/updateUser', (req, res) => {
       res.sendStatus(500);
     } else {
       res.sendStatus(200);
+    }
+  });
+});
+
+router.delete('/deleteUser/:username', (req, res) => {
+  const { username } = req.params;
+
+  const sqlQuery = `DELETE FROM users WHERE username = "${username}";`;
+  connection.query(sqlQuery, (err) => {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      res.sendStatus(404);
     }
   });
 });
