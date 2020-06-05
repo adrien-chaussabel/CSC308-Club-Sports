@@ -8,7 +8,7 @@ function validate(username, password) {
   if (username.length <= 1) {
     errors.push('Please enter a username');
   }
-  if (password.length < 6) {
+  if (password.length <= 4) {
     errors.push('Please enter a password');
   }
   return errors;
@@ -87,12 +87,14 @@ class Login extends React.Component {
                 {error}
               </p>
             ))}
+            <h5>Username</h5>
             <input
               id="username"
               placeholder="Username"
               onChange={this.handleUserChange}
               type="text"
             />
+            <h5>Password</h5>
             <input
               id="password"
               type="password"
