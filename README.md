@@ -16,7 +16,9 @@
 
 `npm run client ` to run just frontend
 
-Contact achaussa@calpoly.edu for database and password information to fill out envrionments file.
+Contact achaussa@calpoly.edu for database and password information to fill out envrionments variables
+
+Alternatively, you can access envrionment variables through GitHub repo Secrets
 
 ---
 
