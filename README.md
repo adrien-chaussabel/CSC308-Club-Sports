@@ -16,6 +16,8 @@
 
 `npm run client ` to run just frontend
 
+Contact achaussa@calpoly.edu for database and password information to fill out envrionments file.
+
 ---
 
 ## Style Guide:
@@ -27,6 +29,8 @@ https://github.com/airbnb/javascript
 
 ## Tests:
 
+Tests are run on a test database, seperate from the production database being used on the Heroku deployment
+
 Unit tests are written using Jest, and stored in the `__jest__` folder
 
 Acceptance tests are written using Cypress and the Cucumber plugin, and are stored in the `cypress/integration` folder
@@ -35,7 +39,24 @@ Acceptance tests are written using Cypress and the Cucumber plugin, and are stor
 
 `npm run test:cy ` will run launch the server and run the cypress acceptance tests
 
+&nbsp;&nbsp;&nbsp;&nbsp; For some reason this command doesn't work consistently. Run `npm run dev & npx wait-on http://localhost:3000 & npm run cy:run ` if tests aren't run with the above script.
+
 `npm run test ` will run the above two commands
+
+---
+
+## Continuous Integration:
+
+We are using Travis CI for this project
+
+https://travis-ci.com/github/adrien-chaussabel/CSC308-Club-Sports
+
+
+---
+
+## Deployment:
+
+Deploted using heroku on: https://club-sports-hub.herokuapp.com/
 
 ---
 

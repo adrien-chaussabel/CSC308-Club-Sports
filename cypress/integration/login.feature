@@ -7,20 +7,20 @@ Scenario: Password not entered when logging in
   When I submit the login form
   Then I should see an enter password error
 
-  @focus
+@focus
 Scenario: Username not entered when logging in
   Given I open the login page
   When I type a valid password
   When I submit the login form
   Then I should see an enter username error
 
-  @focus
+@focus
 Scenario: Blank form submitted
   Given I open the login page
   When I submit the login form
   Then I should see an enter username and password error
 
-  @focus
+@focus
 Scenario: Account not verified
   Given I open the login page
   When I enter a username that is not in the database

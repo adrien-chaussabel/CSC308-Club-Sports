@@ -60,8 +60,8 @@ class SportsInfo extends React.Component {
   }
   getEvents() 
   {
-    const name = this.state.username;
-    const gender = this.state.password;
+    const name = this.state.name;
+    const gender = this.state.gender;
     fetch(`http://localhost:5000/teams/${name}/${gender}`)
       .then((response) => response.json())
       .then((response) => this.setState({ sports: response.data }))

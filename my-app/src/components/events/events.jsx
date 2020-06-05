@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { Component } from 'react';
 import './events.css';
 
@@ -17,7 +16,7 @@ class Events extends Component {
   }
 
   getEvents() {
-    fetch('/eventsBox')
+    fetch('events/eventsBox')
       .then((response) => response.json())
       .then((response) => this.setState({ events: response.data }))
       .catch((err) => console.error(err));

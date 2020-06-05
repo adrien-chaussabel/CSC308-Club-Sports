@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import './register.css';
 import { Link, withRouter } from 'react-router-dom';
@@ -45,31 +44,30 @@ class Register extends React.Component {
   addUserServer() {
     // Method that adds users to the database using the backend server.
     const { history } = this.props;
-    const firstName = this.state.user.firstname;
-    const lastName = this.state.user.lastname;
-    const email = this.state.user.email;
-    const userName = this.state.user.username;
-    const password = this.state.user.password;
-    const type = this.state.user.type;
-    // console.log(`${firstName}, ${lastName}, ${email}, ${userName}, ${password}, ${type}`);
+    const { user } = this.state;
+
+    const {
+      firstName, lastName, email, username, password, type,
+    } = user;
+    console.log(`${firstName}, ${lastName}, ${email}, ${username}, ${password}, ${type}`);
     fetch('http://localhost:5000/users/postUser', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        'username': userName,
-        'password': password,
-        'email': email,
-        'firstName': firstName,
-        'lastName': lastName,
-        'type': type,
+        username,
+        password,
+        email,
+        firstName,
+        lastName,
+        type,
       }),
     })
       .then((response) => {
         if (response.status === 201) {
           history.push('/login');
-          alert(`User ${userName} was registered`);
+          alert(`User ${username} was registered`);
         } else {
-          alert(`User ${userName} could not be registered`);
+          alert(`User ${username} could not be registered`);
         }
       })
       .catch((err) => console.log(err));
@@ -85,9 +83,11 @@ class Register extends React.Component {
     } else if (errors.length === 0) {
       this.setState({ errors: [] });
       this.addUserServer();
+      /*
       this.setState({
         username: '', password: '', firstname: '', lastname: '', email: '',
       });
+      */
       this.setState({ errors: [] });
     }
   }

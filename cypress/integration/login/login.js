@@ -33,9 +33,6 @@ Then('I should see an enter username and password error', () => {
 });
 
 Then('I should see the incorrect username or password error', () => {
-  const stub = cy.stub();
-  cy.on('window:alert', stub);
-  cy.get('[type="submit"]').click().then(() => {
-    expect(stub.getCall(0)).to.be.calledWith('Failed to authenticate user');
-  });
+  cy.on('window:alert', cy.stub().as('alert'));
+  cy.get('@alert').should('have.been.calledWithExactly', 'Failed to authenticate user');
 });

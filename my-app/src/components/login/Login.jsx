@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import '../../app.css';
 import { Link, withRouter } from 'react-router-dom';
@@ -31,19 +30,24 @@ class Login extends React.Component {
   }
 
   getUserServer() {
-    const userName = this.state.username;
-    const password = this.state.password;
-    const {foo} = props.location.state
-    console.log(foo) 
-    fetch(`http://localhost:5000/users/getUser/${userName}/${password}`)
+    const { username } = this.state;
+    const { password } = this.state;
+    const { history } = this.props;
+    fetch('http://localhost:5000/users/getUser', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    })
       .then((response) => {
         if (response.status === 404) {
           alert('Failed to authenticate user');
         } else {
           this.setState({ username: '', password: '' });
           this.setState({ errors: [] });
-          // eslint-disable-next-line react/prop-types
-          this.props.history.push('/');
+          history.push('/');
         }
       })
       .catch((err) => alert(err));
