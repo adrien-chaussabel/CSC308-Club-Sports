@@ -12,7 +12,8 @@ import logo from './button.png';
 import CalendarPage from '../calendar/calendar';
 import FormsPage from '../forms/forms';
 import FAQPage from './faq';
-
+import props from 'prop-types';
+//need to finish connecting
 
 const SportsPage = () => (
   <div>
@@ -52,6 +53,11 @@ class SportsInfo extends React.Component {
     this.state = {
       name: ' ',
       gender: ' ',
+      email: ' ',
+      facebook: ' ',
+      instagram:' ',
+      website: ' ',
+      about: ' ',
       sports: [],
     };
   }
@@ -60,7 +66,9 @@ class SportsInfo extends React.Component {
   }
   getEvents() 
   {
-    const name = this.state.name;
+    //const {name} = props.location.state
+    //console.log(name)
+    const name = this.state.gender;
     const gender = this.state.gender;
     fetch(`http://localhost:5000/teams/${name}/${gender}`)
       .then((response) => response.json())
@@ -72,7 +80,7 @@ class SportsInfo extends React.Component {
       return(
           <div className="sportsinfo">
           { sports.map((e) => (
-          <h1>key={e.about}</h1>
+          <h1>name</h1>
           ))}
           <h2>Join one of the best collegiate swim clubs in the West Coast! Cal Poly Swim Club 
               has over 100 members and is constantly growing. We offer high quality professional 

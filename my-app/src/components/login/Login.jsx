@@ -2,7 +2,7 @@ import React from 'react';
 import '../../app.css';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import props from 'prop-types';
+
 
 
 function validate(username, password) {
