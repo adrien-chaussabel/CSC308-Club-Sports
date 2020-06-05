@@ -12,6 +12,6 @@ Then('The title should include Club Sports Hub', () => {
   cy.title().should('include', 'Club Sports');
 });
 
-Then('There should be a Rugby Event at Stanford at 2:00 pm', () => {
-  cy.get('div').should('contain.text', 'Stanford 02:00');
+Then('There should be a Tennis event at Dexter Lawn at 1:00 AM', () => {
+  cy.get('div').should('contain.text', 'Dexter Lawn 01:00 AM');
 });

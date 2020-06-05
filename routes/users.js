@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 require('dotenv').config();
 const express = require('express');
 const crypto = require('crypto');
@@ -24,7 +23,6 @@ const connection = mysql.createConnection({
 });
 
 
-// eslint-disable-next-line consistent-return
 connection.connect((err) => {
   if (err) {
     return err;

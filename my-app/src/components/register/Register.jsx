@@ -44,13 +44,11 @@ class Register extends React.Component {
   addUserServer() {
     // Method that adds users to the database using the backend server.
     const { history } = this.props;
+    const { user } = this.state;
 
-    const firstName = this.state.user.firstname;
-    const lastName = this.state.user.lastname;
-    const { email } = this.state.user;
-    const { username } = this.state.user;
-    const { password } = this.state.user;
-    const { type } = this.state.user;
+    const {
+      firstName, lastName, email, username, password, type,
+    } = user;
     console.log(`${firstName}, ${lastName}, ${email}, ${username}, ${password}, ${type}`);
     fetch('http://localhost:5000/users/postUser', {
       method: 'post',
@@ -85,9 +83,11 @@ class Register extends React.Component {
     } else if (errors.length === 0) {
       this.setState({ errors: [] });
       this.addUserServer();
+      /*
       this.setState({
         username: '', password: '', firstname: '', lastname: '', email: '',
       });
+      */
       this.setState({ errors: [] });
     }
   }

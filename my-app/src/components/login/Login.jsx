@@ -1,6 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable no-alert */
-/* eslint-disable no-console */
 import React from 'react';
 import '../../app.css';
 import { Link, withRouter } from 'react-router-dom';
@@ -47,8 +44,7 @@ class Login extends React.Component {
         } else {
           this.setState({ username: '', password: '' });
           this.setState({ errors: [] });
-          // eslint-disable-next-line react/prop-types
-          this.props.history.push('/');
+          history.push('/');
         }
       })
       .catch((err) => alert(err));
