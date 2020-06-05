@@ -10,20 +10,30 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Alternatively, you can run `npm i` in the root directory and `npm i` in the my-app directory.
 
-`npm run dev ` to run both frontend and backend
+### Running in dev
 
-`npm start `to run just backend
+* `npm run dev ` to run both frontend and backend, access the site at http://localhost:3000
 
-`npm run client ` to run just frontend
+* `npm start `to run just backend
 
-Contact achaussa@calpoly.edu for database and password information to fill out envrionments file.
+* `npm run client ` to run just frontend
+
+### Running production build
+
+* First, run `npm build` in the `my-app` directory
+
+* Then, you can run the production build through `npm start` and visiting http://localhost:5000
+
+Contact achaussa@calpoly.edu for database and password encryption information to fill out envrionments variables
+
+&nbsp;&nbsp;&nbsp;&nbsp;Alternatively, you can access envrionment variables through GitHub repo Secrets
 
 ---
 
 ## Style Guide:
 https://github.com/airbnb/javascript
 
-`npm run get-report ` to generate am html static code analysis report, saved in `report-output.html`
+`npm run get-report ` to generate an html static code analysis report, saved in `report-output.html`
 
 ---
 
@@ -35,11 +45,9 @@ Unit tests are written using Jest, and stored in the `__jest__` folder
 
 Acceptance tests are written using Cypress and the Cucumber plugin, and are stored in the `cypress/integration` folder
 
-`npm run test:jest ` will run the jest tests in the proper folder
+`npm run test:jest ` will run the jest tests in the proper folder and provide a coverage report
 
 `npm run test:cy ` will run launch the server and run the cypress acceptance tests
-
-&nbsp;&nbsp;&nbsp;&nbsp; For some reason this command doesn't work consistently. Run `npm run dev & npx wait-on http://localhost:3000 & npm run cy:run ` if tests aren't run with the above script.
 
 `npm run test ` will run the above two commands
 
@@ -56,7 +64,7 @@ https://travis-ci.com/github/adrien-chaussabel/CSC308-Club-Sports
 
 ## Deployment:
 
-Deploted using heroku on: https://club-sports-hub.herokuapp.com/
+Deployed using heroku on: https://club-sports-hub.herokuapp.com/
 
 ---
 
