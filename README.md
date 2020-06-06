@@ -35,6 +35,8 @@ https://github.com/airbnb/javascript
 
 `npm run get-report ` to generate an html static code analysis report, saved in `report-output.html`
 
+You can find a screenshot of the most updated report in the repo's GitHub wiki
+
 ---
 
 ## Tests:
@@ -51,6 +53,8 @@ Acceptance tests are written using Cypress and the Cucumber plugin, and are stor
 
 `npm run test ` will run the above two commands
 
+You can find a screenshot of the unit test coverage in the repo's GitHub wiki
+
 ---
 
 ## Continuous Integration:
@@ -58,7 +62,6 @@ Acceptance tests are written using Cypress and the Cucumber plugin, and are stor
 We are using Travis CI for this project
 
 https://travis-ci.com/github/adrien-chaussabel/CSC308-Club-Sports
-
 
 ---
 
@@ -76,5 +79,4 @@ https://www.figma.com/file/rwvDW4MBXvO3duub7Jva10/Club-Sports?node-id=0%3A1
 
 ## System Architecture (Feb 7 Class Assignment)
 
----
 ![](uml.jpg)
