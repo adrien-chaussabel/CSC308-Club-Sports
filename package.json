@@ -14,7 +14,7 @@
     "dotenv": "^8.2.0",
     "env": "0.0.2",
     "epress": "0.0.1-security",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jest-cli": "^26.0.1",
     "mysql": "^2.18.1",
     "node": "^13.9.0",
