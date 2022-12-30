@@ -44,7 +44,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "install": "^0.13.0",
     "jest": "^24.9.0",
-    "mocha": "^7.2.0",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.3",
     "npm": "^6.14.5",
     "start-server-and-test": "^1.11.0",
